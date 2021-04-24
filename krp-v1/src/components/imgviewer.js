@@ -7,7 +7,7 @@ const Imgviewer = () => {
             <div className="home1text">
                 <h2>KRP RACING</h2>
                 <h2>Connecting Next Gen Tech</h2>
-                <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque libero quibusdam perferendis possimus ipsum quidem non est architecto, blanditiis placeat!</h3>
+
             </div>
             <div className="imagecontainer">
 
