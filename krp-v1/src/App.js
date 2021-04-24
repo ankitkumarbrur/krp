@@ -1,9 +1,12 @@
 import './App.scss';
+import Footer from './components/Footer';
+import Imgviewer from './components/imgviewer';
 function App() {
   return (
     <div>
-      KRP
-      hello
+      HOME
+      <Imgviewer />
+      <Footer />
     </div>
   );
 }

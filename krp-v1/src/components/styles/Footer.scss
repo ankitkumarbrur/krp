@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+.container{
+    padding:3% 4% 5% 4%;
+    background-image: url('./../../images/footer_vector.png');
+    background-size: 100% 100%;
+    
+}
+.footer{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+}
+.information{
+    padding:5%;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.icons{
+    
+    margin-left:2vw;
+}
+.social_icon{
+    
+    display: grid;
+    margin:0;
+    grid-template-columns: repeat(4,1fr);
+    width:15vw;
+    grid-column-gap:5px;
+    justify-self: start;
+    
+}
+h1{
+    
+    font-family: Inter;
+    font-style: bold;
+    font-weight: 1200;
+    font-size: 16px;
+    line-height: 15px;
+    align-self: center;
+    margin-left:2vw;
+    justify-self: start;
+    letter-spacing: 2;
+    
+    color: #ADADAD;
+}
+.social_email a {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 48px;
+
+    letter-spacing: -0.5px;
+
+    /* Purple / Dark */
+
+    color: #6C5CE7;
+    display: grid;
+    align-items: center;
+    margin-left:2vw;
+}
+.subscribe{
+    display: grid;
+    align-items: center;
+    margin-left: 2vw;
+    
+}
+.col{
+
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+
+
+    letter-spacing: 0.25px;
+
+
+
+    color: #2D3436;
+}
