@@ -1,12 +1,29 @@
-import './App.scss';
-import Footer from './components/Footer';
-import Imgviewer from './components/imgviewer';
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Home, Shop, About, Contact, Error } from "./pages";
+
 function App() {
   return (
     <div>
-      HOME
-      <Imgviewer />
-      <Footer />
+      <Router>
+        <Switch>
+          <Route exact={true} path="/">
+            <Home />
+          </Route>
+          <Route path="/shop">
+            <Shop />
+          </Route>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/contact">
+            <Contact />
+          </Route>
+          <Route path="*">
+            <Error />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }
