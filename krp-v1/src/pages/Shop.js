@@ -1,10 +1,12 @@
 import React from "react";
+import { Navbar } from "../components";
 
 const Shop = () => {
   return (
-    <div>
-      <h1>Shop component</h1>
-    </div>
+    <section>
+      <Navbar />
+      <h1>Shopping page</h1>
+    </section>
   );
 };
 

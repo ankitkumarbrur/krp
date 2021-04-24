@@ -1,10 +1,11 @@
 import React from "react";
-
+import { Navbar } from "../components";
 const Contact = () => {
   return (
-    <div>
-      <h1>Contect Component</h1>
-    </div>
+    <section>
+      <Navbar />
+      <h1>Contact page</h1>
+    </section>
   );
 };
 

@@ -5,6 +5,7 @@ const Home = () => {
   return (
     <section>
       <Navbar />
+      <h1>Home page</h1>
     </section>
   );
 };
