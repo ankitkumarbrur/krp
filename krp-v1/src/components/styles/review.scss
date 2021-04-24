@@ -1,0 +1,48 @@
+.review {
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+
+  .review-container {
+    div {
+      padding: 1.5rem 0;
+      h2 {
+        font-size: 1.5rem;
+        text-align: start;
+        margin-right: 5rem;
+        margin-bottom: 5rem;
+      }
+
+      h3 {
+      }
+      p {
+        text-transform: capitalize;
+      }
+    }
+
+    button {
+      font-size: 1.5rem;
+      width: 35px;
+      height: 35px;
+      line-height: 40px;
+      border: none;
+      background: red;
+      color: white;
+      cursor: pointer;
+    }
+    button:first-of-type {
+      margin-right: 1rem;
+    }
+  }
+
+  .img-container {
+    img {
+      width: 400px;
+      height: 500px;
+      object-fit: cover;
+    }
+  }
+}

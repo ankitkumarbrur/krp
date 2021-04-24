@@ -1,12 +1,13 @@
 import React from "react";
-import { Navbar } from "../components";
+import { Navbar, Review } from "../components";
 
 const Home = () => {
   return (
-    <section>
+    <main>
       <Navbar />
+      <Review />
       <h1>Home page</h1>
-    </section>
+    </main>
   );
 };
 
