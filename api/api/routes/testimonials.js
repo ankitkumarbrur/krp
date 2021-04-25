@@ -3,12 +3,13 @@ const router = express.Router();
 const multer = require('multer');
 const testomonialsController = require('../controllers/testimonials');
 
+// const upload = multer({dest:'uploads/'})
 const storage = multer.diskStorage({
     destination: function(req, file, cb) {
-        cb(null, './uploads');
+        cb(null, './uploads/');
     },
     filename: function(req, file, cb) {
-        cb(null, new Date().toISOString + file.originalname);
+        cb(null, file.originalname);
     }
 });
 
@@ -32,8 +33,8 @@ const upload = multer({
 })
 
 router.get("/", testomonialsController.get_testimonials);
-router.post("/:testimonialID", testomonialsController.create_testimonial);
-router.patch("/:testimonialID", testomonialsController.update_testimonial);
-router.delete("/:testimonialID", testomonialsController.delete_testimonial);
+router.post("/", upload.single('testimonialImage'), testomonialsController.create_testimonial);
+router.patch("/", upload.single('testimonialImage'), testomonialsController.update_testimonial);
+router.delete("/", testomonialsController.delete_testimonial);
 
 module.exports = router;

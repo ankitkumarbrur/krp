@@ -8,9 +8,10 @@ const testimonialsRoute = require('./api/routes/testimonials')
 //LOGGING REQUESTS TO THE CONSOLE
 app.use(morgan('dev'));
 //PARSING THE REQUEST DATA
-app.use(express.json());
 app.use(express.urlencoded({extended:false}));
+app.use(express.json());
 
+app.use('/uploads', express.static('uploads'));
 app.use('/testimonials', testimonialsRoute);
 
 //IF NO ROUTE IS MATCHED TO THE REQUEST SEND AN ERROR

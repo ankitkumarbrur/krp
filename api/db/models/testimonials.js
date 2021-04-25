@@ -12,26 +12,31 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
     }
+
+    // toJSON(){
+    //   return {...this.get(), id:undefined}
+    // }
   };
   testimonials.init({
     name: {
-      type: DataTypes.NUMBER,
-      allowNull:false
+      type: DataTypes.STRING,
+      allowNull: false
     },
     post: {
-      type: DataTypes.NUMBER,
-      allowNull:false
+      type: DataTypes.STRING,
+      allowNull: false
     },
     imgurl: {
-      type: DataTypes.NUMBER,
-      allowNull:false
+      type: DataTypes.STRING,
+      allowNull: false
     },
     review: {
-      type: DataTypes.NUMBER,
-      allowNull:false
+      type: DataTypes.STRING,
+      allowNull: false
     }
   }, {
     sequelize,
+    tableName: 'testimonials',
     modelName: 'testimonials',
   });
   return testimonials;
