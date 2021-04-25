@@ -1,11 +1,12 @@
 import React from "react";
-import { Footer, Imgviewer, Navbar } from "../components";
+import { Footer, Imgviewer, Navbar, Whykrp } from "../components";
 
 const Home = () => {
   return (
     <section>
       <Navbar />
       <Imgviewer />
+      <Whykrp />
       <Footer />
     </section>
   );
