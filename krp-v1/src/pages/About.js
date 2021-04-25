@@ -3,10 +3,10 @@ import { Navbar } from "../components";
 
 const About = () => {
   return (
-    <section>
+    <main>
       <Navbar />
       <h1>About page</h1>
-    </section>
+    </main>
   );
 };
 

@@ -1,14 +1,18 @@
 import React from "react";
-import { Footer, Imgviewer, Navbar, Whykrp } from "../components";
+import { Footer, Imgviewer, Navbar, Whykrp, Review } from "../components";
 
 const Home = () => {
   return (
-    <section>
+    <main>
       <Navbar />
       <Imgviewer />
       <Whykrp />
+      <Review />
       <Footer />
-    </section>
+
+
+
+    </main>
   );
 };
 
