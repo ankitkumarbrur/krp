@@ -32,9 +32,10 @@ const upload = multer({
     }
 })
 
-router.get("/", testomonialsController.get_testimonials);
+router.get("/", testomonialsController.get_all_testimonials);
+router.get("/:testimonialId", testomonialsController.get_one_testimonial);
 router.post("/", upload.single('testimonialImage'), testomonialsController.create_testimonial);
-router.patch("/", upload.single('testimonialImage'), testomonialsController.update_testimonial);
-router.delete("/", testomonialsController.delete_testimonial);
+router.patch("/:testimonialId", upload.single('testimonialImage'), testomonialsController.update_testimonial);
+router.delete("/:testimonialId", testomonialsController.delete_testimonial);
 
 module.exports = router;
