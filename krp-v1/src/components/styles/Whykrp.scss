@@ -1,13 +1,17 @@
 .whykrp_container{
-    background-color: rgba(128, 128, 128, 0.274);
+    background-color: rgba(0, 128, 128, 0.061);
+    overflow: hidden;
     display: grid;
     grid-template-columns: 4fr 6fr;
-    height:100vh;
+    height:70vh;
     width: 100%;
+    
 }
 .whykrp_img{
     background-image: url('./../../images/whykrpbike.jpg');
-    background-size: 100% 100%;
+    height:inherit;
+    
+    overflow:hidden;
 }
 .whykrp_text{
     display:relative;
@@ -25,5 +29,6 @@
     justify-content: center;
     margin: 5%;
     font-size: 20px;
+    overflow: hidden;
     
 }

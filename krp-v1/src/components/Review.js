@@ -26,7 +26,7 @@ const Review = () => {
     <section className="section">
       <div className="title">
         <h2>
-          <span>/</span>reviews
+          <span>Reviews</span>
         </h2>
       </div>
       <div className="section-center">

@@ -6,7 +6,7 @@
 }
 .container{
     padding:3% 4% 5% 4%;
-    background-image: url('./../../images/footer_vector.png');
+    background-image: url('./../../images/7.png');
     background-size: 100% 100%;
     
 }
@@ -34,7 +34,7 @@
     justify-self: start;
     
 }
-h1{
+.footer > h1{
     
     font-family: Inter;
     font-style: bold;
@@ -59,7 +59,7 @@ h1{
 
     /* Purple / Dark */
 
-    color: #6C5CE7;
+    color: #008080;
     display: grid;
     align-items: center;
     margin-left:2vw;
