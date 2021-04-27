@@ -1,14 +1,14 @@
-const { testimonials } = require('../../db/models');
+const { articles } = require('../../db/models');
 const fs = require("fs");
 
-exports.get_all_testimonials = (req, res, next)=>{
-    testimonials.findAll().then((result)=>{
+exports.get_all_articles = (req, res, next)=>{
+    articles.findAll().then((result)=>{
         result.forEach(element => {
             element.dataValues.createdAt=undefined;
             element.dataValues.updatedAt=undefined;
         });
         res.status(200).json({
-            testimonials:result
+            articles:result
         })
     }).catch((err)=>{
         console.log(err);
@@ -18,9 +18,9 @@ exports.get_all_testimonials = (req, res, next)=>{
     });    
 }
 
-exports.get_one_testimonial = (req, res, next)=>{
-    const id = req.params.testimonialId;
-    testimonials.findByPk(id).then((result)=>{
+exports.get_one_article = (req, res, next)=>{
+    const id = req.params.articleId;
+    articles.findByPk(id).then((result)=>{
         res.status(200).json({
             testimonial:result
         })
@@ -32,15 +32,13 @@ exports.get_one_testimonial = (req, res, next)=>{
     });    
 }
 
-
-exports.create_testimonial = (req, res, next)=>{
-    const testimonial_data= {
-        name: req.body.name,
-        post: req.body.post,
-        imgurl: req.file.path,
-        review: req.body.review
+exports.create_article = (req, res, next)=>{
+    const article_data= {
+        headline: req.body.headline,
+        sourceurl: req.body.sourceurl,
+        imgurl: req.file.path
     }
-    testimonials.create(testimonial_data).then((result)=>{
+    articles.create(article_data).then((result)=>{
         res.status(200).json({
             ret: result
         });
@@ -51,18 +49,19 @@ exports.create_testimonial = (req, res, next)=>{
         })
     });
 }
-exports.update_testimonial = (req, res, next)=>{
-    const id = req.params.testimonialId;
-    testimonials.findByPk(id).then((result)=>{
+
+exports.update_article = (req, res, next)=>{
+    const id = req.params.articleId;
+    articles.findByPk(id).then((result)=>{
         if(result){
-            const testimonial_data= {
-                name: req.body.name||result.name,
-                post: req.body.post||result.post,
-                review: req.body.review||result.review
+            const article_data= {
+                headline: req.body.headline,
+                sourceurl: req.body.sourceurl,
+                imgurl: req.file.path
             }
             if(req.file){
                 const pathToFile = result.imgurl;
-                testimonial_data['imgurl'] = req.file.path;
+                article_data['imgurl'] = req.file.path;
                 fs.unlink(pathToFile, err => {
                 if (err) {
                     throw err
@@ -70,15 +69,13 @@ exports.update_testimonial = (req, res, next)=>{
                 });
             }
             else{
-                testimonial_data['imgurl']= result.imgurl;
+                article_data['imgurl']= result.imgurl;
             }
-            testimonials.update(testimonial_data,{ where: { id: id } }).then(result => {
-                if(result)
-                {
+            articles.update(article_data,{ where: { id: id } }).then(result => {
+                if(result) {
                     msg = "Updated Successfully"
                 }
-                else
-                {
+                else {
                     msg = "error occurred while updating"
                 }                
                 res.status(200).json({
@@ -98,13 +95,14 @@ exports.update_testimonial = (req, res, next)=>{
         })
     });
 }
-exports.delete_testimonial = (req, res, next)=>{
-    const id = req.params.testimonialId;
-    testimonials.findByPk(id).then((result)=>{
+
+exports.delete_article = (req, res, next)=>{
+    const id = req.params.articleId;
+    articles.findByPk(id).then((result)=>{
         const pathToFile = result.imgurl;
         fs.unlink(pathToFile, err => { if (err) { throw err } });
 
-        testimonials.destroy({
+        articles.destroy({
             where: {id: id}
          }).then(rowDeleted => {
            if(rowDeleted === 1){
@@ -118,6 +116,7 @@ exports.delete_testimonial = (req, res, next)=>{
                 error:err
             })
         });
+        
     }).catch(err => {
         console.log(err);
         res.status(500).json({

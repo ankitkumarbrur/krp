@@ -1,16 +1,16 @@
 const express = require('express');
 const router = express.Router();
 const multer = require('multer');
-const testomonialsController = require('../controllers/testimonials');
+const homecarouselController = require('../controllers/homecarousel');
 const authorize = require('../middleware/auth')
 
 // const upload = multer({dest:'uploads/'})
 const storage = multer.diskStorage({
     destination: function(req, file, cb) {
-        cb(null, './uploads/testimonials');
+        cb(null, './uploads/homecarousel');
     },
     filename: function(req, file, cb) {
-        cb(null, file.originalname);
+        cb(null, new Date().toISOString().replace(/:/g, '-') + file.originalname);
     }
 });
 
@@ -33,10 +33,8 @@ const upload = multer({
     }
 })
 
-router.get("/", testomonialsController.get_all_testimonials);
-router.get("/:testimonialId", authorize, testomonialsController.get_one_testimonial);
-router.post("/", authorize, upload.single('testimonialImage'), testomonialsController.create_testimonial);
-router.patch("/:testimonialId", authorize, upload.single('testimonialImage'), testomonialsController.update_testimonial);
-router.delete("/:testimonialId", authorize, testomonialsController.delete_testimonial);
+router.get("/", homecarouselController.get_all_homecarousel);
+router.post("/", authorize, upload.single("carouselImg"), homecarouselController.create_homecarousel);
+router.delete("/:homecarouselId", authorize, homecarouselController.delete_homecarousel);
 
 module.exports = router;

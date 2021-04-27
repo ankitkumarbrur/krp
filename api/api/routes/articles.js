@@ -1,13 +1,13 @@
 const express = require('express');
 const router = express.Router();
 const multer = require('multer');
-const testomonialsController = require('../controllers/testimonials');
+const articlesController = require('../controllers/articles');
 const authorize = require('../middleware/auth')
 
 // const upload = multer({dest:'uploads/'})
 const storage = multer.diskStorage({
     destination: function(req, file, cb) {
-        cb(null, './uploads/testimonials');
+        cb(null, './uploads/articles');
     },
     filename: function(req, file, cb) {
         cb(null, file.originalname);
@@ -33,10 +33,10 @@ const upload = multer({
     }
 })
 
-router.get("/", testomonialsController.get_all_testimonials);
-router.get("/:testimonialId", authorize, testomonialsController.get_one_testimonial);
-router.post("/", authorize, upload.single('testimonialImage'), testomonialsController.create_testimonial);
-router.patch("/:testimonialId", authorize, upload.single('testimonialImage'), testomonialsController.update_testimonial);
-router.delete("/:testimonialId", authorize, testomonialsController.delete_testimonial);
+router.get("/", articlesController.get_all_articles);
+router.get("/:articleId", authorize, articlesController.get_one_article);
+router.post("/", authorize, upload.single('articleImage'), articlesController.create_article);
+router.patch("/:articleId", authorize, upload.single('articleImage'), articlesController.update_article);
+router.delete("/:articleId", authorize, articlesController.delete_article);
 
 module.exports = router;
