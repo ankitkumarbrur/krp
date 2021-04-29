@@ -6,6 +6,7 @@ import Review from "./Review";
 import Product2 from "./Product2";
 import Product1 from "./Product1";
 import News from "./News";
+import Feedback from "./Feedback";
 
-export { News, Product1, Product2, Whykrp, Review, Navbar, Footer, Imgviewer };
+export { Feedback, News, Product1, Product2, Whykrp, Review, Navbar, Footer, Imgviewer };
 

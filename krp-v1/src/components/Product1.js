@@ -77,16 +77,16 @@ function Product() {
 function Product1() {
 
     return (
-        <>
+        <div className="productcontainer">
             <h1 className="product1_heading">
                 SHOPPING
             </h1>
-            <Grid container spacing={0}>
+            <div className="gridcontainer" >
 
                 <Product />
 
-            </Grid >
-        </>
+            </div >
+        </div >
     )
 
 }

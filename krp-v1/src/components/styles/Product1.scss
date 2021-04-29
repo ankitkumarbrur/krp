@@ -1,3 +1,18 @@
+.productcontainer {
+
+    width:85%;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+    justify-content: center;
+    align-items: center;
+}
+.gridcontainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+
+}
 .product1_heading{
     color:teal;
     font-weight: 700;
@@ -9,11 +24,19 @@
     padding:10vh;
     margin:0;
 }
-
+.MuiPaper-rounded{
+    border-radius: 0%;
+}
 .product1_card{
     height:35vh;
     position: relative;
+    border-radius: 0%;
+
+    &:hover{
+        transform: translateY(-10px);
+    }
 }
+
 .product1_text{
     position: absolute;
     bottom:0;
@@ -28,9 +51,11 @@
     font-weight: 200;
     font-size:25px;
     text-overflow: ellipsis;
+    height:inherit;
 
     &:hover{
         opacity: 0.8;
+       
     }
 }
 

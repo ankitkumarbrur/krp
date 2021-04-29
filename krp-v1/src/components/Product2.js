@@ -129,7 +129,7 @@ function Product2() {
 
 
     return (
-        <div style={{ marginTop: "50px", color: "#494949" }}>
+        <div style={{ margin: "50px auto", color: "#494949", width: "85%" }}>
 
             <Carousel
                 className="Example"
