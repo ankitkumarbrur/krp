@@ -24,19 +24,19 @@ const News = () => {
   //   }
   // };
 
-  // autoplay
-  useEffect(() => {
-    let slider = setInterval(() => {
-      if (index >= data.length - 1) {
-        setIndex(0);
-      } else {
-        setIndex(index + 1);
-      }
-    }, 5000);
-    return () => {
-      clearInterval(slider);
-    };
-  }, [index]);
+  //* autoplay
+  // useEffect(() => {
+  //   let slider = setInterval(() => {
+  //     if (index >= data.length - 1) {
+  //       setIndex(0);
+  //     } else {
+  //       setIndex(index + 1);
+  //     }
+  //   }, 5000);
+  //   return () => {
+  //     clearInterval(slider);
+  //   };
+  // }, [index]);
 
   const { id, title, images, author } = data[index];
   return (
@@ -45,6 +45,10 @@ const News = () => {
 
       {/* <button className="prev">
         <FiChevronLeft onClick={prevSlide} />
+      </button> */}
+
+      {/* <button className="next" onClick={nextSlide}>
+        <FiChevronRight />
       </button> */}
 
       {/* news container */}
@@ -60,10 +64,6 @@ const News = () => {
           <p>by {author}</p>
         </div>
       </article>
-
-      {/* <button className="next" onClick={nextSlide}>
-        <FiChevronRight />
-      </button> */}
 
       {/* navigation icons */}
       <div className="nav-icons">
