@@ -1,28 +1,9 @@
 import React, { useState, useEffect } from "react";
 import data from "../context/mockData/news-data";
-// import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
 import "./styles/news.scss";
 
 const News = () => {
   const [index, setIndex] = useState(0);
-
-  //manual slide
-  // const prevSlide = () => {
-  //   const lastIndex = data.length - 1;
-  //   if (index <= 0) {
-  //     setIndex(lastIndex);
-  //   } else {
-  //     setIndex(index - 1);
-  //   }
-  // };
-  // const nextSlide = () => {
-  //   const lastIndex = data.length - 1;
-  //   if (index >= lastIndex) {
-  //     setIndex(0);
-  //   } else {
-  //     setIndex(index + 1);
-  //   }
-  // };
 
   //* autoplay
   // useEffect(() => {

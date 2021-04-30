@@ -1,1 +1,14 @@
+.section {
+  width: 85%;
+  margin: 2rem auto;
 
+  .title {
+    h1 {
+      font-size: 2.5rem;
+      color: gray;
+      text-align: center;
+      font-weight: 500;
+      padding: 1rem 0;
+    }
+  }
+}
