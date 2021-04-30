@@ -47,9 +47,19 @@ const News = () => {
       <div className="section-center">
         {data.map((item, newsIndex) => {
           const { id, title, images, author } = item;
-          console.log(item);
+          let position = "nextSlide";
+
+          if (newsIndex === index) {
+            position = "activeSlide";
+          }
+          if (
+            newsIndex === index - 1 ||
+            (index === 0 && newsIndex === data.length - 1)
+          ) {
+            position = "lastSlide";
+          }
           return (
-            <article key={id}>
+            <article className={position} key={id}>
               <div className="img-container">
                 {images.map((img, index) => {
                   return <img src={img} alt="" key={index} />;
@@ -64,7 +74,7 @@ const News = () => {
           );
         })}
       </div>
-      {/* <div className="nav-icons">
+      <div className="nav-icons">
         {data.map((item, iconIndex) => {
           return (
             <div
@@ -74,7 +84,7 @@ const News = () => {
             ></div>
           );
         })}
-      </div> */}
+      </div>
     </section>
   );
 };
