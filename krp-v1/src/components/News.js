@@ -32,41 +32,39 @@ const News = () => {
   //     } else {
   //       setIndex(index + 1);
   //     }
-  //   }, 5000);
+  //   }, 2500);
   //   return () => {
   //     clearInterval(slider);
   //   };
   // }, [index]);
 
-  const { id, title, images, author } = data[index];
   return (
-    <section className="news-section">
-      <h1>supported by real people</h1>
+    <section className="section">
+      <div className="title">
+        <h1>supported by real people</h1>
+      </div>
 
-      {/* <button className="prev">
-        <FiChevronLeft onClick={prevSlide} />
-      </button> */}
+      <div className="section-center">
+        {data.map((item, newsIndex) => {
+          const { id, title, images, author } = item;
+          console.log(item);
+          return (
+            <article key={id}>
+              <div className="img-container">
+                {images.map((img, index) => {
+                  return <img src={img} alt="" key={index} />;
+                })}
+              </div>
 
-      {/* <button className="next" onClick={nextSlide}>
-        <FiChevronRight />
-      </button> */}
-
-      {/* news container */}
-      <article className="news-container" key={id}>
-        <div className="img-container">
-          {images.map((img, index) => {
-            return <img src={img} alt="" key={index} />;
-          })}
-        </div>
-
-        <div className="info-container">
-          <h3>{title}</h3>
-          <p>by {author}</p>
-        </div>
-      </article>
-
-      {/* navigation icons */}
-      <div className="nav-icons">
+              <div className="info-container">
+                <h3>{title}</h3>
+                <p>by {author}</p>
+              </div>
+            </article>
+          );
+        })}
+      </div>
+      {/* <div className="nav-icons">
         {data.map((item, iconIndex) => {
           return (
             <div
@@ -76,7 +74,7 @@ const News = () => {
             ></div>
           );
         })}
-      </div>
+      </div> */}
     </section>
   );
 };

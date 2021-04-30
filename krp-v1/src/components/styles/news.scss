@@ -1,95 +1,120 @@
-.news-section {
-  background-image: url("../../images/news-background.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: bottom 0px center;
+// .section {
+//   background-image: url("../../images/news-background.svg");
+//   background-size: contain;
+//   background-repeat: no-repeat;
+//   background-position: bottom 0px center;
 
+//   width: 85%;
+//   margin: 2.5rem auto;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   overflow: hidden;
+
+//   h1 {
+//     font-size: 2.5rem;
+//     color: gray;
+//     text-align: center;
+//     font-weight: 500;
+//     padding: 1rem 0;
+//   }
+
+//   .news-container {
+//     display: flex;
+//     flex-direction: column;
+//     background-color: white;
+//     box-shadow: 0 0 6px 0 black;
+//     width: 70%;
+//     margin: 2rem auto 2.5rem auto;
+//     border-radius: 1rem;
+//     padding: 0.5rem 0;
+
+//     .img-container {
+//       width: 92%;
+//       margin: 1rem auto;
+//       height: auto;
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+
+//       img {
+//         width: 225px;
+//         height: 150px;
+//         // object-fit: cover;
+//       }
+//       img:first-of-type {
+//         margin-right: 1rem;
+//         border-top-left-radius: 1rem;
+//         border-bottom-left-radius: 1rem;
+//       }
+//       img:last-of-type {
+//         margin-left: 1rem;
+//         border-top-right-radius: 1rem;
+//         border-bottom-right-radius: 1rem;
+//       }
+//       img:nth-of-type(2) {
+//         width: 340px;
+//       }
+//     }
+//   }
+//   .info-container {
+//     margin: 1rem 2.5rem 0 2.5rem;
+//     h3 {
+//       font-size: 1.25rem;
+//       font-weight: 400;
+//       color: #102a42;
+//     }
+//     p {
+//       margin-top: 1.5rem;
+//       font-size: 1rem;
+//       font-weight: 400;
+//       color: #102a42;
+//     }
+//   }
+
+//   .nav-icons {
+//     margin-top: 1.5rem;
+//     width: 7.5%;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     .circle {
+//       width: 12.5px;
+//       height: 12.5px;
+//       border-radius: 50%;
+//       background: grey;
+//       cursor: pointer;
+//       transition: all ease-in-out 0.5s;
+//     }
+//     .circle:hover {
+//       background: red;
+//     }
+//     .active {
+//       background: red;
+//     }
+//   }
+// }
+
+.section {
   width: 85%;
-  margin: 2.5rem auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin: 1rem auto;
 
-  h1 {
-    font-size: 2.5rem;
-    color: gray;
+  .title {
     text-align: center;
-    font-weight: 500;
-    padding: 1rem 0;
+    margin-bottom: 1rem;
+
+    h1 {
+      font-weight: 500;
+    }
   }
 
-  .news-container {
+  section-center {
     display: flex;
-    flex-direction: column;
-    background-color: white;
-    box-shadow: 0 0 6px 0 black;
-    width: 70%;
-    margin: 2rem auto 2.5rem auto;
-    border-radius: 1rem;
-    padding: 0.5rem 0;
-
-    .img-container {
-      width: 92%;
-      margin: 1rem auto;
-      height: auto;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      img {
-        width: 225px;
-        height: 150px;
-        // object-fit: cover;
-      }
-      img:first-of-type {
-        margin-right: 1rem;
-        border-top-left-radius: 1rem;
-        border-bottom-left-radius: 1rem;
-      }
-      img:last-of-type {
-        margin-left: 1rem;
-        border-top-right-radius: 1rem;
-        border-bottom-right-radius: 1rem;
-      }
-      img:nth-of-type(2) {
-        width: 340px;
-      }
-    }
-  }
-  .info-container {
-    margin: 1rem 2.5rem 0 2.5rem;
-    h3 {
-      font-size: 1.25rem;
-      font-weight: 400;
-      color: #102a42;
-    }
-    p {
-      margin-top: 1.5rem;
-      font-size: 1rem;
-      font-weight: 400;
-      color: #102a42;
-    }
-  }
-
-  .nav-icons {
-    margin-top: 1.5rem;
-    width: 7.5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    .circle {
-      width: 12.5px;
-      height: 12.5px;
-      border-radius: 50%;
-      background: grey;
-      cursor: pointer;
-      transition: all ease-in-out 0.5s;
-    }
-    .circle:hover {
-      background: red;
-    }
-    .active {
-      background: red;
-    }
+    /* must have to have a height */
+    height: 475px;
+    margin: 0 auto;
+    margin-top: 4rem;
+    position: relative;
+    // overflow: hidden;
   }
 }
