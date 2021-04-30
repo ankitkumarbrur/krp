@@ -23,11 +23,9 @@ const Review = () => {
     };
   }, [index]);
   return (
-    <section className="section">
+    <section className="review-section">
       <div className="title">
-        <h2>
-          <span>/</span>reviews
-        </h2>
+        <h1>reviews</h1>
       </div>
       <div className="section-center">
         {review.map((item, reviewIndex) => {

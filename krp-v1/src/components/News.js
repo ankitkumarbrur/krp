@@ -13,14 +13,14 @@ const News = () => {
   //     } else {
   //       setIndex(index + 1);
   //     }
-  //   }, 2500);
+  //   }, 5000);
   //   return () => {
   //     clearInterval(slider);
   //   };
   // }, [index]);
 
   return (
-    <section className="section">
+    <section className="news-section">
       <div className="title">
         <h1>supported by real people</h1>
       </div>
