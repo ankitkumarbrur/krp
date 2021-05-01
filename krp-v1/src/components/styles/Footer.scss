@@ -1,28 +1,53 @@
+$headingcolor:blue;
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     
 }
+.newsletterbtn{
+    width:50%;
+    background-color: #ADADAD !important;
+    border-radius: 30px !important;
+   
+}
+
+.logoaddress{
+    display: grid;
+    grid-template-rows: 2fr 3fr;
+    justify-content: center;
+    align-items: center;
+    
+}
 .container{
     padding:3% 4% 5% 4%;
-    background-image: url('./../../images/7.png');
+    
+     background-image: url('./../../images/7.png'); 
+    background-color: #ADADAD;
     background-size: 100% 100%;
+    
+   
     
 }
 .footer{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(2,1fr);
+    grid-template: auto 1fr auto / auto 1fr auto
 }
 .information{
     padding:5%;
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
+    width: 50vw;
 }
 .icons{
-    
+    cursor: pointer;
     margin-left:2vw;
+
+    &:hover{
+        transform:translateY(-10px);
+        
+
+    }
 }
 .social_icon{
     
@@ -46,7 +71,7 @@
     justify-self: start;
     letter-spacing: 2;
     
-    color: #ADADAD;
+    color:$headingcolor;
 }
 .social_email a {
     font-family: Inter;

@@ -7,11 +7,12 @@
 
 .home1container{
    background: url("./../../images/Design.svg");
-    height: 90vh;
+    height: 93vh;
     width: 100%;
     padding-top: 10vh;
     display:grid;
     grid-template-columns: 2fr 3fr;
+    
     
    
 }
@@ -24,7 +25,7 @@
     
      &:hover{
         z-index:20;
-        animation: myanimation1 1s forwards ease-out;
+        animation: myanimation1 200ms forwards ease-out;
         @keyframes myanimation1 {
 
             from {
@@ -32,9 +33,9 @@
                 width:100%;
             }
             to {
-                height:130%;
-                width:130%;
-                transform: translate(-20px,-20px);
+                height:110%;
+                width:110%;
+                transform: translate(5px,-20px);
             }
         }
     }
@@ -46,7 +47,7 @@
     border-radius: 12px;
      &:hover{
         z-index:20;
-        animation: myanimation3 1s forwards ease-out;
+        animation: myanimation3 250ms forwards ease-out;
         @keyframes myanimation3 {
 
             from {
@@ -54,9 +55,9 @@
                 width:100%;
             }
             to {
-                height:120%;
-                width:120%;
-                transform: translate(-20px,-20px);
+                height:108%;
+                width:107%;
+                transform: translate(-10px,-20px);
             }
         }
     }
@@ -69,7 +70,7 @@
     
     &:hover{
         z-index:20;
-        animation: myanimation2 1s forwards ease-out;
+        animation: myanimation2 300ms forwards ease-out;
         @keyframes myanimation2 {
 
             from {
@@ -77,8 +78,8 @@
                 width:100%;
             }
             to {
-                height:150%;
-                width:150%;
+                height:120%;
+                width:130%;
                 transform: translate(-20px,-20px);
             }
         }
@@ -91,7 +92,7 @@
     border-radius: 12px;
      &:hover{
         z-index:20;
-        animation: myanimation4 1s forwards ease-out;
+        animation: myanimation4 300ms forwards ease-out;
         @keyframes myanimation4 {
 
             from {
@@ -99,8 +100,8 @@
                 width:100%;
             }
             to {
-                height:150%;
-                width:150%;
+                height:120%;
+                width:122%;
                 transform: translate(-20px,-20px);
             }
         }
@@ -114,7 +115,7 @@
     
      &:hover{
         z-index:20;
-        animation: myanimation5 1s forwards ease;
+        animation: myanimation5 300ms forwards ease;
         @keyframes myanimation5 {
 
             from {
@@ -122,8 +123,8 @@
                 width:100%;
             }
             to {
-                height:130%;
-                width:130%;
+                height:110%;
+                width:116%;
                 transform: translate(-20px,-20px);
             }
         }
@@ -137,7 +138,7 @@
     background-color: rgba(128, 0, 128, 0.472);
      &:hover{
         z-index:20;
-        animation: myanimation6 1s forwards ease-out;
+        animation: myanimation6 300ms forwards ease-out;
         @keyframes myanimation6 {
 
             from {
@@ -147,7 +148,7 @@
             to {
                 height:160%;
                 width:160%;
-                transform: translate(-20px,-20px);
+                transform: translate(-20px,-30px);
             }
         }
     }

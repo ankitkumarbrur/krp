@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Grid, Card, TextField, CardMedia, makeStyles } from '@material-ui/core';
+import { Grid, Card, TextField, CardMedia, makeStyles, Button } from '@material-ui/core';
 
 import ReactMapGL from 'react-map-gl';
 import "./styles/Feedback.scss"
@@ -51,11 +51,14 @@ export default function Feedback() {
                             className="inputs" />
 
                     </div>
+                    <Button variant="contained" color="grey" style={{ width: "50%" }} className="feedbackbtn">
+                        SUBMIT
+                    </Button>
                 </div>
 
 
 
             </div>
-        </form>
+        </form >
     )
 }

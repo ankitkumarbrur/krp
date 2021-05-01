@@ -1,10 +1,10 @@
 import React from "react";
 import "./styles/Footer.scss";
+import { Button } from '@material-ui/core';
 const Footer = () => (
     <div className="container">
         <div className="footer">
-            <h1>FOLLOW US</h1>
-            <h1>EMAIL US</h1>
+
             <div className="social_icon">
                 <svg className="icons" width="13" height="22" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12 1H9C7.67392 1 6.40215 1.52678 5.46447 2.46447C4.52678 3.40215 4 4.67392 4 6V9H1V13H4V21H8V13H11L12 9H8V6C8 5.73478 8.10536 5.48043 8.29289 5.29289C8.48043 5.10536 8.73478 5 9 5H12V1Z" stroke="#6C5CE7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -21,11 +21,21 @@ const Footer = () => (
 
             </div>
 
-            <div className="social_email">
-                <a href="#">krp@gmail.com</a>
+            <h1></h1>
+
+
+            <h1>NEWSLETTER</h1>
+
+
+            <div className="logoaddress">
+                <div >
+                    LOGO
+                </div>
+                <div className="rowaddress">
+                    B-71 phase 2, Naraina Industrial Phase 2, Delhi - 110028, ind area
+                </div>
             </div>
-            <h1>INFORMATION</h1>
-            <h1>SUBSCRIBE</h1>
+
             <div className="information">
                 <div className="row">
                     <div className="col">Lorem, ipsum.</div>
@@ -44,10 +54,13 @@ const Footer = () => (
                 </div>
 
             </div>
-
             <div className="subscribe">
-                Subscribe to newsletter
+                <Button variant="contained" color="primary" className="newsletterbtn">
+                    SUBSCRIBE
+                </Button>
+            Subscribe to the KRP newsletter.
             </div>
+
         </div>
     </div>
 );

@@ -53,11 +53,12 @@ function Product() {
             <Grid item xs>
                 <Card className="product1_card" >
 
-                    <CardMedia
+                    <CardMedia className="product1_card"
                         component="img"
                         title={item.title}
                         image={item.img}
-                        height={`200`}
+                        height={`100%`}
+
                     />
 
                     <div className="product1_text">

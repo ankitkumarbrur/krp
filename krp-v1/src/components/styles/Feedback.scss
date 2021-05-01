@@ -6,6 +6,12 @@
     right:0;
     margin:0 auto ;
 }
+.feedbackbtn{
+    top:0 !important;
+    left:0 !important;
+    margin:auto !important;
+    margin-top: 1vh !important;
+}
 .feedbackForm{
    
    position: absolute;
@@ -29,9 +35,12 @@
     .inputs{
         margin:1rem  2rem;
     }
-
+    left:0;
+    top:0;
+    margin:auto;
    border-radius: 2%;
-    width: 25vw;
+   padding-bottom: 5%;
+    width: 20vw;
     height: 100%;
     margin-bottom: 0.5rem;
     background-color: white;
