@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { appContext } from "../context/Context";
-import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
+import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
 import "./styles/review.scss";
 
 const Review = () => {
@@ -22,6 +22,7 @@ const Review = () => {
       clearInterval(slider);
     };
   }, [index]);
+
   return (
     <section className="review-section">
       <div className="title">
@@ -48,12 +49,6 @@ const Review = () => {
                 <h2>{text}</h2>
                 <h3>{name}</h3>
                 <p>{job}</p>
-                <button onClick={() => setIndex(index - 1)}>
-                  <IoIosArrowBack />
-                </button>
-                <button onClick={() => setIndex(index + 1)}>
-                  <IoIosArrowForward />
-                </button>
               </div>
               <div className="img-container">
                 <img src={image} alt={name} />
@@ -61,6 +56,12 @@ const Review = () => {
             </article>
           );
         })}
+        <button className="prev" onClick={() => setIndex(index - 1)}>
+          <FiChevronLeft />
+        </button>
+        <button className="next" onClick={() => setIndex(index + 1)}>
+          <FiChevronRight />
+        </button>
       </div>
     </section>
   );

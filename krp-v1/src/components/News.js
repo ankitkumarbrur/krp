@@ -6,18 +6,18 @@ const News = () => {
   const [index, setIndex] = useState(0);
 
   //* autoplay
-  // useEffect(() => {
-  //   let slider = setInterval(() => {
-  //     if (index >= data.length - 1) {
-  //       setIndex(0);
-  //     } else {
-  //       setIndex(index + 1);
-  //     }
-  //   }, 5000);
-  //   return () => {
-  //     clearInterval(slider);
-  //   };
-  // }, [index]);
+  useEffect(() => {
+    let slider = setInterval(() => {
+      if (index >= data.length - 1) {
+        setIndex(0);
+      } else {
+        setIndex(index + 1);
+      }
+    }, 5000);
+    return () => {
+      clearInterval(slider);
+    };
+  }, [index]);
 
   return (
     <section className="news-section">

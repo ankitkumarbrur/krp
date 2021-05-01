@@ -19,7 +19,7 @@
     /* must have to have a height */
     height: 68vh;
     margin: 0 auto;
-    margin-top: 3rem;
+    margin-top: 2rem;
     position: relative;
     overflow: hidden;
 
@@ -70,10 +70,10 @@
     }
     article {
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      // top: 0;
+      // left: 0;
+      // width: 100%;
+      // height: 100%;
       opacity: 0;
       transition: all 0.4s linear;
     }
@@ -86,6 +86,31 @@
     }
     article.nextSlide {
       transform: translateX(100%);
+    }
+
+    // buttons
+    .prev,
+    .next {
+      position: relative;
+      top: 75%;
+      background: grey;
+      color: black;
+      width: 2.25rem;
+      height: 2.25rem;
+      display: grid;
+      place-items: center;
+      border-color: transparent;
+      font-size: 1.75rem;
+      border-radius: 0.25rem;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+    }
+    .prev {
+      margin-right: 0.5rem;
+    }
+    .prev:hover,
+    .next:hover {
+      background: red;
     }
   }
 }

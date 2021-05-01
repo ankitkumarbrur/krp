@@ -1,7 +1,18 @@
 .navbar-section {
+  width: 85%;
+  margin: 1rem auto;
+  min-height: 6vh;
+  .scrolled {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 16px 126px;
+    background: white;
+    box-shadow: 0 2px 6px 0 black;
+  }
   .navbar {
-    width: 85%;
-    margin: 1rem auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
