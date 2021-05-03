@@ -1,0 +1,23 @@
+@import "global";
+
+.scroll-your-role{
+    z-index:20;
+    
+    border-radius:50%!important;
+    border: 0 !important;
+    //background-image: url("../../images/upward.svg") !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    padding:10px !important;
+    box-shadow: 0 1px 2px 0 grey !important;
+    height:10vh !important;
+    width: 5vw !important;
+    font-size: 16px;
+    opacity: 0.5 !important;
+
+    &:hover{
+        opacity: 1 !important;
+        background-color: $primary !important;
+        
+    }
+}

@@ -7,6 +7,8 @@ import Product2 from "./Product2";
 import Product1 from "./Product1";
 import News from "./News";
 import Feedback from "./Feedback";
+import Subscribe from "./Subscribe";
+import Scroll from "./Scroll";
 
-export { Feedback, News, Product1, Product2, Whykrp, Review, Navbar, Footer, Imgviewer };
+export { Scroll, Subscribe, Feedback, News, Product1, Product2, Whykrp, Review, Navbar, Footer, Imgviewer };
 

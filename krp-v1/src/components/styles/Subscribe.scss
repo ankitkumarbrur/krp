@@ -1,0 +1,71 @@
+@import 'global';
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+
+.subscribeimage{
+    width: 70%;
+    height:25vh;
+    background-image: url("../../images/subscribe.png");
+    display: flex;
+    margin:auto;
+    margin-top:20vh;
+    margin-bottom: 0;
+    object-fit: cover;
+    object-position:0 -80%;
+    position:relative;
+}
+
+.subscribecontainer{
+    background-color:#f8f8f8;
+    height:28vh;
+    width: 95%;
+    position: absolute;
+    margin: 0 2vw 3vh 2vw;
+    bottom:0;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 2px solid #DDDDDD;
+
+    
+}
+.subscribebtn{
+    position:relative;
+    left:40%;
+    top:40%;
+    height: 7vh;
+    width: 14vw;
+    background-color: $primary;
+    color:white;
+    border: 0px;
+    box-shadow: 4px 22px 22px 0px rgba(50, 50, 50, 0.31);
+    font-size: 15px;
+    font-weight: bold;
+
+    &:hover{
+        cursor: pointer;
+        background-color: white;
+        color:black;
+    }
+    
+}
+.subscribeheading{
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 27px;
+    line-height: 35px;
+    width: 50%;
+    position:relative;
+    left:20%;
+    top:10%;
+
+}
+.subscribesubheading{
+    position:relative;
+    left:20%;
+    top:20%;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 13px;
+    line-height: 20px;
+}

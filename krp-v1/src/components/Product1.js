@@ -78,16 +78,18 @@ function Product() {
 function Product1() {
 
     return (
-        <div className="productcontainer">
-            <h1 className="product1_heading">
-                SHOPPING
+        <div className="product1image" >
+            <div className="productcontainer">
+                <h1 className="product1_heading">
+                    SHOPPING
             </h1>
-            <div className="gridcontainer" >
+                <div className="gridcontainer" >
 
-                <Product />
+                    <Product />
 
+                </div >
             </div >
-        </div >
+        </div>
     )
 
 }
