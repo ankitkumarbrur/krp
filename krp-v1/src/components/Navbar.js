@@ -4,14 +4,14 @@ import { Link } from "react-router-dom";
 import "./styles/navbar.scss";
 
 const Navbar = () => {
-  const [scrolled, setScrolled] = useState(false);
+  const [scroll, setScroll] = useState(false);
 
   const handleScroll = () => {
     const offSet = window.scrollY;
-    if (offSet > 100) {
-      setScrolled(true);
+    if (offSet >= 80) {
+      setScroll(true);
     } else {
-      setScrolled(false);
+      setScroll(false);
     }
   };
 
@@ -20,19 +20,17 @@ const Navbar = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [scrolled]);
-
-  let navbarClasses = ["navbar"];
-  if (scrolled) {
-    navbarClasses.push("scrolled");
-  }
+  }, [scroll]);
 
   return (
-    <section className="navbar-section">
-      <nav className={navbarClasses.join(" ")}>
-        {/* <img src={logo} alt="logo" className="logo" /> */}
-        <h1>KRP</h1>
-        <div>
+    <section className={scroll ? "navbar scroll" : "navbar"}>
+      <nav className="navbar-container">
+        <div className="title">
+          <Link to="/">
+            <h1>KRP</h1>
+          </Link>
+        </div>
+        <div className="pages">
           <ul>
             <Link className="nav-list" to="/">
               Home
@@ -47,8 +45,11 @@ const Navbar = () => {
               Contact us
             </Link>
           </ul>
+          <div className="btn-container">
+            <button className="btn sign-up">Sign up</button>
+            <button className="btn login">Login</button>
+          </div>
         </div>
-        <button className="sign_in-btn">Sign In</button>
       </nav>
     </section>
   );
