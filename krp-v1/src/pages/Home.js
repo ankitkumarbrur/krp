@@ -1,10 +1,11 @@
 import React from "react";
-import { Navbar, Review, News } from "../components";
+import { Navbar, Review, News, About } from "../components";
 
 const Home = () => {
   return (
     <main>
       <Navbar />
+      <About />
       <News />
       <Review />
     </main>

@@ -3,7 +3,7 @@
 Global Styles
 ===============
 */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Roboto:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 
 *,
 ::after,
@@ -14,10 +14,11 @@ Global Styles
 }
 body {
   font-family: "Roboto", sans-serif;
-  background: #ffffff;
+  background: #f1f3f6;
   color: #102a42;
   line-height: 1.5;
   font-size: 0.875rem;
+  overflow-x: hidden;
 }
 ul {
   list-style-type: none;
@@ -37,11 +38,7 @@ h4 {
   letter-spacing: 0.1rem;
   text-transform: capitalize;
   line-height: 1.25;
-  margin-bottom: 0.75rem;
 }
 button {
   font-family: "Roboto", sans-serif;
-}
-p {
-  font-family: "Poppins", sans-serif;
 }
