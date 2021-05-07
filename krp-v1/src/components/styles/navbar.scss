@@ -1,54 +1,80 @@
-.navbar-section {
-  width: 85%;
-  margin: 1rem auto;
-  min-height: 6vh;
-  .scrolled {
-    z-index: 1;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding: 16px 126px;
-    background: white;
-    box-shadow: 0 2px 6px 0 black;
-  }
-  .navbar {
+.navbar {
+  width: 100vw;
+  background: transparent;
+  display: grid;
+  place-items: center;
+  position: sticky;
+  top: 0;
+  //height:11vh;
+  z-index: 999;
+  //transition: all 0.7s ease-in;
+  background-color: rgba(255, 255, 255, 0);
+
+  .navbar-container {
+    width: 85vw;
+    margin: 0.75rem auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     
 
-    // .logo {
-    //   width: 10%;
-    // }
-    h1 {
-      font-size: 2.5rem;
-      font-weight: 500;
-      color: teal;
+    .title {
+      
+      h1 {
+        font-size: 2rem;
+      font-weight: 700;
+        color: #007bff;
+      }
     }
-
-    ul {
+    .pages {
       display: flex;
-      .nav-list {
-        text-transform: capitalize;
-        font-size: 1.25rem;
-        margin: 0 2rem;
-        color: gray;
-        cursor: pointer;
-      }
-      .nav-list:hover {
-        color: teal;
+      align-items: center;
+      justify-content: space-between;
+      //line-height: 8vh;
+      ul {
+        .nav-list {
+          font-weight: 400;
+          text-transform: capitalize;
+          font-size: 1rem;
+          color: gray;
+          cursor: pointer;
+          margin-right: 2.5rem;
+        }
+        .active {
+          color: #007bff;
+        }
       }
     }
-
-    .sign_in-btn {
-      font-size: 1.25rem;
-      border-radius: 2rem;
-      background-color: teal;
-      border: none;
-      color: white;
-      padding: 1rem 2rem;
+    .btn {
+      font-size: 1rem;
+      border-radius: 40px;
+      border: 2.5px solid #007bff;
       cursor: pointer;
+      font-weight: 500;
+    }
+    .sign-up {
+      background: rgba($color: #222, $alpha: 0);
+      color: #007bff;
+      margin-right: 0.75rem;
+      padding: 0.5rem 1.5rem;
+    }
+    .sign-up:hover {
+      background: rgba($color: #222, $alpha: 0.05);
+    }
+    .login {
+      color: white;
+      background: rgba($color: #007bff, $alpha: 1);
+      padding: 0.5rem 1.75rem;
+    }
+    .login:hover {
+      background: rgba($color: #007bff, $alpha: 0.95);
     }
   }
+}
+.navbar.scroll {
+  // background: rgba($color: #222, $alpha: 0.25);
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px) saturate(160%) contrast(45%) brightness(140%);
+  box-shadow: 0 0 1px 0 #007bff;
+  //opacity:0.9;
 }
