@@ -7,8 +7,7 @@
   top: 0;
   //height:11vh;
   z-index: 999;
-  //transition: all 0.7s ease-in;
-  background-color: rgba(255, 255, 255, 0);
+  // transition: all 0.7s ease-in;
 
   .navbar-container {
     width: 85vw;
@@ -19,10 +18,9 @@
     
 
     .title {
-      
       h1 {
+        font-weight: 700;
         font-size: 2rem;
-      font-weight: 700;
         color: #007bff;
       }
     }
@@ -67,7 +65,7 @@
       padding: 0.5rem 1.75rem;
     }
     .login:hover {
-      background: rgba($color: #007bff, $alpha: 0.95);
+      background: rgba($color: #007bff, $alpha: 0.9);
     }
   }
 }

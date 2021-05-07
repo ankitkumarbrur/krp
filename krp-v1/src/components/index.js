@@ -9,6 +9,9 @@ import News from "./News";
 import Feedback from "./Feedback";
 import Subscribe from "./Subscribe";
 import Scroll from "./Scroll";
+import About from "./About";
+export { About, Scroll, Subscribe, Feedback, News, Product1, Product2, Whykrp, Review, Navbar, Footer, Imgviewer };
 
-export { Scroll, Subscribe, Feedback, News, Product1, Product2, Whykrp, Review, Navbar, Footer, Imgviewer };
+
+
 
