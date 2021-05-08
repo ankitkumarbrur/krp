@@ -1,5 +1,14 @@
 import React, { useState, useEffect } from 'react'
-import { Grid, Card, TextField, CardMedia, makeStyles, Button } from '@material-ui/core';
+import InputLabel from '@material-ui/core/InputLabel';
+import InputAdornment from '@material-ui/core/InputAdornment';
+import { MdAccountCircle } from 'react-icons/md';
+import { HiOutlineMail } from 'react-icons/hi';
+
+
+import { VscFeedback } from 'react-icons/vsc';
+import Input from '@material-ui/core/Input';
+import TextField from '@material-ui/core/TextField';
+
 
 import ReactMapGL from 'react-map-gl';
 import "./styles/Feedback.scss"
@@ -37,24 +46,51 @@ export default function Feedback() {
     return (
         <form>
             <div class="feedbackcontainer">
-                <Map />
-                <div className="feedbackForm">
-                    <h2 className="cheadline">CONTACT US</h2>
-                    <div className="feedbackcard">
-                        <TextField id="standard-basic" label="Name" className="inputs" />
-                        <TextField id="standard-basic" label="Email" className="inputs" />
-                        <TextField id="standard-multiline-flexible"
-                            label="Multiline"
-                            multiline
-                            rows={2}
-                            rowsMax={4}
-                            className="inputs" />
 
-                    </div>
-                    <Button variant="contained" color="grey" style={{ width: "50%" }} className="feedbackbtn">
-                        SUBMIT
-                    </Button>
-                </div>
+                <Map className="feedbackmap" />
+                <form className="feedbackForm">
+
+
+                    <div className="formhead">Contact Us</div>
+                    <InputLabel htmlFor="outlined-basic">Name</InputLabel>
+                    <Input id="outlined-basic" label="Name" variant="outlined" className="forminputs"
+
+                        startAdornment={
+                            <InputAdornment position="start">
+                                < MdAccountCircle className="icons" />
+                            </InputAdornment>
+                        }
+                    />
+                    <InputLabel htmlFor="outlined-basic">Email</InputLabel>
+                    <Input id="outlined-basic" label="Email" variant="outlined" className="forminputs"
+
+                        startAdornment={
+                            <InputAdornment position="start">
+                                < HiOutlineMail className="icons" />
+                            </InputAdornment>
+                        }
+                    />
+                    <InputLabel htmlFor="standard-multiline-flexible">Feedback</InputLabel>
+                    <Input id="standard-multiline-flexible" label="Feedback" variant="outlined" className="forminputs"
+                        rows={2}
+                        rowsMax={4}
+                        startAdornment={
+                            <InputAdornment position="start">
+                                < VscFeedback className="icons" />
+                            </InputAdornment>
+                        }
+                    />
+
+
+
+
+
+                    <button className="feedbackbutton" >Submit</button>
+
+
+
+
+                </form>
 
 
 

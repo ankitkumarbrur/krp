@@ -8,10 +8,10 @@ const Home = () => {
       <Scroll />
       <Navbar />
       <Imgviewer />
-      <Whykrp />
+      <About />
       <Product1 />
       <Product2 />
-      <About />
+
       <News />
       <Feedback />
       <Review />

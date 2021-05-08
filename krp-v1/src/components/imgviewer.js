@@ -45,9 +45,8 @@ const Imgviewer = () => {
     return (
         <div className="home1container">
             <div className="home1text">
-                {/* <h2>KRP RACING</h2>
-                <h2>Connecting Next Gen Tech</h2> */}
-
+                WE ARE THE BEST IN THE INDUSTRY
+                <button>Shop</button >
             </div>
             <div className="imagecontainer">
                 <Images />
