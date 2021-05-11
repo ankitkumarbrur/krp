@@ -1,12 +1,11 @@
 .navbar {
   width: 100vw;
-  background: transparent;
+  background: black;
   display: grid;
   place-items: center;
   position: sticky;
   top: 0;
   z-index: 999;
-  // transition: all 0.7s ease-in;
 
   .navbar-container {
     width: 85vw;
@@ -17,9 +16,14 @@
 
     .title {
       h1 {
-        font-weight: 700;
+        font-weight: 500;
         font-size: 2rem;
-        color: #007bff;
+        color: #fff;
+      }
+      .line {
+        width: 55px;
+        height: 2.5px;
+        background-color: #fff;
       }
     }
     .pages {
@@ -28,46 +32,38 @@
       justify-content: space-between;
       ul {
         .nav-list {
+          text-transform: uppercase;
           font-weight: 400;
-          text-transform: capitalize;
           font-size: 1rem;
-          color: gray;
+          color: white;
           cursor: pointer;
           margin-right: 2.5rem;
         }
         .active {
-          color: #007bff;
+          color: lightgray;
         }
       }
     }
     .btn {
       font-size: 1rem;
-      border-radius: 40px;
-      border: 2.5px solid #007bff;
+      border: 1.5px solid white;
       cursor: pointer;
       font-weight: 500;
     }
     .sign-up {
-      background: rgba($color: #222, $alpha: 0);
-      color: #007bff;
+      background: black;
+      color: white;
       margin-right: 0.75rem;
       padding: 0.5rem 1.5rem;
     }
-    .sign-up:hover {
-      background: rgba($color: #222, $alpha: 0.05);
-    }
     .login {
-      color: white;
-      background: rgba($color: #007bff, $alpha: 1);
+      color: black;
+      background: white;
       padding: 0.5rem 1.75rem;
-    }
-    .login:hover {
-      background: rgba($color: #007bff, $alpha: 0.9);
     }
   }
 }
 .navbar.scroll {
-  // background: rgba($color: #222, $alpha: 0.25);
-  background: white;
-  box-shadow: 0 0 4px 0 #007bff;
+  background: black;
+  box-shadow: 0 0 4px 0 #fff;
 }
