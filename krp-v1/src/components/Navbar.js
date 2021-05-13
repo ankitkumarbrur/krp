@@ -11,7 +11,6 @@ const Navbar = () => {
   const { pathname } = location;
 
   const splitLocation = pathname.split("/");
-  console.log(splitLocation);
   //*active nav-links
 
   //* scroll logic

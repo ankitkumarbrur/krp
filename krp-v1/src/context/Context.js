@@ -1,14 +1,9 @@
-import React, { useState } from "react";
-import data from "./mockData/data";
+import React from "react";
 
 const appContext = React.createContext();
 
 const ContextProvider = ({ children }) => {
-  const [review, setReview] = useState(data);
-
-  return (
-    <appContext.Provider value={{ review }}>{children}</appContext.Provider>
-  );
+  return <appContext.Provider value={""}>{children}</appContext.Provider>;
 };
 
 export { ContextProvider, appContext };

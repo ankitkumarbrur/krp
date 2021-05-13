@@ -1,20 +1,19 @@
 import React, { useState, useEffect } from "react";
-import { appContext } from "../context/Context";
+import data from "../context/mockData/review-data";
 import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
 import "./styles/review.scss";
 
 const Review = () => {
-  const { review } = React.useContext(appContext);
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
     if (index < 0) {
-      setIndex(review.length - 1);
+      setIndex(data.length - 1);
     }
-    if (index > review.length - 1) {
+    if (index > data.length - 1) {
       setIndex(0);
     }
-  }, [index, review]);
+  }, [index, data]);
 
   useEffect(() => {
     let slider = setInterval(() => setIndex(index + 1), 5000);
@@ -30,7 +29,7 @@ const Review = () => {
         <h1>testimonials</h1>
       </div>
       <div className="section-center">
-        {review.map((item, reviewIndex) => {
+        {data.map((item, reviewIndex) => {
           const { id, name, job, image, text } = item;
           let position = "nextSlide";
 
@@ -39,7 +38,7 @@ const Review = () => {
           }
           if (
             reviewIndex === index - 1 ||
-            (index === 0 && reviewIndex === review.length - 1)
+            (index === 0 && reviewIndex === data.length - 1)
           ) {
             position = "lastSlide";
           }
@@ -55,7 +54,7 @@ const Review = () => {
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <g clip-path="url(#clip0)">
+                    <g clipPath="url(#clip0)">
                       <path
                         d="M88.6001 11.8911V81.3198H132.6C132.6 106.841 112.861 127.605 88.6001 127.605V150.748C124.995 150.748 154.6 119.605 154.6 81.3198V11.8911H88.6001Z"
                         fill="#ECECEC"
