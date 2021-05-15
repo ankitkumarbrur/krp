@@ -5,8 +5,8 @@ const Home = () => {
   return (
     <main>
       <Navbar />
-      <Shopping />
       <About />
+      <Shopping />
       <News />
 
       <Review />
