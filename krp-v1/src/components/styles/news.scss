@@ -1,0 +1,116 @@
+.news-section {
+  //background-image: url("../../images/news-background.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom 0px center;
+  width: 85vw;
+  margin: 2.5rem auto;
+
+  .title {
+    h1 {
+      font-size: 2.75rem;
+      color: gray;
+      text-align: center;
+      font-weight: 500;
+    }
+  }
+
+  .section-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* must have to have a height */
+    height: 62vh;
+    margin: 0 auto;
+    margin-top: 1rem;
+    position: relative;
+    overflow: hidden;
+
+    article {
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      box-shadow: 0 0 6px 0 black;
+      width: 70%;
+      margin: 2rem auto 2.5rem auto;
+      border-radius: 1rem;
+      padding: 0.5rem 0;
+
+      .img-container {
+        width: 85%;
+        margin: 1rem auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          object-fit: cover;
+          width: 35%;
+          height: clamp(10vw, 12vw, 20vw);
+        }
+        img:first-of-type {
+          margin-right: 1rem;
+          border-top-left-radius: 1rem;
+          border-bottom-left-radius: 1rem;
+        }
+        img:last-of-type {
+          margin-left: 1rem;
+          border-top-right-radius: 1rem;
+          border-bottom-right-radius: 1rem;
+        }
+      }
+
+      .info-container {
+        margin: 1rem 2.5rem 0 2.5rem;
+        h3 {
+          font-size: 1.25rem;
+          font-weight: 400;
+          color: #102a42;
+        }
+        p {
+          margin-top: 1.5rem;
+          font-size: 1rem;
+          font-weight: 400;
+          color: #102a42;
+        }
+      }
+    }
+    article {
+      position: absolute;
+      opacity: 0;
+      transition: all 0.4s linear;
+    }
+    article.activeSlide {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    article.lastSlide {
+      transform: translateX(-100%);
+    }
+    article.nextSlide {
+      transform: translateX(100%);
+    }
+  }
+
+  .nav-icons {
+    margin: 1rem auto 0 auto;
+    width: 7.5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .circle {
+      width: 12.5px;
+      height: 12.5px;
+      border-radius: 50%;
+      background: grey;
+      cursor: pointer;
+      transition: all ease-in-out 0.5s;
+    }
+    .circle:hover {
+      background: red;
+    }
+    .active {
+      background: red;
+    }
+  }
+}
