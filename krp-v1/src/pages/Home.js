@@ -1,29 +1,28 @@
 import React from "react";
-import { Shopping, About, Scroll, Subscribe, Feedback, News, Product1, Product2, Footer, Imgviewer, Navbar, WhyKRP, Review } from "../components";
-
+import {
+  Shopping,
+  News,
+  Footer,
+  Imgviewer,
+  Navbar,
+  WhyKRP,
+  Review,
+} from "../components";
 
 const Home = () => {
-      return (
-            <main>
+  return (
+    <main>
+      <Navbar />
+      <Imgviewer />
+      <Shopping />
+      <WhyKRP />
 
-                  <Navbar />
-                  <Imgviewer />
-                  <Shopping />
-                  <WhyKRP />
+      <News />
 
-
-
-                  <News />
-                  <Feedback />
-
-                  <Review />
-                  <Subscribe />
-                  <Footer />
-
-
-
-            </main>
-      );
+      <Review />
+      <Footer />
+    </main>
+  );
 };
 
 export default Home;
