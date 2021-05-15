@@ -1,6 +1,6 @@
 import React from "react";
 import "./styles/Footer.scss";
-import { Button } from '@material-ui/core';
+
 import { FiFacebook, FiTwitter, FiInstagram, FiLinkedin } from 'react-icons/fi';
 const Footer = () => (
     <div className="footer-background">
