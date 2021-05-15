@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-// import logo from "../images/logo.jpeg";
 import { Link, useLocation } from "react-router-dom";
 import "./styles/navbar.scss";
 
@@ -12,7 +11,6 @@ const Navbar = () => {
   const { pathname } = location;
 
   const splitLocation = pathname.split("/");
-  console.log(splitLocation);
   //*active nav-links
 
   //* scroll logic
@@ -40,6 +38,7 @@ const Navbar = () => {
           <Link to="/">
             <h1>KRP</h1>
           </Link>
+          <div className="line"></div>
         </div>
         <div className="pages">
           <ul>
@@ -47,7 +46,7 @@ const Navbar = () => {
               className={`nav-list ${splitLocation[1] === "" ? "active" : ""}`}
               to="/"
             >
-              Home
+              home
             </Link>
             <Link
               className={`nav-list ${
@@ -71,7 +70,7 @@ const Navbar = () => {
               }`}
               to="/contact"
             >
-              Contact us
+              contact us
             </Link>
           </ul>
           <div className="btn-container">

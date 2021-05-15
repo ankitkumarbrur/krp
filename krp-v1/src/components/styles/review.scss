@@ -1,25 +1,33 @@
 .review-section {
-  width: 85vw;
+  width: 90vw;
   margin: 2.5rem auto;
 
   .title {
-    text-align: center;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     margin-bottom: 2rem;
+    .line {
+      background: #333;
+      width: 350px;
+      height: 5px;
+    }
 
     h1 {
-      font-size: 2.75rem;
-      color: gray;
+      text-transform: uppercase;
+      font-size: 2.5rem;
+      color: #333;
       text-align: center;
       font-weight: 500;
+      margin-left: 1rem;
     }
   }
 
   .section-center {
-    display: flex;
+    width: 100%;
     /* must have to have a height */
-    height: 68vh;
+    height: 60vh;
     margin: 0 auto;
-    margin-top: 2rem;
     position: relative;
     overflow: hidden;
 
@@ -28,52 +36,56 @@
       justify-content: center;
       align-items: center;
       .info {
-        padding: 1.5rem 0;
-        h2 {
-          font-size: 1.5rem;
-          text-align: start;
-          margin: 0 5rem 5rem 0;
-        }
-        p {
-          font-size: 1rem;
-          font-weight: 600;
-          text-transform: capitalize;
-        }
+        position: relative;
+        width: 47.5%;
+        margin-left: 2rem;
+        margin-right: 7.5rem;
 
-        button {
-          font-size: 1.5rem;
-          width: 35px;
-          height: 35px;
-          line-height: 40px;
-          border: none;
-          background: #495057;
-          color: white;
-          cursor: pointer;
-          transition: all ease-in-out 0.25s;
+        .quote {
+          color: grey;
+          font-size: 8rem;
+          position: absolute;
+          top: -45px;
+          left: -40px;
+          z-index: -1;
         }
-        button:hover {
-          background: #e5383b;
-        }
-        button:first-of-type {
-          margin-right: 1rem;
+        .review {
+          margin-top: 2rem;
+          h2 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+          }
+          h3 {
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+          }
+          p {
+            font-size: 1rem;
+            font-weight: 400;
+            text-transform: capitalize;
+            margin-bottom: 1rem;
+          }
         }
       }
 
       .img-container {
+        width: 22.5%;
+        height: 65vh;
         img {
-          border-radius: 5px;
-          width: 400px;
-          height: 500px;
-          object-fit: cover;
+          width: 100%;
+          height: 100%;
+          object-fit: scale-down;
         }
       }
     }
     article {
       position: absolute;
-      // top: 0;
-      // left: 0;
-      // width: 100%;
-      // height: 100%;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       opacity: 0;
       transition: all 0.4s linear;
     }
@@ -87,30 +99,31 @@
     article.nextSlide {
       transform: translateX(100%);
     }
+  }
 
-    // buttons
+  // buttons
+  .btn {
     .prev,
     .next {
-      position: relative;
-      top: 75%;
-      background: grey;
-      color: black;
-      width: 2.25rem;
-      height: 2.25rem;
+      position: absolute;
+      color: white;
+      // width: 2.25rem;
+      // height: 2.25rem;
       display: grid;
       place-items: center;
       border-color: transparent;
-      font-size: 1.75rem;
-      border-radius: 0.25rem;
+      font-size: 2rem;
       cursor: pointer;
-      transition: all 0.3s ease-in-out;
     }
     .prev {
-      margin-right: 0.5rem;
+      background: black;
+      left: 25px;
+      top: 45%;
     }
-    .prev:hover,
-    .next:hover {
-      background: red;
+    .next {
+      background: black;
+      right: 25px;
+      top: 45%;
     }
   }
 }

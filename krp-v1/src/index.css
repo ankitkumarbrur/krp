@@ -14,8 +14,13 @@ Global Styles
 }
 body {
   font-family: "Roboto", sans-serif;
+<<<<<<< HEAD
   background: #f0f2f5;
   color: #102a42;
+=======
+  background: #fff;
+  color: #333333;
+>>>>>>> 96c12836ee4dda895c4e5dc529869ac47c3e3c46
   line-height: 1.5;
   font-size: 0.875rem;
   overflow-x: hidden;
