@@ -23,27 +23,14 @@ $grey: #808080;
 }
 body {
   font-family: "Roboto", sans-serif;
-  background: #fff;
-  color: #333333;
+  background: $primary;
+  color: $secondary;
   line-height: 1.5;
-  font-size: 0.875rem;
   overflow-x: hidden;
 }
 ul {
   list-style-type: none;
 }
-a {
-  text-decoration: none;
-}
-img {
-  width: 100%;
-  display: block;
-}
-/*
-font-family: 'Bebas Neue', cursive;
-font-family: 'Open Sans', sans-serif;
-font-family: 'Poppins', sans-serif;
-*/
 h1 {
   font-family: "Bebas Neue", cursive;
   font-size: 66px;
@@ -51,7 +38,7 @@ h1 {
 }
 h2 {
   font-family: "Bebas Neue", cursive;
-  font-size: 66px;
+  font-size: 2rem;
   word-spacing: 2px;
 }
 h3 {
@@ -84,12 +71,15 @@ img {
 }
 a {
   text-decoration: none;
+  font-size: 0.875rem;
 }
 button {
+  letter-spacing: 1px;
   font-family: "Bebas Neue", cursive;
   font-size: 1rem;
-  padding: 0.5rem 1.25rem;
+  padding: 0.5rem 1.5rem;
   cursor: pointer;
   text-transform: capitalize;
   outline: none;
+  border: none;
 }

@@ -1,0 +1,99 @@
+@import "../../index.scss";
+
+.navbar {
+  width: 100%;
+  background: $secondary;
+  display: grid;
+  place-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+
+  .navbarItems {
+    width: 85%;
+    position: relative;
+    margin: 0.75rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .title {
+      h2 {
+        color: $primary;
+      }
+      .line {
+        width: 55px;
+        height: 2.5px;
+        background-color: $primary;
+      }
+    }
+    .item-container {
+      display: flex;
+      .nav-menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .nav-links {
+          text-transform: uppercase;
+          color: $primary;
+          cursor: pointer;
+          margin-right: 1.5rem;
+          transition: all 0.5s linear;
+          padding: 0.5rem 1rem;
+        }
+        .nav-links:hover {
+          background-color: $primary;
+          color: $accent;
+        }
+      }
+      .login {
+        color: $secondary;
+        background: $primary;
+      }
+    }
+    .menu-icon {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    .navbarItems {
+      width: 100%;
+
+      .item-container {
+        .nav-menu {
+          width: 100%;
+          position: absolute;
+          top: 54.5px;
+          left: -100%;
+          transition: all 0.5s linear;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          .nav-links {
+            display: table;
+            margin: 1rem 0;
+          }
+        }
+        .nav-menu.active {
+          background: $secondary;
+          left: 0;
+          transition: all 0.5s linear;
+        }
+      }
+      .menu-icon {
+        display: block;
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        color: white;
+        cursor: pointer;
+        font-size: 1.75rem;
+      }
+    }
+  }
+}
