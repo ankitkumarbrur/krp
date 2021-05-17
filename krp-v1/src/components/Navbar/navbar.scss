@@ -1,0 +1,159 @@
+@import "../../index.scss";
+
+.navbar {
+  width: 100%;
+  background: $secondary;
+  display: grid;
+  place-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+
+  .navbarItems {
+    width: 85%;
+    position: relative;
+    margin: 0.75rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .title {
+      h2 {
+        color: $primary;
+      }
+      .line {
+        width: 55px;
+        height: 2.5px;
+        background-color: $primary;
+      }
+    }
+    .item-container {
+      display: flex;
+      .nav-menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .nav-links {
+          text-transform: uppercase;
+          color: $primary;
+          cursor: pointer;
+          margin-right: 1.5rem;
+          transition: all 0.5s linear;
+          padding: 0.5rem 1rem;
+        }
+        .nav-links:hover {
+          background-color: $primary;
+          color: $accent;
+        }
+      }
+      .login {
+        color: $secondary;
+        background: $primary;
+      }
+    }
+    .menu-icon {
+      display: none;
+    }
+  }
+}
+
+//MEdia queries
+
+@media (max-width: 768px) {
+  .navbar {
+    .navbarItems {
+      width: 100%;
+      .title {
+        position: relative;
+        left: 10px;
+        .line {
+          width: 45px;
+        }
+      }
+
+      .item-container {
+        .nav-menu {
+          width: 100%;
+          position: absolute;
+          top: 54.5px;
+          left: -100%;
+          transition: all 0.5s linear;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          .nav-links {
+            display: table;
+            margin: 1rem 0;
+          }
+        }
+        .nav-menu.active {
+          background: $secondary;
+          left: 0;
+          transition: all 0.5s linear;
+        }
+      }
+      .menu-icon {
+        display: block;
+      }
+    }
+  }
+}
+
+//MENU button
+@mixin transition-ease {
+  transition: all 0.5s ease-in-out;
+}
+.menu-icon {
+  display: block;
+  z-index: 1;
+  position: absolute;
+  right: 10px;
+  height: 20px;
+  width: 28px;
+  cursor: pointer;
+  @include transition-ease;
+
+  .menu-btn {
+    position: absolute;
+    right: 0;
+    top: 0.5rem;
+    height: 3px;
+    width: 28px;
+    background: $primary;
+    @include transition-ease;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -8px;
+      height: 3px;
+      width: 28px;
+      background: $primary;
+      @include transition-ease;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 8px;
+      height: 3px;
+      width: 28px;
+      background: $primary;
+      @include transition-ease;
+    }
+
+    &.open {
+      transform: rotate(360deg);
+      background: transparent;
+
+      &::before {
+        transform: rotate(45deg) translate(5px, 8px);
+      }
+      &::after {
+        width: 28px;
+        transform: rotate(-45deg) translate(3px, -7px);
+      }
+    }
+  }
+}

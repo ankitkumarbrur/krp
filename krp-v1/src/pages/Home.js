@@ -13,7 +13,7 @@ import {
 const Home = () => {
   return (
     <main>
-      {/* <Navbar /> */}
+      <Navbar />
 
       <Imgviewer />
 
