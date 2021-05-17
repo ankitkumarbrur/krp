@@ -3,8 +3,6 @@ import menuItems from "./MenuItems";
 
 import { Link } from "react-router-dom";
 import "../Navbar/navbar.scss";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { FaTimes } from "react-icons/fa";
 
 const NavbarV2 = () => {
   const [showLinks, setShowLinks] = useState(false);
@@ -16,8 +14,8 @@ const NavbarV2 = () => {
           <div className="line"></div>
         </div>
 
-        <div className="menu-icon" onClick={() => setShowLinks(!showLinks)}>
-          <i>{showLinks ? <FaTimes /> : <GiHamburgerMenu />}</i>
+        <div class="menu-icon" onClick={() => setShowLinks(!showLinks)}>
+          <span class={showLinks ? "menu-btn open" : "menu-btn"}></span>
         </div>
 
         <div className="item-container">

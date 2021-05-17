@@ -58,10 +58,19 @@
   }
 }
 
+//MEdia queries
+
 @media (max-width: 768px) {
   .navbar {
     .navbarItems {
       width: 100%;
+      .title {
+        position: relative;
+        left: 10px;
+        .line {
+          width: 45px;
+        }
+      }
 
       .item-container {
         .nav-menu {
@@ -87,12 +96,63 @@
       }
       .menu-icon {
         display: block;
-        position: absolute;
-        right: 5px;
-        top: 5px;
-        color: white;
-        cursor: pointer;
-        font-size: 1.75rem;
+      }
+    }
+  }
+}
+
+//MENU button
+@mixin transition-ease {
+  transition: all 0.5s ease-in-out;
+}
+.menu-icon {
+  display: block;
+  z-index: 1;
+  position: absolute;
+  right: 10px;
+  height: 20px;
+  width: 28px;
+  cursor: pointer;
+  @include transition-ease;
+
+  .menu-btn {
+    position: absolute;
+    right: 0;
+    top: 0.5rem;
+    height: 3px;
+    width: 28px;
+    background: $primary;
+    @include transition-ease;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -8px;
+      height: 3px;
+      width: 28px;
+      background: $primary;
+      @include transition-ease;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 8px;
+      height: 3px;
+      width: 28px;
+      background: $primary;
+      @include transition-ease;
+    }
+
+    &.open {
+      transform: rotate(360deg);
+      background: transparent;
+
+      &::before {
+        transform: rotate(45deg) translate(5px, 8px);
+      }
+      &::after {
+        width: 28px;
+        transform: rotate(-45deg) translate(3px, -7px);
       }
     }
   }
