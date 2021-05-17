@@ -1,4 +1,5 @@
 import React from "react";
+import { Navbar } from './index';
 import "./styles/imgviewer.scss";
 const data = [
     {
@@ -71,6 +72,7 @@ function Images() {
 const Imgviewer = () => {
     return (
         <div className="home1container">
+            <Navbar />
             <div id="item0" ></div>
             <div className="home1text">
                 <h1>ONE Stop Shop For<br />

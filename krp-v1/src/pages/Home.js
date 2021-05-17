@@ -7,21 +7,26 @@ import {
   Navbar,
   WhyKRP,
   Review,
+  Info
 } from "../components";
 
 const Home = () => {
   return (
     <main>
-      <Navbar />
+      {/* <Navbar /> */}
 
       <Imgviewer />
+
+
       <WhyKRP />
-      <Shopping />
 
 
-      <News />
 
-      <Review />
+      <Info />
+      {/*<Shopping />/*}
+      {/* <News />
+
+      <Review /> */}
       <Footer />
     </main>
   );

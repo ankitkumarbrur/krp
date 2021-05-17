@@ -1,12 +1,13 @@
 .navbar {
   width: 100vw;
-  background: black;
+  //background: black;
   display: grid;
   place-items: center;
-  position: sticky;
+  position: absolute;
   top: 0;
   //height:11vh;
   z-index: 999;
+  
 
   .navbar-container {
     width: 85vw;
@@ -67,6 +68,7 @@
   }
 }
 .navbar.scroll {
+  position: sticky;
   background: black;
-  box-shadow: 0 0 4px 0 #fff;
+  //box-shadow: 0 0 4px 0 #fff;
 }
