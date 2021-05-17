@@ -2,15 +2,14 @@
 
 .navbar {
   width: 100%;
-  background: $secondary;
   display: grid;
   place-items: center;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 999;
 
   .navbarItems {
-    width: 85%;
+    width: 90%;
     position: relative;
     margin: 0.75rem auto;
     display: flex;
@@ -60,46 +59,46 @@
 
 //MEdia queries
 
-@media (max-width: 768px) {
-  .navbar {
-    .navbarItems {
-      width: 100%;
-      .title {
-        position: relative;
-        left: 10px;
-        .line {
-          width: 45px;
-        }
-      }
+// @media (max-width: 768px) {
+//   .navbar {
+//     .navbarItems {
+//       width: 100%;
+//       .title {
+//         position: relative;
+//         left: 10px;
+//         .line {
+//           width: 45px;
+//         }
+//       }
 
-      .item-container {
-        .nav-menu {
-          width: 100%;
-          position: absolute;
-          top: 54.5px;
-          left: -100%;
-          transition: all 0.5s linear;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
+//       .item-container {
+//         .nav-menu {
+//           width: 100%;
+//           position: absolute;
+//           top: 54.5px;
+//           left: -100%;
+//           transition: all 0.5s linear;
+//           flex-direction: column;
+//           justify-content: center;
+//           align-items: center;
 
-          .nav-links {
-            display: table;
-            margin: 1rem 0;
-          }
-        }
-        .nav-menu.active {
-          background: $secondary;
-          left: 0;
-          transition: all 0.5s linear;
-        }
-      }
-      .menu-icon {
-        display: block;
-      }
-    }
-  }
-}
+//           .nav-links {
+//             display: table;
+//             margin: 1rem 0;
+//           }
+//         }
+//         .nav-menu.active {
+//           background: $secondary;
+//           left: 0;
+//           transition: all 0.5s linear;
+//         }
+//       }
+//       .menu-icon {
+//         display: block;
+//       }
+//     }
+//   }
+// }
 
 //MENU button
 @mixin transition-ease {

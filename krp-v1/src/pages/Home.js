@@ -7,20 +7,20 @@ import {
   Navbar,
   WhyKRP,
   Review,
-  Info
+  Info,
 } from "../components";
+
+import "./styles/home.scss";
 
 const Home = () => {
   return (
     <main>
-      <Navbar />
-
-      <Imgviewer />
-
+      <header className="main-header">
+        <Navbar />
+        <Imgviewer />
+      </header>
 
       <WhyKRP />
-
-
 
       <Info />
       {/*<Shopping />/*}
