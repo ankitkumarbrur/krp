@@ -7,9 +7,11 @@ const Home = () => {
             <main>
 
                   <Navbar />
+
                   <Imgviewer />
-                  <Shopping />
                   <WhyKRP />
+                  <Shopping />
+
 
 
 

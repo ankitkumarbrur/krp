@@ -7,33 +7,34 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+    margin-bottom: 10vh;
     .heading {
       transform: rotate(180deg);
       writing-mode: vertical-rl;
       .line {
+        position: absolute;
+        top: 0;
         transform: rotate(90deg);
-        width: 60px;
-        height: 3px;
+        width: 7rem;
+        height: 6px;
         background: black;
-        margin-top: 2rem;
+        margin-top: 3.6rem;
         margin-right: -25px;
       }
-      h2 {
-        font-size: 2rem;
-        text-transform: uppercase;
-        color: black;
-        font-weight: 400;
-      }
+      
     }
     .text {
-      margin-top: 1.5rem;
-      p {
-        width: 85%;
-        font-size: 0.9rem;
-        color: #676767;
-        font-weight: 200;
-        margin-bottom: 1.25rem;
+        
+        width: 80%;
+      p{
+        bottom: 0;
+        position: absolute;
+        margin-left:auto;
+        margin-right:auto;
+        
       }
+      
     }
 
     // button {

@@ -1,204 +1,135 @@
 @import 'global.scss';
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-    
-}
-
 
 .home1container{
-  // background: url("./../../images/radical.svg");
+  
    background-size:auto;
     height: 93vh;
     width: 100%;
     padding: 5vh 0;
     display:grid;
-    grid-template-columns: 2fr 3fr;
+    margin-bottom: 46vh;
+    background-image: url("./../../images/bg_bike.png");
+    position: relative;
+    #item0{
+        
+        position: absolute; 
+        width: 100%; 
+        height: 100%; 
+        top: 0px; 
+        left: 0px; 
+        opacity: 0; 
+        background: black;
+    }
+
+ .home1text{
+   
+    //width: 85%;
+    padding:0 5vw;
+    position:relative;
+    color:white;
+    div{
+        color:$accent;
+        display: inline;
+    }
+    button{
+        margin-top: 2rem;
+        color:$accent;
+        padding: 0.3rem 2rem;
+        font-size: 1.5rem;
+    }
+
+    
+    }
+.imagecontainer{
+    display:grid;
+    height:85vh;
+    grid-template-columns: repeat(80,1fr);
+    grid-template-rows: repeat(45,1fr);
+    opacity:1;
+    div{
+    //box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    }   
+   
+    }
+    .idiv1,.idiv2,.idiv3,.idiv4,.idiv5,.idiv6,.idiv7,.idiv8{
+        overflow: hidden;
+    img{
+         transition: transform .5s, filter 1.5s ease-in-out;
+        filter: grayscale(100%);
+        &:hover{
+        z-index:20;
+        filter: grayscale(0);
+        transform: scale(1.1);
+        
+    }
+    }
+    }
+.idiv1{
+    grid-row:7/19;
+    grid-column: 15/24;
+    background-color: orange;
+    width: 98%;
+    
+    
+     
+}
+.idiv3{
+    grid-row:20/38;
+    grid-column: 11/24;
+    width: 102%;
+    background-color: lightseagreen;
+    
+    
+}
+.idiv2{
+    grid-row:7/28;
+    grid-column: 25/38;
+    background-color: peachpuff;
     
     
    
 }
-.idiv1{
-    grid-row:5/23;
-    grid-column: 1/8;
-    background-color: orange;
-    border-radius: 12px;
-    
-    
-     &:hover{
-        z-index:20;
-        animation: myanimation1 200ms forwards ease-out;
-        @keyframes myanimation1 {
-
-            from {
-                height:100%;
-                width:100%;
-            }
-            to {
-                height:105%;
-                width:105%;
-                transform: translate(2px,-10px);
-            }
-        }
-    }
-}
-.idiv3{
-    grid-row:1/16;
-    grid-column: 9/21;
-    background-color: lightseagreen;
-    border-radius: 12px;
-     &:hover{
-        z-index:20;
-        animation: myanimation3 250ms forwards ease-out;
-        @keyframes myanimation3 {
-
-            from {
-                height:100%;
-                width:100%;
-            }
-            to {
-                height:102%;
-                width:105%;
-                transform: translate(-10px,-10px);
-            }
-        }
-    }
-}
-.idiv2{
-    grid-row:7/16;
-    grid-column: 22/26;
-    background-color: peachpuff;
-    border-radius: 12px;
-    
-    &:hover{
-        z-index:20;
-        animation: myanimation2 300ms forwards ease-out;
-        @keyframes myanimation2 {
-
-            from {
-                height:100%;
-                width:100%;
-            }
-            to {
-                height:110%;
-                width:115%;
-                transform: translate(-10px,-20px);
-            }
-        }
-    }
-}
 .idiv4{
-    grid-row:17/27;
-    grid-column: 9/16;
+    grid-row:29/43;
+    grid-column: 25/42;
     background-color: pink;
-    border-radius: 12px;
-     &:hover{
-        z-index:20;
-        animation: myanimation4 300ms forwards ease-out;
-        @keyframes myanimation4 {
-
-            from {
-                height:100%;
-                width:100%;
-            }
-            to {
-                height:110%;
-                width:110%;
-                transform: translate(-8px,-20px);
-            }
-        }
-    }
+    
+     
 }
 .idiv5{
-    grid-row:17/30;
-    grid-column: 17/26;
+    grid-row:4/28;
+    grid-column: 39/57;
     background-color: skyblue;
-    border-radius: 12px;
     
-     &:hover{
-        z-index:20;
-        animation: myanimation5 300ms forwards ease;
-        @keyframes myanimation5 {
-
-            from {
-                height:100%;
-                width:100%;
-            }
-            to {
-                height:108%;
-                width:108%;
-                transform: translate(-10px,-15px);
-            }
-        }
-    }
+    
+    
 }
 .idiv6{
-    grid-row:17/24;
-    grid-column: 27/30;
-    border-radius: 12px;
+    grid-row:29/48;
+    grid-column: 43/57;
+    height:105%;
     
     background-color: rgba(128, 0, 128, 0.472);
-     &:hover{
-        z-index:20;
-        animation: myanimation6 300ms forwards ease-out;
-        @keyframes myanimation6 {
-
-            from {
-                height:100%;
-                width:100%;
-            }
-            to {
-                height:130%;
-                width:130%;
-                transform: translate(-10px,-30px);
-            }
-        }
-    }
-}
-.home1text{
-    font-family:$compheadingfont ;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 6rem;
-    line-height: 5.5rem;
-    //width: 85%;
-    padding:0 5vw;
-    position:relative;
-
-    button {
-        position: absolute;
-        left:30%;
-        right:50%;
-        bottom:10%;
-        letter-spacing: 0.1rem;
-        font-size: 1.5rem;
-        font-weight: 500;
-        text-align: center;
-        border: none;
-        border-radius: 5px;
-        background: rgba($color: #007bff, $alpha: 1);
-        color: white;
-        padding: 0.75rem 1rem;
-        cursor: pointer;
-        transition: all 0.4s ease-in-out;
-        
-    }
-    button:hover {
-        background: rgba($color: white, $alpha: 0.8);
-        transform: scale(0.95);
-        color:#007bff;
-        border:1px solid #007bff;
-    }
-}
-.imagecontainer{
-    display:grid;
-    grid-template-columns: repeat(30,1fr);
-    grid-template-rows: repeat(30,1fr);
     
 }
-.imagecontainer > div{
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+.idiv7{
+    grid-row:7/23;
+    grid-column: 58/72;
+    
+    
+    background-color: rgba(128, 0, 128, 0.472);
+     
 }
+.idiv8{
+    grid-row: 24/39;
+    grid-column: 58/70;
+    
+    
+    background-color: rgba(128, 0, 128, 0.472);
+     
+}
+ 
+}
+
 
 

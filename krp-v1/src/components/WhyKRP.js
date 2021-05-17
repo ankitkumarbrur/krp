@@ -6,21 +6,12 @@ const About = () => {
     <section className="about-section">
       <article className="about-info">
         <div className="heading">
-          <h2>why krp?</h2>
+          <h1>why krp?</h1>
           <div className="line"></div>
         </div>
         <div className="text">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
-            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
-            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua.
+            Lorem ipsum dolor sit amet, coAnsectetur adipiscing elit. Cras efficitur pharetra ante sit amet commodo. Aliquam et Praesent sit amet ultrices tortorLorem ipsum dolor sit amet, consectetur adipiscing elit. Cras efficitur pharetra ante sit amet commodo. Aliquam et Praesent sit amet ultrices tortor
           </p>
         </div>
       </article>
