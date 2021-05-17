@@ -9,15 +9,7 @@ Global Styles
 //Bebas Neue,Open sans, Poppins,
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@300;400&family=Poppins:wght@200;300;400&display=swap');
 
-
-$primary: white;
-$secondary: black;
-$accent:#E93900 ;
-$grey: #808080;
-
-
-
-
+@import "./config";
 
 *,
 ::after,
@@ -29,9 +21,9 @@ $grey: #808080;
 body {
   font-family: "Roboto", sans-serif;
   background: #fff;
-  color: #333333;
-  line-height: 1.5;
-  font-size: 0.875rem;
+  // color: #333333;
+  // line-height: 1.5;
+  // font-size: 0.875rem;
   overflow-x: hidden;
 }
 ul {
@@ -51,16 +43,15 @@ font-family: 'Poppins', sans-serif;
 */
 h1{
   font-family: 'Bebas Neue', cursive;
-  font-size:66px;
+  font-size: 66px;
   word-spacing: 3px;
   
 }
 h2{
 
   font-family: 'Bebas Neue', cursive;
-  font-size:66px;
-  word-spacing: 2px;
-  
+  font-size: 4.5rem;
+  letter-spacing: 3px;
 }
 h3{
 
@@ -75,9 +66,9 @@ h4{
 
 h1,h2,h3,h4 {
 
-  letter-spacing: 0.1rem;
+  // letter-spacing: 0.1rem;
+  display: inline;
   text-transform: capitalize;
-  line-height: 1.25;
 }
 p{
 
@@ -103,10 +94,8 @@ button {
   padding:0.5rem 1.25rem ;
   cursor: pointer;
   text-transform: capitalize;
-  outline: none;      
+  outline: none;    
+  box-shadow: none !important; 
+  color: inherit;
+	border: none;
 }
-
-
-
-
-
