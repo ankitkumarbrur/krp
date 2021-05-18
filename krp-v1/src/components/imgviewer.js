@@ -42,20 +42,18 @@ const data = [
 
 //const originalTitle = document.getElementById('item1');
 
-/* window.addEventListener("scroll", () => {
-    const percentLabel = document.getElementsByID('item0');
-    let scrollTop = window.scrollY;
-    let docHeight = document.body.offsetHeight;
-    let winHeight = window.innerHeight;
-    let scrollPercent = scrollTop / (docHeight - winHeight);
-    let scrollPercentRounded = Math.round(scrollPercent * 100);
-    percentLabel.style.opacity = '1';
-    //document.title = `(${scrollPercentRounded}%) ${originalTitle}`;
+
+
+window.addEventListener('scroll', function (e) {
+    // http://stackoverflow.com/a/28633515/962603
+    var scroll = window.pageYOffset || document.documentElement.scrollTop ||
+        document.body.scrollTop || 0;
+
+    document.getElementById('item1').style.opacity = 1 - Math.max(0, Math.min(1, -scroll / 150 + 1));
+    document.getElementById('item0').style.opacity = 1 - Math.max(0, Math.min(1, -scroll / 150 + 1));
 });
- */
-
-
 function Images() {
+
     let toDisplay = []
     for (let i = 1; i <= 8; i++) {
         let item = data[i - 1];
@@ -70,6 +68,7 @@ function Images() {
     return toDisplay;
 }
 const Imgviewer = () => {
+
     return (
         <div className="home1container">
 

@@ -2,40 +2,60 @@
 $headingcolor:#222222;
 $hover:$primary;
 $nothover:grey;
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    
-}
+
 .footerbottom{
     margin-top:0;
-    margin-left:7%;   
-    margin-bottom:3vh;
+    
+    padding-left:3%; 
+    margin-left: auto;  
+    margin-right: auto;
+    
+    width: 93.2%;
+    text-align: left;
+    background-color: $secondary;
+    position: absolute;
+    bottom:0;
+    left: 0%;
+    right: 0%;
+    border-top:1px solid $primary;
+    padding-top:3.1vh;
+    padding-bottom:3.1vh;
+    font-size:1rem;
+    font-weight: bold;
 }
 
+
 .footer-background{
+    position: relative;
+    background-color: $secondary;
+    height:66vh;
+    color:$primary;
+    display: grid;
     
-    //background-color: white;
+    
 }
 .footercontainer{
     //padding:3% 4% 5% 4%;
     
+    
     background-size: 100% 100%;
     font-weight:bold ;
-    height:65vh;
-    width: 85%;
+    
+    width: 89%;
     margin:5vh auto; 
-    margin-bottom: 1vh;
-    border-bottom:1px solid black;
+    //margin-bottom: 0;
+  
+    
 }
 .footer{
     display: grid;
     grid-template-columns: 1fr 1fr; 
 }
 .footerright{
-    padding-left:30%;
-    padding-top: 12vh;
+    height: inherit;
+    padding-left: 14%;
+    padding-top: 6vh;
+    //width: 65%;
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
     
@@ -46,25 +66,34 @@ $nothover:grey;
     position: relative;
 }
 .footerKRP{
-    //font-family: $compheadingfont;
+    
+    
+    
+
     font-size:2.5rem;
     font-weight:400;
-    border-bottom:2px solid black ;
+    
 }
+.krp_line{
+    
+        display: inline-block;
+        background-color: $accent;
+        width:30vw;
+        height:3px;
+        margin-bottom:0.6rem;
+        margin-left:2rem;
+    }
 .footerinfo{
-    padding-top:5vh;
+    padding-top: 2vh;
+    p{
+        color:white;
+        font-weight: 400;
+        opacity: 0.99;
+        line-height: normal;
+    }
+    
     width:85%;
-    font-family: Fira Sans;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 11px;
-    line-height: 18px;
-
-
-
-    color: rgba(0, 0, 0, 0.8);
-
-    opacity: 0.7;
+    
 }
 .footerfollow{
     padding-top:10vh;
@@ -78,73 +107,65 @@ $nothover:grey;
     text-transform: uppercase;
     
 }
+.icon_bg{
+      
+        text-align: center;
+          
+        padding:0.4rem;
+        //Fix this
+        padding-bottom:0.1rem;
+        border-radius: 50%;
+        &:hover{
+        //transform:translateY(-10px);
+        
+        background-color: $accent;
+        
+        
+        color:white;
+        border-radius: 50%;
+
+    }
+    
+    }
 .footer_icons{
     cursor: pointer;
     transition: transform 0.2s;
     color:$primary;
     font-size:25px;
-    &:hover{
-        //transform:translateY(-10px);
-        color:white;
-        background-color: $primary;
-        font-size:30px;
-        //padding:3vh;
-        border-radius: 50%;
-
-    }
+    
+    
 }
 .social_icon{
-    
+    position: absolute;
+    bottom: -20%;
     display: grid;
     margin:0;
     grid-template-columns: repeat(4,1fr);
     width:15vw;
+    padding-left:2%;
     grid-column-gap:5px;
     justify-self: start;
+    grid-gap: 2.3rem;
     
 }
 
+.row{
 
-
-.col{
-
-
-    font-family: Mulish;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 25px;
-    /* or 211% */
-
-
-    color: rgba(0, 0, 0, 0.65);
-
-    mix-blend-mode: normal;
-    
-    &:hover{
+    h4{
+        line-height: 4rem;
+        font-size:18px;
         cursor: pointer;
-        color: $hover; 
-       
-    }
-}
-.col1{
-    font-family: Mulish;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 60px;
-    /* identical to box height, or 300% */
-    
-
-
-    color: rgba(0, 0, 0, 0.75);
-
-    mix-blend-mode: normal;
-    &:hover{
-        cursor: pointer;
-        font-size:22px ;
-       
         
     }
-
+    h5{
+        line-height: 2rem;
+        opacity: 0.8;
+        font-size: smaller;
+        cursor: pointer;
+        &:hover{
+            color:$accent;
+        }
+    }
 }
+
+

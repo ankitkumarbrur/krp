@@ -5,63 +5,83 @@ import { FiFacebook, FiTwitter, FiInstagram, FiLinkedin } from 'react-icons/fi';
 const Footer = () => (
     <div className="footer-background">
         <div className="footercontainer">
-        <div className="footer">
+            <div className="footer">
 
-            <div className="footerleft">
-                <div className="footerKRP">KRP</div>
-                <div className="footerinfo">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                     
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam omnis ipsa rem, numquam nihil ipsam voluptatum, dolore dolores ratione distinctio quo laboriosam tenetur. Facilis magni placeat nostrum totam voluptate! Fuga totam labore harum quisquam explicabo provident minus dolorum repellat quia autem, omnis veniam possimus beatae quae facilis ducimus molestiae sunt.
+                <div className="footerleft">
+                    <div className="footerKRP">
+                        KRP
+                        <div className="krp_line"> </div>
+
+
+                    </div>
+
+                    <div className="footerinfo">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras efficitur pharetra ante sit amet commodo. Aliquam et Praesent sit amet ultrices tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.                    </p>
+
+                    </div>
+                    {/* <div className="footerfollow"></div> */}
+                    <div className="social_icon">
+                        <div className="icon_bg">
+                            <FiFacebook className="footer_icons" />
+                        </div>
+                        <div className="icon_bg">
+                            <FiInstagram className="footer_icons" />
+                        </div>
+                        <div className="icon_bg">
+                            <FiTwitter className="footer_icons" />
+                        </div>
+                        <div className="icon_bg">
+                            <FiLinkedin className="footer_icons" />
+                        </div>
+
+
+
+
+
+
+                    </div>
+
+
                 </div>
-                <div className="footerfollow">FOLLOW US</div>
-                <div className="social_icon">
-                        <FiFacebook className="footer_icons"/>
-                        <FiInstagram className="footer_icons"/>
-                        <FiTwitter className="footer_icons"/>
-                        <FiLinkedin className="footer_icons"/>
 
+                <div className="footerright">
+                    <div className="row">
+                        <h4>Home</h4>
+                        <h5>Contact Us</h5>
+                        <h5>About Us</h5>
+                        <h5>Shop</h5>
+                        <h5>Learn</h5>
+                        <h5>Query</h5>
+                    </div>
+                    <div className="row">
+                        <h4>Bags</h4>
+                        <h5>Tires</h5>
+                        <h5>Jackets</h5>
+                        <h5>Pants</h5>
+
+                    </div>
+                    <div className="row">
+                        <h4>Services</h4>
+                        <h5>Modify Bike</h5>
+                        <h5>Workshops</h5>
+                        <h5>Buy parts</h5>
+                        <h5>Buy bike</h5>
+                        <h5>Donor</h5>
+                    </div>
 
                 </div>
 
 
             </div>
-
-            <div className="footerright">
-                <div className="row">
-                    <div className="col1">Home</div>
-                    <div className="col">Contact Us</div>
-                    <div className="col">About Us</div>
-                    <div className="col">Shop</div>
-                    <div className="col">Learn</div>
-                    <div className="col">Query</div>
-                </div>
-                <div className="row">
-                    <div className="col1">Learn</div>
-                    <div className="col">Query</div>
-                    <div className="col">Visit Us</div>
-                </div>
-                <div className="row">
-                    <div className="col1">Lorem</div>
-                    <div className="col">Ipsum dolor.</div>
-                    <div className="col">Donor</div>
-                    <div className="col">Lorem</div>
-                    <div className="col">Ipsum dolor.</div>
-                    <div className="col">Donor</div>
-                </div>
-
-            </div>
-
-
-        </div>
-            
-    </div>
-        <div className="footerbottom">
-            ©KRP2021
+            <div className="footerbottom">
+                ©2021KRP
          </div>
-    </div>    
-    
-    
+        </div>
+
+    </div>
+
+
 );
 
 export default Footer;
