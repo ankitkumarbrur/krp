@@ -23,10 +23,10 @@ const Home = () => {
       <WhyKRP />
 
       <Info />
-      {/*<Shopping />/*}
-      {/* <News />
+      <Shopping />
+      <News />
 
-      <Review /> */}
+      <Review />
       <Footer />
     </main>
   );

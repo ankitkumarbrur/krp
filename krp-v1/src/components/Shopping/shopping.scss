@@ -1,0 +1,94 @@
+@import "../../config.scss";
+
+.shopping-section {
+  width: 100vw;
+  margin: 2.5rem auto;
+  position: relative;
+
+  .block {
+    position: absolute;
+    width: 66px;
+    height: 61px;
+    top: -5px;
+    background: $accent;
+  }
+
+  .info-container {
+    float: right;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+
+    .info {
+      align-self: flex-start;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      h2 {
+        margin-bottom: 2rem;
+      }
+      h3 {
+        margin-bottom: 1.75rem;
+      }
+      p {
+        margin-bottom: 1.5rem;
+      }
+      .btn {
+        border: 2px solid $accent;
+        background: none;
+        width: 120px;
+        a {
+          color: $accent;
+        }
+      }
+    }
+    .info-img {
+      width: 550px;
+    }
+  }
+
+  .item-container {
+    width: 85%;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 275px 275px;
+
+    .item {
+      position: relative;
+      overflow: hidden;
+      background: $secondary;
+      img {
+        opacity: 0.5;
+        @include transition-ease;
+      }
+      img:hover {
+        opacity: 1;
+        transform: scale(1.1);
+      }
+
+      h3 {
+        position: absolute;
+        right: 15px;
+        bottom: 25px;
+        color: $primary;
+        overflow: hidden;
+      }
+    }
+
+    .item:nth-child(1) {
+      grid-column: 1 / 3;
+    }
+    .item:nth-child(6) {
+      grid-column: 3 / 5;
+    }
+
+    .item:nth-child(7) {
+      grid-column: 5 / 6;
+      grid-row: 1 / 3;
+    }
+  }
+}
