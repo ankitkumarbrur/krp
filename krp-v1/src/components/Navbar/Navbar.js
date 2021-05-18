@@ -1,44 +1,67 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import menuItems from "./MenuItems";
 
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "../Navbar/navbar.scss";
 
-const NavbarV2 = () => {
+const Navbar = () => {
   const [showLinks, setShowLinks] = useState(false);
+  const [scroll, setScroll] = useState(false);
+
+  //*active class
+  const { pathname } = useLocation();
+  const splitLocation = pathname.split("/");
+
+  //*scroll effect
+  const handleScroll = () => {
+    const offSet = window.scrollY;
+    if (offSet > 80) {
+      setScroll(true);
+    } else {
+      setScroll(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [scroll]);
+
   return (
-    <section className="navbar">
-      <nav className="navbarItems">
+    <section className={scroll ? "navbar scroll" : "navbar"}>
+      <nav className="nav">
+        <div class="menu-icon" onClick={() => setShowLinks(!showLinks)}>
+          <span class={showLinks ? "menu-btn open" : "menu-btn"}></span>
+        </div>
+
         <div className="title">
           <h2>KRP</h2>
           <div className="line"></div>
         </div>
 
-        <div class="menu-icon" onClick={() => setShowLinks(!showLinks)}>
-          <span class={showLinks ? "menu-btn open" : "menu-btn"}></span>
-        </div>
-
-        <div className="item-container">
-          <ul className={showLinks ? "nav-menu active" : "nav-menu"}>
+        <ul className={showLinks ? "menu-nav active" : "menu-nav"}>
+          <li>
             {menuItems.map((item, index) => {
               const { title, url, className } = item;
               return (
-                <li key={index}>
-                  <Link className={className} to={url}>
-                    {title}
-                  </Link>
-                </li>
+                <Link
+                  key={index}
+                  className={`${className} ${
+                    splitLocation[1] === url ? "active" : ""
+                  }`}
+                  to={`/${url}`}
+                >
+                  {title}
+                </Link>
               );
             })}
-          </ul>
-
-          {/* <div>
-            <button className="btn login">sign up / login</button>
-          </div> */}
-        </div>
+          </li>
+        </ul>
       </nav>
     </section>
   );
 };
 
-export default NavbarV2;
+export default Navbar;

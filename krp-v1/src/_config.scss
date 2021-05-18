@@ -1,4 +1,8 @@
 $primary: white;
-$secondary: black;
-$accent:#E93900 ;
+$secondary: #222;
+$accent: #e63946;
 $grey: #808080;
+
+@mixin transition-ease {
+  transition: all 0.5s ease-in-out;
+}
