@@ -1,17 +1,17 @@
-@import "../../index.scss";
+@import "../../config.scss";
+@import "./menu-button.scss";
 
 .navbar {
   width: 100%;
-  display: grid;
-  place-items: center;
   position: fixed;
   top: 0;
   z-index: 999;
-
-  .navbarItems {
+  padding: 0.5rem 0 0.75rem 0;
+  @include transition-ease;
+  .nav {
     width: 90%;
+    margin: 0 auto;
     position: relative;
-    margin: 0.75rem auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -21,137 +21,102 @@
         color: $primary;
       }
       .line {
-        width: 55px;
+        width: 45px;
         height: 2.5px;
         background-color: $primary;
       }
     }
-    .item-container {
-      display: flex;
-      .nav-menu {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
 
-        .nav-links {
-          text-transform: uppercase;
-          color: $primary;
-          cursor: pointer;
-          margin-right: 1.5rem;
-          transition: all 0.5s linear;
-          padding: 0.5rem 1rem;
+    .menu-icon {
+      display: none;
+    }
+
+    .menu-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .nav-links {
+        text-transform: uppercase;
+        color: $primary;
+        margin-right: 2.5rem;
+        @include transition-ease;
+        &:hover {
+          color: $accent;
         }
-        .nav-links:hover {
-          background-color: $primary;
+        &.active {
           color: $accent;
         }
       }
-      .login {
-        color: $secondary;
-        background: $primary;
-      }
     }
-    .menu-icon {
-      display: none;
+  }
+}
+.scroll {
+  background: rgba($color: $secondary, $alpha: 0.85);
+}
+
+//Media queries Tablet
+
+@media (max-width: 768px) {
+  .navbar {
+    .nav {
+      width: 95%;
+      .menu-nav {
+        .nav-links {
+          margin-right: 1rem;
+
+          &:last-child {
+            margin-right: 0rem;
+          }
+        }
+      }
     }
   }
 }
 
-//MEdia queries
+//Media queries Phone
 
-// @media (max-width: 768px) {
-//   .navbar {
-//     .navbarItems {
-//       width: 100%;
-//       .title {
-//         position: relative;
-//         left: 10px;
-//         .line {
-//           width: 45px;
-//         }
-//       }
+@media (max-width: 480px) {
+  .navbar {
+    .nav {
+      width: 100%;
 
-//       .item-container {
-//         .nav-menu {
-//           width: 100%;
-//           position: absolute;
-//           top: 54.5px;
-//           left: -100%;
-//           transition: all 0.5s linear;
-//           flex-direction: column;
-//           justify-content: center;
-//           align-items: center;
-
-//           .nav-links {
-//             display: table;
-//             margin: 1rem 0;
-//           }
-//         }
-//         .nav-menu.active {
-//           background: $secondary;
-//           left: 0;
-//           transition: all 0.5s linear;
-//         }
-//       }
-//       .menu-icon {
-//         display: block;
-//       }
-//     }
-//   }
-// }
-
-//MENU button
-@mixin transition-ease {
-  transition: all 0.5s ease-in-out;
-}
-.menu-icon {
-  display: block;
-  z-index: 1;
-  position: absolute;
-  right: 10px;
-  height: 20px;
-  width: 28px;
-  cursor: pointer;
-  @include transition-ease;
-
-  .menu-btn {
-    position: absolute;
-    right: 0;
-    top: 0.5rem;
-    height: 3px;
-    width: 28px;
-    background: $primary;
-    @include transition-ease;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: -8px;
-      height: 3px;
-      width: 28px;
-      background: $primary;
-      @include transition-ease;
-    }
-    &::after {
-      content: "";
-      position: absolute;
-      top: 8px;
-      height: 3px;
-      width: 28px;
-      background: $primary;
-      @include transition-ease;
-    }
-
-    &.open {
-      transform: rotate(360deg);
-      background: transparent;
-
-      &::before {
-        transform: rotate(45deg) translate(5px, 8px);
+      .title {
+        position: relative;
+        left: 10px;
+        z-index: 1;
       }
-      &::after {
-        width: 28px;
-        transform: rotate(-45deg) translate(3px, -7px);
+      .menu-icon {
+        display: block;
+      }
+
+      .menu-nav {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        opacity: 0.9;
+        background: $secondary;
+        transform: translateY(-100%);
+        @include transition-ease;
+
+        &.active {
+          transform: translateY(0);
+        }
+
+        li {
+          margin-top: 3rem;
+
+          .nav-links {
+            display: flex;
+            flex-flow: column wrap;
+            margin: 3rem 0 0 0;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 300;
+          }
+        }
       }
     }
   }

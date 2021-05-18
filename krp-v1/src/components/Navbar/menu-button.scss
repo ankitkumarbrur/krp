@@ -1,0 +1,54 @@
+@import "../../config.scss";
+
+.menu-icon {
+  display: block;
+  z-index: 1;
+  position: absolute;
+  right: 10px;
+  height: 20px;
+  width: 28px;
+  cursor: pointer;
+  @include transition-ease;
+
+  .menu-btn {
+    position: absolute;
+    right: 0;
+    top: 0.5rem;
+    height: 3px;
+    width: 28px;
+    background: $primary;
+    @include transition-ease;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -8px;
+      height: 3px;
+      width: 28px;
+      background: $primary;
+      @include transition-ease;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 8px;
+      height: 3px;
+      width: 28px;
+      background: $primary;
+      @include transition-ease;
+    }
+
+    &.open {
+      transform: rotate(360deg);
+      background: transparent;
+
+      &::before {
+        transform: rotate(45deg) translate(5px, 8px);
+      }
+      &::after {
+        width: 28px;
+        transform: rotate(-45deg) translate(3px, -7px);
+      }
+    }
+  }
+}
