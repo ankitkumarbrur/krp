@@ -1,0 +1,38 @@
+@import "./config";
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 2.75rem;
+    word-spacing: 3px;
+    font-weight: 500;
+  }
+  h2 {
+    font-size: 2.5rem;
+    word-spacing: 2px;
+    font-weight: 400;
+  }
+  h3 {
+    font-size: 1.8rem;
+    font-weight: 300;
+  }
+  h4 {
+    font-size: 18px;
+  }
+  h5 {
+    font-size: smaller;
+  }
+
+  p {
+    font-size: 0.85rem;
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  button {
+    letter-spacing: 1px;
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+  }
+}

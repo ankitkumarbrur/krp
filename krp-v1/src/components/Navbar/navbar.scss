@@ -1,5 +1,6 @@
 @import "../../config.scss";
 @import "./menu-button.scss";
+@import "../../responsive.scss";
 
 .navbar {
   width: 100%;
@@ -17,7 +18,7 @@
     align-items: center;
 
     .title {
-      h2 {
+      h3 {
         color: $primary;
       }
       .line {
@@ -52,13 +53,16 @@
   }
 }
 .scroll {
-  background: rgba($color: $secondary, $alpha: 0.85);
+  background: rgba($color: $secondary, $alpha: 1);
+  filter: brightness(2);
 }
 
 //Media queries Tablet
 
 @media (max-width: 768px) {
   .navbar {
+    padding: 0.25rem 0 0.6rem 0;
+
     .nav {
       width: 95%;
       .menu-nav {
@@ -78,13 +82,18 @@
 
 @media (max-width: 480px) {
   .navbar {
+    padding: 0.6rem 0 0.6rem 0;
+
     .nav {
       width: 100%;
 
       .title {
         position: relative;
-        left: 10px;
+        left: 15px;
         z-index: 1;
+        .line {
+          display: none;
+        }
       }
       .menu-icon {
         display: block;
@@ -115,6 +124,7 @@
             text-align: center;
             font-size: 1.5rem;
             font-weight: 300;
+            filter: brightness(1.5);
           }
         }
       }

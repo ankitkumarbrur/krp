@@ -37,7 +37,7 @@ const Navbar = () => {
         </div>
 
         <div className="title">
-          <h2>KRP</h2>
+          <h3>KRP</h3>
           <div className="line"></div>
         </div>
 

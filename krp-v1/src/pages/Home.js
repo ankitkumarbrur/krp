@@ -24,11 +24,11 @@ const Home = () => {
       <WhyKRP />
 
       <Info />
-      {/*<Shopping />/*}
-      {/* <News />
+      <Shopping />
+      <News />
 
-      <Review /> */}
       <Subscribe />
+      <Review />
       <Footer />
     </main>
   );
