@@ -4,14 +4,14 @@
     margin:5.2rem auto;
     display: grid;
     grid-template-columns: 2.9fr 1.2fr;
-    width: 76%;
+    width: 76vw;
     align-items: center;
     position: relative;
     .subscribeEmail{
         border:3px solid $secondary;
         border-right:none;
         height:4rem;
-        padding-left:10%;
+        padding-left:10vw;
         font-size: 2rem;
         &::placeholder{
             font-size: 2rem;
@@ -21,7 +21,7 @@
     .subscribeIcon{
             position: absolute;
             font-size: 3rem;
-            left:1%;
+            left:1vw;
             
 
     }  
@@ -32,5 +32,13 @@
         font-size: xx-large;
 
         
+    }
+    @media (max-width: 768px) {
+        width:50vw;
     }   
+    @media (max-width: 480px) {
+        width:25vw;
+    }
 }
+
+
