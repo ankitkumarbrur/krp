@@ -25,10 +25,10 @@ const Home = () => {
 
       <Info />
       <Shopping />
-      <News />
+      {/* <News /> */}
 
-      <Subscribe />
-      <Review />
+      {/* <Subscribe />
+      <Review /> */}
       <Footer />
     </main>
   );
