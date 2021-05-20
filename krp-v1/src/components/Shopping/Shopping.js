@@ -33,7 +33,7 @@ const Shopping = () => {
           return (
             <div className="item" key={id}>
               <img src={image} alt={title} />
-              <h3>{title}</h3>
+              <h4>{title}</h4>
             </div>
           );
         })}

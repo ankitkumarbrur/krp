@@ -1,0 +1,102 @@
+@import "../../config.scss";
+@import "../../responsive.scss";
+
+.review-section {
+  width: 100vw;
+  height: 564px;
+  // height: 78vh;
+  margin: 3rem auto;
+  position: relative;
+
+  .block {
+    position: absolute;
+    width: 75px;
+    height: 70px;
+    top: 0;
+    background: $accent;
+  }
+
+  .article {
+    width: 90%;
+    margin-left: auto;
+    position: relative;
+
+    h2 {
+      // margin-bottom: 2.25rem;
+    }
+    .container {
+      position: relative;
+      .info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-text {
+          align-self: flex-start;
+          position: relative;
+          width: 50%;
+          margin: 5.5rem 3.5rem 0 2.5rem;
+          .quote {
+            top: -48px;
+            left: -35px;
+            position: absolute;
+            z-index: -1;
+          }
+
+          p {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 2.5rem;
+          }
+
+          h4 {
+            margin-left: 3rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+            position: relative;
+            &:before {
+              content: "";
+              position: absolute;
+              left: -45px;
+              top: 11px;
+              width: 30px;
+              height: 1.5px;
+              background: $secondary;
+            }
+          }
+          h5 {
+            margin-left: 3rem;
+            font-weight: 400;
+          }
+        }
+
+        &-img {
+          width: 400px;
+        }
+      }
+
+      // buttons
+      .btn {
+        display: flex;
+        position: absolute;
+        left: 25px;
+        bottom: 20px;
+        .prev,
+        .next {
+          display: grid;
+          place-items: center;
+          font-size: 1.75rem;
+          padding: 0.5rem;
+          color: $primary;
+        }
+        .prev {
+          background: $grey;
+          margin-right: 1rem;
+        }
+        .next {
+          background: $accent;
+        }
+      }
+    }
+  }
+}

@@ -6,9 +6,10 @@ import {
   Imgviewer,
   Navbar,
   WhyKRP,
-  Review,
+  Testimonials,
   Info,
   Subscribe,
+  Testing,
 } from "../components";
 
 import "./styles/home.scss";
@@ -25,10 +26,11 @@ const Home = () => {
 
       <Info />
       <Shopping />
-      <News />
+      {/* <News /> */}
 
+      {/* <Testimonials /> */}
+      <Testing />
       <Subscribe />
-      <Review />
       <Footer />
     </main>
   );

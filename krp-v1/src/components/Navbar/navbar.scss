@@ -1,6 +1,6 @@
 @import "../../config.scss";
-@import "./menu-button.scss";
 @import "../../responsive.scss";
+@import "./menu-button.scss";
 
 .navbar {
   width: 100%;
@@ -100,6 +100,9 @@
       }
 
       .menu-nav {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
         flex-direction: column;
         position: fixed;
         top: 0;
@@ -107,24 +110,22 @@
         height: 100vh;
         opacity: 0.9;
         background: $secondary;
-        transform: translateY(-100%);
+        transform: translateX(-100%);
         @include transition-ease;
 
         &.active {
-          transform: translateY(0);
+          transform: translateX(0);
         }
 
         li {
-          margin-top: 3rem;
+          margin-top: 2rem;
 
           .nav-links {
             display: flex;
-            flex-flow: column wrap;
-            margin: 3rem 0 0 0;
-            text-align: center;
+            margin: 2rem 0 0 1rem;
+            text-align: left;
             font-size: 1.5rem;
             font-weight: 300;
-            filter: brightness(1.5);
           }
         }
       }
