@@ -31,12 +31,12 @@ ul {
 }
 h1 {
   font-family: "Bebas Neue", cursive;
-  font-size: 66px;
+  font-size: 4rem;
   word-spacing: 3px;
 }
 h2 {
   font-family: "Bebas Neue", cursive;
-  font-size: 40px;
+  font-size: 3rem;
   word-spacing: 2px;
 }
 h3 {
@@ -45,11 +45,12 @@ h3 {
 }
 h4 {
   font-family: "Poppins", sans-serif;
-  font-size:20px;
+  font-size:1.75rem;
 }
 h5{
   font-family: "Poppins", sans-serif;
 
+  font-size: 1.5rem;
 }
 
 h1,
@@ -63,8 +64,9 @@ h5 {
 }
 p {
   font-family: "Open Sans", sans-serif;
-  font-size: 20px;
+  font-size: 1rem;
   color: $grey;
+  text-transform: capitalize;
 }
 
 img {
