@@ -9,24 +9,34 @@ import store_img from "../../images/store_img.png";
 const Shopping = () => {
   return (
     <section className="shopping-section">
-      <div className="block"></div>
-      <article className="info-container">
-        <div className="info">
-          <h2>store</h2>
-          <h3>shop with us !</h3>
-          <p>
+
+    <div className="store-heading">
+        <div className="store-heading-left">
+          <div className="store-title">
+            <div className="store-title-accent-square"></div>
+            <h2 className="store-title-heading"> Store </h2>
+          </div>
+
+          <div className="store-info">
+            <h3>shop with us !</h3>
+            <p className="store-info-text">
             we bring you a variety of top notch products with sense of belief...
-          </p>
-          <button className="btn">
-            <Link to="#">visit store</Link>
-          </button>
+            </p>
+           
+            <button className="store-info-btn">
+              <Link to="#">visit store</Link>
+            </button>
+
+          </div>
         </div>
 
-        <div className="info-img">
-          <img src={store_img} alt="" />
+        <div className="store-heading-right">
+            <div className="store-image">
+              <img src={store_img} alt="" />
+            </div>
         </div>
-      </article>
-
+      </div>
+      
       <article className="item-container">
         {data.map((item) => {
           const { id, title, image } = item;

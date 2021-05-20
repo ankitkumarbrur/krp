@@ -1,0 +1,143 @@
+@import "../../config.scss";
+
+// media queries tablets
+
+@media screen and (max-width: 768px) {
+  .store{
+    &-heading{
+      // display: flex;
+      margin-bottom: 10vh;
+      &-left{  width: 100vw; }
+      &-right{ display:none; }
+    }
+    &-info{
+      &-text{
+          width: 80vw;
+      }
+  }
+    &-title{
+      &-accent-square{
+          height: 5rem;
+      }
+  }    
+  }
+  .shopping-section {
+    // .block {
+    //   width: 45px;
+    //   height: 40px;
+    // }
+
+    // .info-container {
+    //   .info {
+    //     h2 {
+    //       font-size: 2.5rem;
+    //       margin-bottom: 1.5rem;
+    //     }
+    //     h3 {
+    //       font-size: 1.75rem;
+    //       margin-bottom: 1.25rem;
+    //     }
+    //     p {
+    //       font-size: 0.8rem;
+    //       margin-bottom: 1rem;
+    //     }
+    //     .btn {
+    //       width: 100px;
+    //       padding: 8px 14px;
+    //       a {
+    //         color: $accent;
+    //       }
+    //     }
+    //   }
+    //   .info-img {
+    //     width: 450px;
+    //   }
+    // }
+
+    .item-container {
+      width: 90%;
+      grid-gap: 10px;
+      grid-template-rows: 175px 175px;
+
+      .item {
+        h3 {
+          font-size: 1.25rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  // .shopping-section {
+  //   .item-container {
+  //     grid-template-rows: 125px 125px;
+  //     .item {
+  //       h3 {
+  //         right: 10px;
+  //         bottom: 15px;
+  //       }
+  //     }
+  //   }
+  // }
+}
+
+//media queries smartphones
+
+@media screen and (max-width: 480px) {
+  .store{
+    &-title{
+
+      &-accent-square{
+          height: 3.5rem;
+      }
+  }    
+  }
+  .shopping-section {
+    // .block {
+    //   width: 35px;
+    //   height: 30px;
+    // }
+
+    // .info-container {
+    //   .info {
+    //     margin-right: 2rem;
+
+    //     h2 {
+    //       font-size: 2.5rem;
+    //       margin-bottom: 1.25rem;
+    //     }
+    //     h3 {
+    //       font-size: 1.75rem;
+    //       margin-bottom: 1rem;
+    //     }
+    //     p {
+    //       font-size: 0.8rem;
+    //       margin-bottom: 0.75rem;
+    //     }
+    //     .btn {
+    //       width: 80px;
+    //       padding: 5px 0;
+    //       a {
+    //         color: $accent;
+    //       }
+    //     }
+    //   }
+    //   .info-img {
+    //     display: none;
+    //   }
+    // }
+
+    .item-container {
+      width: 95%;
+      grid-gap: 10px;
+      grid-template-rows: 175px 175px;
+
+      .item {
+        h3 {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
