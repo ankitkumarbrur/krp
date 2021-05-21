@@ -74,8 +74,12 @@ const Imgviewer = () => {
                 <h1>
                     ONE Stop Shop For
           <br />
-                    <div>Motorcycle</div> Performance Parts,
-          <br />
+                    <div className="motorcyle">Motorcycle</div> Performance Parts,
+          <br /><div className="since">
+                        <br />
+                        <div className="hline"></div>
+              Since <br /> &nbsp;&nbsp;1970
+              </div>
           Accessories, Gear & Wear
         </h1>
                 <button>About Us</button>
@@ -83,7 +87,7 @@ const Imgviewer = () => {
             <div id="item1" className="imagecontainer">
                 <Images />
             </div>
-        </div>
+        </div >
     );
 };
 

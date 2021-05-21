@@ -4,14 +4,14 @@
     margin:5.2rem auto;
     display: grid;
     grid-template-columns: 2.9fr 1.2fr;
-    width: 76vw;
+    width: 76%;
     align-items: center;
     position: relative;
     .subscribeEmail{
         border:3px solid $secondary;
         border-right:none;
         height:4rem;
-        padding-left:10vw;
+        padding-left:10%;
         font-size: 2rem;
         &::placeholder{
             font-size: 2rem;
@@ -21,8 +21,8 @@
     .subscribeIcon{
             position: absolute;
             font-size: 3rem;
-            left:1vw;
-            
+            left:1%;
+            font-weight: 100;
 
     }  
     .subscribeBtn{
@@ -32,13 +32,46 @@
         font-size: xx-large;
 
         
-    }
-    @media (max-width: 768px) {
-        width:50vw;
     }   
-    @media (max-width: 480px) {
-        width:25vw;
-    }
 }
 
+@media (max-width: 480px) {
+    .subscribeContainer{
+    margin:5.2rem auto;
+    display: grid;
+    grid-template-columns: 2.9fr 1.2fr;
+    width: 70%;
+    align-items: center;
+    position: relative;
+    .subscribeEmail{
+        border:2px solid $secondary;
+        border-right:none;
+        height:3rem;
+        padding-left:20%;
+        font-size: 1rem;
+        width: 100%;
+        &::placeholder{
+            font-size: 1rem;
+            
+            
+        }
+    }
+    .subscribeIcon{
+            position: absolute;
+            font-size: 1.5rem;
+            left:3%;
+            
 
+    }  
+    .subscribeBtn{
+        background-color: $accent;
+        height:3rem;
+        color:$primary;
+        width:8rem;
+        font-size: 1rem;
+        padding:0;
+        
+    }   
+}
+    
+}

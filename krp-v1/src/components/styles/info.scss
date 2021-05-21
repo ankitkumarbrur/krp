@@ -2,18 +2,13 @@
 
 .info{
 
-    
     &-first{
         display: flex;
-        align-items:start;
-        
         &-left{
-            height: 80rem;
             width: 57vw;
         }
 
         &-right{
-            height: 80rem;
             width: 43vw;
         }
     }
@@ -84,6 +79,7 @@
 
     &-second{
         display:flex;
+        margin-top: 20vh;
 
         &-left{
             display:flex;
@@ -161,6 +157,15 @@
 @media only screen and (max-width: 980px) {
     .info{
 
+        &-title{
+            &-accent-square{
+                height: 7rem;
+            }
+            &-black-square{
+                height: 7rem;
+            }
+        }
+
         &-first{
             flex-direction: column;
 
@@ -176,6 +181,7 @@
         &-workshop{
             position: relative;
             left:0;
+            top: 7vh;
             width: 80vw;
             margin: 0 auto;
 
@@ -196,8 +202,10 @@
 
         &-apparels{
             left:0;
+            // top: 17vh;
             width: 80vw;
             margin: 0 auto;
+            margin-top: 10vh;
             
             display: flex;
             flex-direction: column-reverse;
@@ -220,6 +228,7 @@
 
         &-second{
             flex-direction: column;
+            margin-top: 0vh;
 
             &-left{
                 width: 100vw;

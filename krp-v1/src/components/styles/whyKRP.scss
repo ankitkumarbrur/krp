@@ -27,32 +27,62 @@
     .text {
         
         width: 80%;
+        
       p{
-        bottom: 0;
+        
+        bottom: 20%;
         position: absolute;
-        margin-left:auto;
-        margin-right:auto;
+        margin:auto;
         
       }
       
     }
 
-    // button {
-    //   letter-spacing: 0.1rem;
-    //   font-size: 1rem;
-    //   font-weight: 500;
-    //   text-align: center;
-    //   border: none;
-    //   border-radius: 5px;
-    //   background: rgba($color: #007bff, $alpha: 1);
-    //   color: white;
-    //   padding: 0.75rem 1rem;
-    //   cursor: pointer;
-    //   transition: all 0.4s ease-in-out;
-    // }
-    // button:hover {
-    //   background: rgba($color: #007bff, $alpha: 0.8);
-    //   transform: scale(0.95);
-    // }
   }
 }
+
+@media (max-width: 480px) {
+  .about-section {
+  width: 85vw;
+  margin: 1rem auto;
+  padding: 1.5rem;
+
+  .about-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 10vh;
+    .heading {
+      transform: rotate(180deg);
+      writing-mode: vertical-rl;
+      .line {
+        position: absolute;
+        
+        transform: rotate(90deg);
+        width: 4rem;
+        height: 4px;
+        background: black;
+        margin-top: 2.1rem;
+        margin-right: -25px;
+      }
+      
+    }
+    .text {
+        
+        width: 100%;
+        
+      p{
+        padding-left: 20%;
+        bottom: -20%;
+        position: absolute;
+        margin:auto;
+        
+      }
+      
+    }
+
+  }
+}
+}
+
