@@ -59,8 +59,8 @@
     .item {
       width: 95%;
       grid-gap: 10px;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: 150px 150px;
+      grid-template-columns: repeat(2, 175px);
+      grid-template-rows: 125px 125px;
 
       &-container {
         &-title {

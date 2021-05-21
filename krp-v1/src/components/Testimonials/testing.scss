@@ -29,41 +29,49 @@
       position: relative;
       top: 5vh;
       left: 15vw;
-      margin: 5.5rem 0 0 2.5rem;
+      margin: 3.5rem 0 0 2.5rem;
 
-      &-quote {
-        top: -44px;
-        left: -38px;
-        position: absolute;
-        z-index: -1;
-      }
+      &-container {
+        transition: all 0.6s ease-in-out;
+        transform: translateX(-10%);
 
-      &-text {
-        margin-top: 1rem;
-        width: 55%;
-        font-size: 1.5rem;
-        font-weight: 400;
-        margin-bottom: 2.5rem;
-      }
-      &-name {
-        margin-left: 3rem;
-        font-weight: 400;
-        margin-bottom: 1rem;
-        position: relative;
-        &:before {
-          content: "";
+        &-quote {
+          top: -44px;
+          left: -38px;
           position: absolute;
-          left: -45px;
-          top: 11px;
-          width: 30px;
-          height: 1.5px;
-          background: $secondary;
+          z-index: -1;
+        }
+
+        &-text {
+          margin-top: 1rem;
+          width: 55%;
+          font-size: 1.5rem;
+          font-weight: 400;
+          margin-bottom: 2.5rem;
+        }
+        &-name {
+          margin-left: 3rem;
+          font-weight: 400;
+          margin-bottom: 1rem;
+          position: relative;
+          &:before {
+            content: "";
+            position: absolute;
+            left: -45px;
+            top: 11px;
+            width: 30px;
+            height: 1.5px;
+            background: $secondary;
+          }
+        }
+        &-title {
+          margin-left: 3rem;
+          margin-bottom: 5rem;
+          font-weight: 400;
         }
       }
-      &-title {
-        margin-left: 3rem;
-        margin-bottom: 5rem;
-        font-weight: 400;
+      &-container.active {
+        transform: translateX(0);
       }
       &-btn {
         display: flex;
@@ -92,12 +100,12 @@
     }
     &-slide {
       transform: translateX(100%);
-      // opacity: 0;
       transition: all 0.6s ease-in-out;
     }
     &-slide.active {
       transform: translateX(0);
-      // opacity: 1;
     }
   }
 }
+
+@import "./media-queries.scss";
