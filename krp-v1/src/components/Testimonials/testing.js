@@ -84,20 +84,22 @@ const Review = () => {
             </div>
           </div>
         </div>
+        
         <div className="review-heading-right">
-          {data.map((item, index) => {
-            return (
-              <div
-                key={item.id}
-                className={`review-image ${
-                  index === current ? "review-slide active" : "review-slide"
-                }`}
-              >
-                {index === current && <img src={item.image} alt="" />}
-              </div>
-            );
-          })}
+          <div className="carousel">
+            {data.map((item, index) => {
+              return (
+                <div
+                  key={item.id}
+                  className={`carousel-item ${ index === current ? "active-slide" : "" }`}
+                >
+                  { <img className="carousel-item__image " src={item.image} alt="" />}
+                </div>
+              );
+            })}
+          </div>
         </div>
+
       </div>
     </section>
   );
