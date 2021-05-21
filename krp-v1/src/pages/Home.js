@@ -25,7 +25,7 @@ const Home = () => {
 
       <Info />
       <Shopping />
-      {/* <News /> */}
+      <News />
 
 
       <Subscribe />

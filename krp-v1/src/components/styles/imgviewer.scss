@@ -141,7 +141,7 @@
   .home1container {
   background-size: auto;
   height: 100%;
-  width: 100%;
+  width: 100vw;
   padding: 5vh 0;
   display: grid;
   margin-bottom: 20vh;
@@ -153,7 +153,7 @@
   #item0 {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 100vw;
     top: 0px;
     left: 0px;
     opacity: 0;
