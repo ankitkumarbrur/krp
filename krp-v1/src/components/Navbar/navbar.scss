@@ -36,16 +36,18 @@
       align-items: center;
       justify-content: space-between;
 
-      .nav-links {
-        text-transform: uppercase;
-        color: $primary;
-        margin-right: 2.5rem;
-        @include transition-ease;
-        &:hover {
-          color: $accent;
-        }
-        &.active {
-          color: $accent;
+      &-item {
+        .nav-links {
+          text-transform: uppercase;
+          color: $primary;
+          margin-right: 2.5rem;
+          @include transition-ease;
+          &:hover {
+            color: $accent;
+          }
+          &.active {
+            color: $accent;
+          }
         }
       }
     }

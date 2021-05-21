@@ -33,7 +33,7 @@
 
       &-container {
         transition: all 0.6s ease-in-out;
-        transform: translateX(-10%);
+        transform: translateY(0);
 
         &-quote {
           top: -44px;
@@ -71,7 +71,7 @@
         }
       }
       &-container.active {
-        transform: translateX(0);
+        transform: translateY(10%);
       }
       &-btn {
         display: flex;

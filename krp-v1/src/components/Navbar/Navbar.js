@@ -42,22 +42,24 @@ const Navbar = () => {
         </div>
 
         <ul className={showLinks ? "menu-nav active" : "menu-nav"}>
-          <li>
-            {menuItems.map((item, index) => {
-              const { title, url, className } = item;
-              return (
+          {menuItems.map((item, index) => {
+            const { title, url } = item;
+            return (
+              <li
+                className={showLinks ? "menu-nav-item open" : "menu-nav-item"}
+              >
                 <Link
                   key={index}
-                  className={`${className} ${
+                  className={`nav-links ${
                     splitLocation[1] === url ? "active" : ""
                   }`}
                   to={`/${url}`}
                 >
                   {title}
                 </Link>
-              );
-            })}
-          </li>
+              </li>
+            );
+          })}
         </ul>
       </nav>
     </section>

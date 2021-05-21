@@ -24,7 +24,7 @@
 
 //Media queries Phone
 
-@media (max-width: 480px) {
+@media (max-width: 580px) {
   .navbar {
     padding: 0.6rem 0 0.6rem 0;
 
@@ -46,7 +46,7 @@
       .menu-nav {
         display: flex;
         justify-content: flex-start;
-        align-items: flex-start;
+        align-items: center;
         flex-direction: column;
         position: fixed;
         top: 0;
@@ -54,22 +54,36 @@
         height: 100vh;
         opacity: 0.9;
         background: $secondary;
-        transform: translateX(-100%);
+        transform: translateX(200%);
         @include transition-ease;
 
         &.active {
           transform: translateX(0);
         }
 
-        li {
-          margin-top: 3rem;
+        &-item {
+          transform: translateX(100vw);
+          @include transition-ease;
 
           .nav-links {
-            display: flex;
             margin: 2rem 0 0 1rem;
+            display: inline-block;
             text-align: left;
-            font-size: 1.5rem;
+            font-size: 1.75rem;
             font-weight: 300;
+            @include transition-ease;
+          }
+
+          &:first-child {
+            margin-top: 3rem;
+          }
+        }
+        &-item.open {
+          transform: translateX(0);
+        }
+        @for $i from 1 through 4 {
+          .menu-nav-item:nth-child(#{$i}) {
+            transition-delay: ($i * 0.1s) + 0.15s;
           }
         }
       }
