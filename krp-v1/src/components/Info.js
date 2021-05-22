@@ -4,6 +4,7 @@ import "./styles/info.scss";
 const Info = () => {
   return (
     <section className="info-section">
+      
       <div className="info-first">
         <div className="info-first-left">
           <div className="info-title">

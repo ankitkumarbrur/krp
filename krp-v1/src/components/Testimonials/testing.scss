@@ -11,6 +11,7 @@
       }
       &-right {
         width: 35%;
+        height: auto;
       }
     }
 
@@ -94,18 +95,109 @@
     }
 
     &-image {
-      margin-left: auto;
+      &-container{
+        visibility: visible;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: flex-end;
+        position: relative;
+        background-color: #fff;
+        flex-shrink: 0;
+        position: absolute;
+        z-index: 0;
+        transition: .6s all linear;
+      }
+      
+      // margin-left: auto;
       width: 28.5vw;
+      // width: 60%;
+
+      height: 100%;
+      order: 2;
+      align-self: flex-end;
+      flex-basis: 60%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      transform: translateX(100%);
+      transition: .6s all ease-in-out;
+
+      
+      // align-self: flex-end;
       // height: 81vh;
     }
-    &-slide {
-      transform: translateX(100%);
-      transition: all 0.6s ease-in-out;
-    }
-    &-slide.active {
-      transform: translateX(0);
-    }
+    // &-slide {
+    //   // display: none;
+    //   visibility: hidden;
+    //   transform: translateX(100%);
+    //   // opacity: 0;
+    //   transition: all 0.6s ease-in-out;
+    // }
+    // &-slide.active {
+    //   // display: block;
+    //   visibility: visible;
+
+    //   transform: translateX(0);
+    //   // opacity: 1;
+    // }
   }
+  
+}
+
+
+
+.carousel {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  max-width: 900px;
+  max-height: 550px;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-item {
+  visibility: visible;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: flex-end;
+  /* position: relative; */
+  background-color: #fff;
+  flex-shrink: 0;
+  position: absolute;
+  z-index: 0;
+  transition: .6s all linear;
+}
+
+.carousel-item__image {
+  width: 60%;
+  height: 100%;
+  order: 2;
+  align-self: flex-end;
+  flex-basis: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  transform: translateX(100%);
+  transition: .6s all ease-in-out;
+}
+
+.active-slide {
+  z-index: 1;
+  /* display: flex; */
+  visibility: visible;
+}
+
+.active-slide .carousel-item__image  {
+  
+  transition: .6s all ease-in-out;
+  transform: translateX(0);
 }
 
 @import "./media-queries.scss";
