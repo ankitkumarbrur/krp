@@ -27,11 +27,11 @@ export default function Article() {
                         <h3 className="article-title">New Launch</h3>
                     </div>
                     <div className="article-div3">
-                        <div className="article-number">02</div>
+                        <div className="article-number">03</div>
                         <h3 className="article-title">Kaulson Racing</h3>
                     </div>
                     <div className="article-div4">
-                        <div className="article-number">02</div>
+                        <div className="article-number">04</div>
                         <h3 className="article-title">Suzuki Motorcorp</h3>
                     </div>
 

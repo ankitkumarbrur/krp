@@ -2,7 +2,7 @@
 
 //hello
 .contactus{
-    background: url("https://unsplash.com/photos/PuLsDCBbyBM/download?force=true&w=1920");
+    background: url("https://unsplash.com/photos/6bXvYyAYVrE/download?force=true&w=1920");
     height: 80vh;
     display: flex;
     
@@ -159,6 +159,7 @@
     align-items: baseline;
 }
 .contact_wrapper .contact_msg .form_fild .input_group .btn {
+    background: white;
     padding: 12px;
     border: 2px solid $accent;
     font-size: 1rem;
