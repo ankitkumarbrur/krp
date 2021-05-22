@@ -5,6 +5,7 @@ import Navbar from "./Navbar/Navbar";
 import Testimonials from "./Testimonials/Testimonials";
 import News from "./News";
 import Shopping from "./Shopping/Shopping";
+import Contactus from "./Contactus/Contactus";
 import Info from "./Info";
 import Subscribe from "./Subscribe";
 
@@ -21,4 +22,5 @@ export {
   Imgviewer,
   Info,
   Testing,
+  Contactus
 };

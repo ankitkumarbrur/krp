@@ -10,6 +10,7 @@ import {
   Info,
   Subscribe,
   Testing,
+  Contactus
 } from "../components";
 
 import "./styles/home.scss";
@@ -28,6 +29,9 @@ const Home = () => {
       <Shopping />
       {/* <Testimonials /> */}
       <Testing />
+
+      <Contactus/>
+
       <Subscribe />
 
       <Footer />

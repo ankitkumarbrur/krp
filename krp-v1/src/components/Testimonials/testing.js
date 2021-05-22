@@ -29,7 +29,6 @@ const Review = () => {
   //   };
   // }, [index]);
 
-  const { name, title, text } = data[current];
   return (
     <section className="review-section">
       <div className="review-heading">
@@ -40,64 +39,71 @@ const Review = () => {
           </div>
 
           <div className="review-info">
-            <div className="review-info-quote">
-              <svg
-                width="155"
-                height="163"
-                viewBox="0 0 155 163"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g clipPath="url(#clip0)">
-                  <path
-                    d="M88.6001 11.8911V81.3198H132.6C132.6 106.841 112.861 127.605 88.6001 127.605V150.748C124.995 150.748 154.6 119.605 154.6 81.3198V11.8911H88.6001Z"
-                    fill="#ECECEC"
-                  />
-                  <path
-                    d="M0.600098 81.3198H44.6C44.6 106.841 24.8612 127.605 0.600098 127.605V150.748C36.9948 150.748 66.6002 119.605 66.6002 81.3198V11.8911H0.600098V81.3198Z"
-                    fill="#ECECEC"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0">
-                    <rect
-                      width="154"
-                      height="162"
-                      fill="white"
-                      transform="translate(0.600098 0.319824)"
+            <div className="review-info-container-quote">
+                <svg
+                  width="155"
+                  height="163"
+                  viewBox="0 0 155 163"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clipPath="url(#clip0)">
+                    <path
+                      d="M88.6001 11.8911V81.3198H132.6C132.6 106.841 112.861 127.605 88.6001 127.605V150.748C124.995 150.748 154.6 119.605 154.6 81.3198V11.8911H88.6001Z"
+                      fill="#ECECEC"
                     />
-                  </clipPath>
-                </defs>
-              </svg>
-            </div>
-            <p className="review-info-text">{text}</p>
-            <h4 className="review-info-name">{name}</h4>
-            <h5 className="review-info-title">{title}</h5>
-
-            <div className="review-info-btn">
-              <button className="prev" onClick={prevPerson}>
-                <FiChevronLeft />
-              </button>
-              <button className="next" onClick={nextPerson}>
-                <FiChevronRight />
-              </button>
+                    <path
+                      d="M0.600098 81.3198H44.6C44.6 106.841 24.8612 127.605 0.600098 127.605V150.748C36.9948 150.748 66.6002 119.605 66.6002 81.3198V11.8911H0.600098V81.3198Z"
+                      fill="#ECECEC"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0">
+                      <rect
+                        width="154"
+                        height="162"
+                        fill="white"
+                        transform="translate(0.600098 0.319824)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+            <div className="review-info-grids">
+              {data.map((item, index) => {
+                return (
+                  <div className="review-info-container">
+                        <p className={`review-info-container-text ${ index === current ? "active" : "" }`}>{item.text}</p>
+                        <h4 className={`review-info-container-name ${ index === current ? "active" : "" }`}>{item.name}</h4>
+                        <h5 className={`review-info-container-title ${ index === current ? "active" : "" }`}>
+                          {item.title}
+                        </h5>
+                  </div>
+                );
+              })}    
+              <div className="review-info-btn">
+                <button className="prev" onClick={prevPerson}>
+                  <FiChevronLeft />
+                </button>
+                <button className="next" onClick={nextPerson}>
+                  <FiChevronRight />
+                </button>
+              </div>
             </div>
           </div>
         </div>
         
         <div className="review-heading-right">
-          <div className="carousel">
             {data.map((item, index) => {
               return (
                 <div
                   key={item.id}
-                  className={`carousel-item ${ index === current ? "active-slide" : "" }`}
+                  className={`review-carousel-item ${ index === current ? "review-active-slide" : "" }`}
                 >
-                  { <img className="carousel-item__image " src={item.image} alt="" />}
+                  { <img className="review-carousel-item-image " src={item.image} alt="" />}
                 </div>
               );
             })}
-          </div>
         </div>
 
       </div>
