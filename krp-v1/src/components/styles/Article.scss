@@ -1,5 +1,9 @@
 @import "../../config";
 
+.article-main{
+    margin-top:15vh;
+    margin-bottom:15vh;
+}
 .article-maintitle{
     
       display: flex;
@@ -16,7 +20,7 @@
 
 
 .article-container{
-    background-image: url("https://source.unsplash.com/featured/?tyres");
+    background-image: url("https://images.unsplash.com/photo-1527254547437-5c9c0862be58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjIxNjk1MDc3&ixlib=rb-1.2.1&q=80&w=1080&utm_source=unsplash_source&utm_medium=referral&utm_campaign=api-credit");
     height:90vh;
     width: 90%;
     margin: 5vh auto;
