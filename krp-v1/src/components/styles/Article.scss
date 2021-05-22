@@ -1,0 +1,91 @@
+@import "../../config";
+
+.article-maintitle{
+    
+      display: flex;
+      align-items: center;
+
+      .article-title-accent-square{
+          height: 6rem;
+          width: 11.2vw;
+          margin-right: 3.8vw;
+          background-color: $accent;
+      }
+     
+}
+
+
+.article-container{
+    background-image: url("https://source.unsplash.com/featured/?tyres");
+    height:90vh;
+    width: 90%;
+    margin: 5vh auto;
+    position: relative;
+     box-shadow: 0 10px 30px rgba(0, 0, 0, .3); 
+}
+.article-image{
+
+   
+   
+    color:white;
+    .article-left{
+        //position: relative;
+         background-color: rgba(0, 0, 0, 0.322);
+         height:50%;
+        .title{
+            position: absolute;
+            top:5%;
+            left:5%;
+            
+            font-weight: 400;
+        }
+        .news{
+            position: absolute;
+            bottom:30%;
+            color: white;
+            font-size:larger;
+            width: 50%;
+            left:5%;
+        }
+        .bottom{
+            
+            position: absolute;
+            bottom:5%;
+            left:5%;
+            font-weight: 600;
+            padding:0.5rem;
+            background-color: rgba(0, 0, 0, 0.486);
+        }
+    }
+}
+.article-right{
+    position: absolute;
+    right:0;
+    top:5%;
+    height: 83vh;
+    width: 40%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+
+    .article-div1,.article-div2,.article-div3,.article-div4{
+        background-color: white;
+        color:$secondary;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &:hover{
+             background: rgba(255, 255, 255,0);
+             color:$primary;
+        }
+    // .article-number{
+    //     //justify-self: flex-start;
+    // }
+    // .article-title{
+        
+    // }
+    
+    }
+
+
+}

@@ -7,4 +7,5 @@ import News from "./News";
 import Shopping from "./Shopping/Shopping";
 import Info from "./Info";
 import Subscribe from "./Subscribe";
-export { Subscribe, Shopping, News, WhyKRP, Review, Navbar, Footer, Imgviewer, Info };
+import Article from "./Article";
+export { Article, Subscribe, Shopping, News, WhyKRP, Review, Navbar, Footer, Imgviewer, Info };

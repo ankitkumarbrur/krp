@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  Article,
   Shopping,
   News,
   Footer,
@@ -30,7 +31,7 @@ const Home = () => {
 
       <Subscribe />
       <Review />
-
+      <Article />
       <Footer />
     </main>
   );
