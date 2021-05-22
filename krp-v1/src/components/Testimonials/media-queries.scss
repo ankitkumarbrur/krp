@@ -1,6 +1,6 @@
 @import "../../config.scss";
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 980px) {
   .review-section {
     .review {
       &-heading {
@@ -12,6 +12,22 @@
         &-right {
           display: none;
         }
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .review-section {
+    .review {
+      &-heading {
+        // display: flex;
+        // margin-bottom: 15vh;
+        // &-left {
+        //   width: 100%;
+        // }
+        // &-right {
+        //   display: none;
+        // }
       }
 
       &-title {
@@ -30,13 +46,13 @@
         }
         &-btn {
           // display: flex;
-          position: absolute;
-          bottom: -70px;
-          left: -38px;
+          // position: absolute;
+          // bottom: -70px;
+          // left: -38px;
 
-          .prev {
-            margin-right: 1.5rem;
-          }
+          // .prev {
+          //   margin-right: 1.5rem;
+          // }
         }
       }
     }
