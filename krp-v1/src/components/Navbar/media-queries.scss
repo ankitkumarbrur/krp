@@ -1,0 +1,92 @@
+@import "../../config.scss";
+@import "./menu-button.scss";
+
+//Media queries Tablet
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.25rem 0 0.6rem 0;
+
+    .nav {
+      width: 95%;
+      .menu-nav {
+        .nav-links {
+          margin-right: 1rem;
+
+          &:last-child {
+            margin-right: 0rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+//Media queries Phone
+
+@media (max-width: 580px) {
+  .navbar {
+    padding: 0.6rem 0 0.6rem 0;
+
+    .nav {
+      width: 100%;
+
+      .title {
+        position: relative;
+        left: 15px;
+        z-index: 1;
+        .line {
+          display: none;
+        }
+      }
+      .menu-icon {
+        display: block;
+      }
+
+      .menu-nav {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        opacity: 0.9;
+        background: $secondary;
+        transform: translateX(200%);
+        @include transition-ease;
+
+        &.active {
+          transform: translateX(0);
+        }
+
+        &-item {
+          transform: translateX(100vw);
+          @include transition-ease;
+
+          .nav-links {
+            margin: 2rem 0 0 1rem;
+            display: inline-block;
+            text-align: left;
+            font-size: 1.75rem;
+            font-weight: 300;
+            @include transition-ease;
+          }
+
+          &:first-child {
+            margin-top: 3rem;
+          }
+        }
+        &-item.open {
+          transform: translateX(0);
+        }
+        @for $i from 1 through 4 {
+          .menu-nav-item:nth-child(#{$i}) {
+            transition-delay: ($i * 0.1s) + 0.15s;
+          }
+        }
+      }
+    }
+  }
+}

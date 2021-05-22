@@ -7,9 +7,9 @@ import {
   Imgviewer,
   Navbar,
   WhyKRP,
-  Review,
   Info,
   Subscribe,
+  Testing,
 } from "../components";
 
 import "./styles/home.scss";
@@ -30,8 +30,12 @@ const Home = () => {
 
 
       <Subscribe />
-      <Review />
+
       <Article />
+      {/* <Testimonials /> */}
+      <Testing />
+      <Subscribe />
+
       <Footer />
     </main>
   );

@@ -1,5 +1,4 @@
 @import "../../config.scss";
-@import "./menu-button.scss";
 @import "../../responsive.scss";
 
 .navbar {
@@ -37,16 +36,18 @@
       align-items: center;
       justify-content: space-between;
 
-      .nav-links {
-        text-transform: uppercase;
-        color: $primary;
-        margin-right: 2.5rem;
-        @include transition-ease;
-        &:hover {
-          color: $accent;
-        }
-        &.active {
-          color: $accent;
+      &-item {
+        .nav-links {
+          text-transform: uppercase;
+          color: $primary;
+          margin-right: 2.5rem;
+          @include transition-ease;
+          &:hover {
+            color: $accent;
+          }
+          &.active {
+            color: $accent;
+          }
         }
       }
     }
@@ -57,77 +58,4 @@
   filter: brightness(2);
 }
 
-//Media queries Tablet
-
-@media (max-width: 768px) {
-  .navbar {
-    padding: 0.25rem 0 0.6rem 0;
-
-    .nav {
-      width: 95vw;
-      .menu-nav {
-        .nav-links {
-          margin-right: 1rem;
-
-          &:last-child {
-            margin-right: 0rem;
-          }
-        }
-      }
-    }
-  }
-}
-
-//Media queries Phone
-
-@media (max-width: 480px) {
-  .navbar {
-    padding: 0.6rem 0 0.6rem 0;
-
-    .nav {
-      width: 100vw;
-
-      .title {
-        position: relative;
-        left: 15px;
-        z-index: 1;
-        .line {
-          display: none;
-        }
-      }
-      .menu-icon {
-        display: block;
-      }
-
-      .menu-nav {
-        flex-direction: column;
-        position: fixed;
-        top: 0;
-        width: 100vw;
-        height: 100vh;
-        opacity: 0.9;
-        background: $secondary;
-        transform: translateY(-100%);
-        @include transition-ease;
-
-        &.active {
-          transform: translateY(0);
-        }
-
-        li {
-          margin-top: 3rem;
-
-          .nav-links {
-            display: flex;
-            flex-flow: column wrap;
-            margin: 3rem 0 0 0;
-            text-align: center;
-            font-size: 1.5rem;
-            font-weight: 300;
-            filter: brightness(1.5);
-          }
-        }
-      }
-    }
-  }
-}
+@import "./media-queries.scss";

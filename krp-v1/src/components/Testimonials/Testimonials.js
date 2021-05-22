@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import data from "../context/mockData/review-data";
+import data from "./testimonials-data";
 import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
-import "./styles/review.scss";
+import "./testimonials.scss";
 
 const Review = () => {
   const [index, setIndex] = useState(0);
@@ -15,12 +15,12 @@ const Review = () => {
     }
   }, [index, data]);
 
-  useEffect(() => {
-    let slider = setInterval(() => setIndex(index + 1), 5000);
-    return () => {
-      clearInterval(slider);
-    };
-  }, [index]);
+  // useEffect(() => {
+  //   let slider = setInterval(() => setIndex(index + 1), 5000);
+  //   return () => {
+  //     clearInterval(slider);
+  //   };
+  // }, [index]);
 
   return (
     <section className="review-section">
