@@ -1,4 +1,5 @@
 @import "../../config";
+@import url('http://fonts.cdnfonts.com/css/bruno-ace-sc');
 
 .article-main{
     margin-top:15vh;
@@ -20,36 +21,48 @@
 
 
 .article-container{
-    background-image: url("https://images.unsplash.com/photo-1527254547437-5c9c0862be58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjIxNjk1MDc3&ixlib=rb-1.2.1&q=80&w=1080&utm_source=unsplash_source&utm_medium=referral&utm_campaign=api-credit");
-    height:90vh;
+    
+    height:80vh;
     width: 90%;
     margin: 5vh auto;
-    position: relative;
-     box-shadow: 0 10px 30px rgba(0, 0, 0, .3); 
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+     //box-shadow: 0 10px 30px rgba(0, 0, 0, .3); 
 }
 .article-image{
 
-   
-   
-    color:white;
+   background-image: url("../../images/article.png");
+    position: relative;
+    color:$primary;
     .article-left{
-        //position: relative;
-         background-color: rgba(0, 0, 0, 0.322);
-         height:50%;
-        .title{
-            position: absolute;
-            top:5%;
-            left:5%;
+        position: absolute;
+        bottom: 0;
             
-            font-weight: 400;
+         background-color: rgba(0, 0, 0, 0.322);
+        height:40%;
+        bottom: 0;
+        padding: 2% 5%;
+        
+        .title{
+             //position: absolute;
+            width: fit-content;
+            font-weight: 600;
+            padding:0.5rem;
+            background-color: rgba(0, 0, 0, 0.486);
+            text-transform: uppercase;
+
         }
         .news{
-            position: absolute;
-            bottom:30%;
-            color: white;
+            // position: absolute;
+            //bottom:30%;
+            padding-top: 2%;
+            color:$primary;
             font-size:larger;
-            width: 50%;
+            //width: 50%;
             left:5%;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: x-large;
         }
         .bottom{
             
@@ -59,36 +72,71 @@
             font-weight: 600;
             padding:0.5rem;
             background-color: rgba(0, 0, 0, 0.486);
+            text-transform: uppercase;
         }
     }
 }
 .article-right{
-    position: absolute;
-    right:0;
-    top:5%;
-    height: 83vh;
-    width: 40%;
+    
+    
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-
+    background: $secondary;
+    
+    
+    .article-div1::after,.article-div2::after,.article-div3::after{
+        position: absolute;
+        content: "";
+        width: 90%;
+        border-bottom: 2px solid $primary;
+        bottom: 0%;
+        right:0;
+        &:hover{
+           border: 1px solid $secondary;
+        }
+    }
     .article-div1,.article-div2,.article-div3,.article-div4{
-        background-color: white;
-        color:$secondary;
+        background-color: $secondary;
+        color:$primary;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
-        &:hover{
-             background: rgba(255, 255, 255,0);
-             color:$primary;
-        }
-    // .article-number{
-    //     //justify-self: flex-start;
-    // }
-    // .article-title{
+        margin: 2% 5%;
+        position: relative;
         
-    // }
+        &:hover{
+            
+             background:$primary;
+             color:$secondary;
+        }
+     .article-number{
+        //position: absolute;
+        padding-right: 5%;
+        padding-left: 1%;
+        top:0;
+        left:0;
+        font-size: 2.5rem;
+        font-family: 'Bruno Ace SC', sans-serif;
+     }
+     .article-title{
+         text-transform: uppercase;
+         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        //position: absolute;    
+        right:0;
+        width: 90%;
+        font-size:1.5rem;
+        font-weight: 400;
+        //top:0;
+     }
+     
     
+    }
+    //Extra padding for 01
+    .article-div1{
+        .article-number{
+            padding-right: 8%;
+        }
     }
 
 
