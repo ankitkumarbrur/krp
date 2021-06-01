@@ -9,9 +9,17 @@ import Contactus from "./Contactus/Contactus";
 import Info from "./Info";
 import Subscribe from "./Subscribe";
 import Article from "./Article";
-import Testing from "./Testimonials/testing";
 
-export { Contactus, Testing, Article, Subscribe, Shopping, News, WhyKRP, Navbar, Footer, Imgviewer, Info };
-
-
-
+export {
+  Contactus,
+  Testimonials,
+  Article,
+  Subscribe,
+  Shopping,
+  News,
+  WhyKRP,
+  Navbar,
+  Footer,
+  Imgviewer,
+  Info,
+};
