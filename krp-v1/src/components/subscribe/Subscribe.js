@@ -1,5 +1,5 @@
 import React from 'react'
-import './styles/subscribe.scss';
+import './subscribe.scss';
 import { HiOutlineMail } from 'react-icons/hi';
 export default function Subscribe() {
     return (

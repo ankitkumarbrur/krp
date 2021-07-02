@@ -1,6 +1,5 @@
 @import "../../config.scss";
 
-//hello
 .contactus{
     background: url("https://unsplash.com/photos/6bXvYyAYVrE/download?force=true&w=1920");
     height: 80vh;
@@ -32,6 +31,7 @@
         }
         p{
             margin-top: 0.5rem;
+            padding: 0 0.3rem;
             text-align: center;
             color: $primary;
             font-size: 1.1rem;
@@ -79,101 +79,101 @@
                 line-height: 7rem;
             }
         }
+
+        .form_field {
+            padding: 8rem 25px;
+            // position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        
+        .input_group {
+            position: relative;
+            margin-bottom: 25px;
+            padding: 0 15px;
+        }
+        .w_50 {
+            width: 50%;
+        }
+        .w_100 {
+            width: 100%;
+        }
+        
+        .input {
+            width: 100%;
+            min-height: 30px;
+            padding: 5px 0;
+            border: none;
+            font-size: 18px;
+            color: #444;
+            outline: 0;
+            font-weight: 400;
+            border-bottom: solid 2px #e9e9e9;
+        }
+        
+        .input_textarea {
+            min-width: 100%;
+            min-height: 75px;
+            max-height: 75px;
+            max-width: 100%
+        }
+        
+        .placeholder {
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            color: #bbb;
+            font-weight: 400;
+            transition: all .3s ease;
+            pointer-events: none;
+        }
+        
+        .textarea {
+            align-items: baseline;
+        }
+        
+        .btn {
+            background: white;
+            padding: 12px;
+            border: 2px solid $accent;
+            font-size: 1rem;
+            border-radius: 0;
+            color: $accent;
+            min-width: 120px;
+            outline: 0;
+            transition: all .3s ease;
+        }
+        
+        .btn:hover {
+            background-color: $accent;
+            color: $primary;
+        }
+        .btn:active {
+            transform: scale(.90);
+        }
+        
+        .input:hover {
+            border-bottom-color: rgb(196, 196, 196);
+        }
+        .input:focus {
+            border-bottom-color: rgb(156, 156, 156);
+        }
+        
+        .input:focus~.placeholder, .input:valid~.placeholder {
+            top: -50px;
+            font-size: 12px!important;
+            color: $accent;
+        }
+        
+        .input:focus~.textarea, .input:valid~.textarea {
+            top: -12px;
+        }
     }
-    
 }
 
-
-
-.contact_wrapper {
-    // margin-top: 5rem;
-    display: flex;
-    padding: 8rem 25px;
-    /* box-shadow: 0 10px 30px rgba(0, 0, 0, .3); */
-    position: relative;
-    /* width: 700px; */
-}
-.contact_wrapper .contact_msg .form_fild {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-}
-.contact_wrapper .contact_msg .form_fild .input_group {
-    position: relative;
-    margin-bottom: 25px;
-    padding: 0 15px;
-}
-.contact_wrapper .contact_msg .form_fild .input_group.w_50 {
-    width: calc(50% - 30px);
-    flex: 0 0 calc(50% - 30px);
-}
-.contact_wrapper .contact_msg .form_fild .input_group.w_100 {
-    width: calc(100% - 30px);
-    flex: 0 0 calc(100% - 30px);
-}
-.contact_wrapper .contact_msg .form_fild .input_group .input {
-    width: 100%;
-    min-height: 30px;
-    padding: 5px 0;
-    border: none;
-    font-size: 18px;
-    color: #444;
-    outline: 0;
-    font-weight: 400;
-    border-bottom: solid 2px #e9e9e9;
-}
-.contact_wrapper .contact_msg .form_fild .input_group .input.input_textarea {
-    min-width: 100%;
-    min-height: 75px;
-    max-height: 75px;
-    max-width: 100%}
-.contact_wrapper .contact_msg .form_fild .input_group .input:hover {
-    border-bottom-color: #ddd;
-}
-.contact_wrapper .contact_msg .form_fild .input_group .input:focus {
-    border-bottom-color: #aaa;
-}
-.contact_wrapper .contact_msg .form_fild .input_group .input:focus~.placeholder, .contact_wrapper .contact_msg .form_fild .input_group .input:valid~.placeholder {
-    top: -50px;
-    font-size: 12px!important;
-    color: $accent;
-}
-.contact_wrapper .contact_msg .form_fild .input_group .input:focus~.placeholder.textarea, .contact_wrapper .contact_msg .form_fild .input_group .input:valid~.placeholder.textarea {
-    top: -12px;
-}
-.contact_wrapper .contact_msg .form_fild .input_group .placeholder {
-    position: absolute;
-    left: 15px;
-    top: 0;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    font-size: 18px;
-    color: #bbb;
-    font-weight: 400;
-    transition: all .3s ease;
-    pointer-events: none;
-}
-.contact_wrapper .contact_msg .form_fild .input_group .placeholder.textarea {
-    align-items: baseline;
-}
-.contact_wrapper .contact_msg .form_fild .input_group .btn {
-    background: white;
-    padding: 12px;
-    border: 2px solid $accent;
-    font-size: 1rem;
-    border-radius: 0;
-    // background-color: $accent;
-    color: $accent;
-    min-width: 120px;
-    outline: 0;
-    transition: all .3s ease;
-}
-.contact_wrapper .contact_msg .form_fild .input_group .btn:hover {
-    background-color: $accent;
-    color: $primary;
-}
-.contact_wrapper .contact_msg .form_fild .input_group .btn:active {
-    transform: scale(.90);
-}
+@import "./responsive"
