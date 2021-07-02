@@ -1,5 +1,5 @@
 import React from "react";
-import "./styles/Footer.scss";
+import "./Footer.scss";
 
 import { FiFacebook, FiTwitter, FiInstagram, FiLinkedin } from 'react-icons/fi';
 const Footer = () => (
@@ -10,17 +10,15 @@ const Footer = () => (
                 <div className="footerleft">
                     <div className="footerKRP">
                         KRP
-                        <div className="krp_line"> </div>
-
-
+                        <div className="krp_line title-border"> </div>
                     </div>
 
                     <div className="footerinfo">
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras efficitur pharetra ante sit amet commodo. Aliquam et Praesent sit amet ultrices tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.                    </p>
-
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras efficitur pharetra ante sit amet commodo. Aliquam et Praesent sit amet ultrices tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+                        <div className="krp_line footerinfo-border"> </div>
                     </div>
-                    {/* <div className="footerfollow"></div> */}
                     <div className="social_icon">
                         <div className="icon_bg">
                             <FiFacebook className="footer_icons" />
@@ -34,44 +32,35 @@ const Footer = () => (
                         <div className="icon_bg">
                             <FiLinkedin className="footer_icons" />
                         </div>
-
-
-
-
-
-
                     </div>
-
-
                 </div>
 
                 <div className="footerright">
                     <div className="row">
                         <h4>Home</h4>
-                        <h5>Contact Us</h5>
-                        <h5>About Us</h5>
-                        <h5>Shop</h5>
-                        <h5>Learn</h5>
-                        <h5>Query</h5>
+                        <h5><a>Contact Us</a></h5>
+                        <h5><a>About Us</a></h5>
+                        <h5><a>Shop</a></h5>
+                        <h5><a>Learn</a></h5>
+                        <h5><a>Query</a></h5>
                     </div>
                     <div className="row">
                         <h4>Bags</h4>
-                        <h5>Tires</h5>
-                        <h5>Jackets</h5>
-                        <h5>Pants</h5>
+                        <h5><a>Tires</a></h5>
+                        <h5><a>Jackets</a></h5>
+                        <h5><a>Pants</a></h5>
 
                     </div>
                     <div className="row">
                         <h4>Services</h4>
-                        <h5>Modify Bike</h5>
-                        <h5>Workshops</h5>
-                        <h5>Buy parts</h5>
-                        <h5>Buy bike</h5>
-                        <h5>Donor</h5>
+                        <h5><a>Modify Bike</a></h5>
+                        <h5><a>Workshops</a></h5>
+                        <h5><a>Buy parts</a></h5>
+                        <h5><a>Buy bike</a></h5>
+                        <h5><a>Donor</a></h5>
                     </div>
 
                 </div>
-
 
             </div>
             <div className="footerbottom">
