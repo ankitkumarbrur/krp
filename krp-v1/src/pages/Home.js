@@ -29,9 +29,6 @@ const Home = () => {
       <Shopping />
       {/* <News /> */}
 
-
-
-
       <Article />
       {/* <Testimonials /> */}
       <Testing />

@@ -12,6 +12,3 @@ import Article from "./Article";
 import Testing from "./Testimonials/testing";
 
 export { Contactus, Testing, Article, Subscribe, Shopping, News, WhyKRP, Navbar, Footer, Imgviewer, Info };
-
-
-
