@@ -1,16 +1,42 @@
 @import "../../config.scss";
 
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 1200px) {
+    
+}
+
+@media screen and (max-width: 1024px) {
   .review-section {
+    margin-bottom: 3rem;
     .review {
+
       &-heading {
         // display: flex;
-        margin-bottom: 15vh;
+        // margin-bottom: 0;
         &-left {
           width: 100%;
         }
         &-right {
           display: none;
+        }
+      }
+      &-info {
+        margin-top: 10vh;
+        // margin-left: 15vw;
+        &-container {
+          &-text {
+            width: 85%;
+            font-size: 1.3rem;
+          }
+          &-quote {
+            top: -20px;
+            left: -38px;
+          }
+          &-name {
+            // font-size: 1.3rem;
+          }
+          &-title {
+
+          }
         }
       }
     }
@@ -37,11 +63,17 @@
       }
 
       &-info {
-        margin: 2.5rem 0 0 2.5rem;
+        margin-top: 5vh;
+        margin-left: 17vw;
+        // margin: 2.5rem 0 0 2.5rem;
 
         &-container {
+          &-quote {
+            display: none;
+          }
+
           &-text {
-            width: 75%;
+            width: 87%;
           }
         }
         &-btn {
@@ -62,21 +94,24 @@
 @media screen and (max-width: 480px) {
   .review-section {
     .review {
+
+      &-title {
+        &-accent-square {
+          height: 4rem;
+        }
+      }
+
       &-info {
         // position: relative;
-        top: 0;
-        left: 0;
-        width: 90%;
-
-        margin: 2rem auto;
+        margin: 0 auto;
+        margin-top: 1vh;
+        width: 85%;
 
         &-container {
           // transition: all 0.6s ease-in-out;
           transform: translateX(-2.5%);
 
-          &-quote {
-            display: none;
-          }
+          
 
           &-text {
             width: 100%;

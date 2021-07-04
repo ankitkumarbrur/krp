@@ -139,9 +139,7 @@ export default function Subscribe() {
                         duration: .15
                     }]
                 })
-
             }
-
         })
 
     })
@@ -149,13 +147,6 @@ export default function Subscribe() {
 
     return (
         <div className="subscribeContainer">
-{/*             
-
-            <input placeholder="E-mail" className="subscribeEmail">
-            </input>
-            <HiOutlineMail className="subscribeIcon" />
-
-            <button className="subscribeBtn">Subscribe Now</button> */}
 
             <form class="newsletter-form">
                 <input type="email" placeholder="Email address" />

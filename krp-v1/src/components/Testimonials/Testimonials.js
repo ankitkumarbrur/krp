@@ -76,18 +76,21 @@ const Review = () => {
                     </defs>
                   </svg>
                 </div>
+
                 <div className="review">
                   <h2>{text}</h2>
                   <h3>{name}</h3>
                   <p>{job}</p>
                 </div>
               </div>
+
               <div className="img-container">
                 <img src={image} alt={name} />
               </div>
             </article>
           );
         })}
+        
         <div className="btn">
           <button className="prev" onClick={() => setIndex(index - 1)}>
             <FiChevronLeft />
