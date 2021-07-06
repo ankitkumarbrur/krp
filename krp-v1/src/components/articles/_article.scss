@@ -1,0 +1,47 @@
+@media screen and (max-width: 1200px) {
+    
+}
+
+@media screen and (max-width: 1024px) {
+    .carousel {
+        ul.thumbs{
+            .article-div {
+                .article-number {
+                    font-size: 2rem;
+                }
+                .article-title {
+                    font-size: 1.1rem;
+                }   
+            }
+        }
+    }
+    .article-image {
+        .article-left {
+            height: 47%;
+            .news {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .carousel-slider{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .carousel {
+        ul.thumbs{
+            .article-div {
+                .article-number {
+                    font-size: 1.7rem;
+                }
+                .article-title {
+                    font-size: 1rem;
+                }   
+            }
+        }
+    }
+}

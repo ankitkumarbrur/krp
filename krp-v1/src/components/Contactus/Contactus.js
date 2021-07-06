@@ -45,7 +45,7 @@ const Contactus = () => {
       
             <div class="input_group w_50">
               <input type="text" class="input" required />
-              <label class="placeholder">Emal Address</label>
+              <label class="placeholder">Email Address</label>
             </div>
       
             <div class="input_group w_50">

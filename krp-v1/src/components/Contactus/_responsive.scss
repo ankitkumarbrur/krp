@@ -1,4 +1,4 @@
-@import "../../config.scss";
+// @import "../../config.scss";
 
 @media screen and (max-width: 1200px) {
     .contactus{
@@ -9,7 +9,7 @@
                 font-size: 2rem;
             }
 
-            p{
+            p {
                 font-size: 1rem;
             }
         }
@@ -127,7 +127,7 @@
             }
 
             .form_field {
-                padding: 8rem 25px 1rem 25px;
+                padding: 4rem 25px 1rem 25px;
             }
 
         }

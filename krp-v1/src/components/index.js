@@ -8,7 +8,7 @@ import Shopping from "./Shopping/Shopping";
 import Contactus from "./Contactus/Contactus";
 import Info from "./Info";
 import Subscribe from "./subscribe/Subscribe";
-import Article from "./Article";
+import Article from "./articles/Article";
 import Testing from "./Testimonials/testing";
 
 export { Contactus, Testing, Article, Subscribe, Shopping, News, WhyKRP, Navbar, Footer, Imgviewer, Info };

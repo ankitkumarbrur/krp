@@ -1,17 +1,31 @@
 @import "../../config.scss";
 
 @media screen and (max-width: 1200px) {
-    
+  .review-section {
+    width: 100%;
+    margin: 3rem 0;
+    .review {
+      &-info {
+        margin-top: 8vh;
+
+        &-container {
+          &-quote {
+            top: -20px;
+          }
+
+          &-text {
+            font-size: 1.3rem;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 1024px) {
   .review-section {
-    margin-bottom: 3rem;
     .review {
-
       &-heading {
-        // display: flex;
-        // margin-bottom: 0;
         &-left {
           width: 100%;
         }
@@ -21,7 +35,6 @@
       }
       &-info {
         margin-top: 10vh;
-        // margin-left: 15vw;
         &-container {
           &-text {
             width: 85%;
@@ -31,12 +44,6 @@
             top: -20px;
             left: -38px;
           }
-          &-name {
-            // font-size: 1.3rem;
-          }
-          &-title {
-
-          }
         }
       }
     }
@@ -45,17 +52,6 @@
 @media screen and (max-width: 768px) {
   .review-section {
     .review {
-      &-heading {
-        // display: flex;
-        // margin-bottom: 15vh;
-        // &-left {
-        //   width: 100%;
-        // }
-        // &-right {
-        //   display: none;
-        // }
-      }
-
       &-title {
         &-accent-square {
           height: 5rem;
@@ -65,8 +61,6 @@
       &-info {
         margin-top: 5vh;
         margin-left: 17vw;
-        // margin: 2.5rem 0 0 2.5rem;
-
         &-container {
           &-quote {
             display: none;
@@ -75,16 +69,6 @@
           &-text {
             width: 87%;
           }
-        }
-        &-btn {
-          // display: flex;
-          // position: absolute;
-          // bottom: -70px;
-          // left: -38px;
-
-          // .prev {
-          //   margin-right: 1.5rem;
-          // }
         }
       }
     }
@@ -102,17 +86,11 @@
       }
 
       &-info {
-        // position: relative;
         margin: 0 auto;
         margin-top: 1vh;
         width: 85%;
-
         &-container {
-          // transition: all 0.6s ease-in-out;
           transform: translateX(-2.5%);
-
-          
-
           &-text {
             width: 100%;
             font-size: 1.1rem;
@@ -121,8 +99,6 @@
           }
         }
         &-btn {
-          // display: flex;
-          // position: absolute;
           bottom: -70px;
           left: 0;
         }
