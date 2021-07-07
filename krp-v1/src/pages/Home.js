@@ -2,7 +2,6 @@ import React from "react";
 import {
   Article,
   Shopping,
-  News,
   Footer,
   Imgviewer,
   Navbar,
@@ -27,7 +26,6 @@ const Home = () => {
 
       <Info />
       <Shopping />
-      {/* <News /> */}
 
       <Article />
       <Testimonials />

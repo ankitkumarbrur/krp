@@ -1,11 +1,25 @@
 import React from "react";
-import { Navbar } from "../components";
+import {
+  Navbar,
+  Footer,
+  Main_header,
+  Our_journey,
+  Group_structure,
+  Our_team,
+  Our_message,
+} from "../components";
+import "./styles/about.scss";
 
 const About = () => {
   return (
     <main>
       <Navbar />
-      <h1>About page</h1>
+      <Main_header />
+      <Our_journey />
+      <Group_structure />
+      <Our_team />
+      <Our_message />
+      <Footer />
     </main>
   );
 };
