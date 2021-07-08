@@ -3,7 +3,7 @@
 .review-section {
   width: 100%;
   margin: 3rem 0;
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
   .review {
     &-heading {
       display: flex;
@@ -13,10 +13,11 @@
       &-right {
         width: 35%;
         height: 82vh;
-        // height: auto;
-
+              
         overflow: hidden;
         position: relative;
+        display: grid;
+
       }
     }
 
@@ -33,24 +34,17 @@
 
     &-info {
       position: relative;
-      height: 55vh;
-      top: 5vh;
-      left: 15vw;
-      margin: 3.5rem 0 0 2.5rem;
+      margin-top: 13vh;
+      margin-left: 19vw;
 
-      &-grids {
+      &-grids{
         display: grid;
-        // grid-template-columns: 1fr;
-        // grid-template-rows: auto;
         grid-gap: 2rem;
       }
 
       &-container {
         grid-row-start: 1;
         grid-column-start: 1;
-        // grid-row-end: 2;
-        // position: absolute;
-        // top: 0;
 
         &-quote {
           top: -44px;
@@ -61,7 +55,7 @@
 
         &-text {
           margin-top: 1rem;
-          width: 55%;
+          width: 80%;
           font-size: 1.5rem;
           font-weight: 400;
           margin-bottom: 2.5rem;
@@ -94,7 +88,6 @@
         }
         &-title {
           margin-left: 3rem;
-          // margin-bottom: 5rem;
           font-weight: 400;
 
           transform: translateY(25%);
@@ -103,23 +96,19 @@
           transition: 0.6s all ease-in-out;
         }
       }
-      // &-container.active {
-      //   transform: translateY(0);
-      // }
-      .active {
+      .active{
         transform: translateY(0);
         opacity: 1;
         transition: 0.6s all ease-in-out;
         visibility: visible;
       }
 
+
+
       &-btn {
         grid-row-start: 2;
         grid-column-start: 1;
         display: flex;
-        // position: relative;
-        // top: 3vh;
-        // display: none;
         .prev,
         .next {
           display: grid;
@@ -135,35 +124,36 @@
         .next {
           background: $accent;
         }
-        // &-active{
-        //   display: block;
-        // }
       }
+      
     }
   }
+  
 }
 
-.review {
+
+.review{
   &-carousel-item {
     width: 100%;
-    height: 100%;
-    position: absolute;
+    height: 95%;
+    grid-row-start: 1;
+    grid-column-start: 1;
     z-index: 0;
-    transition: 0.6s all linear;
+    transition: .6s all linear;
   }
 
   &-carousel-item-image {
     transform: translateX(100%);
-    transition: 0.6s all ease-in-out;
+    transition: .6s all ease-in-out;
   }
-
+  
   &-active-slide {
     z-index: 1;
-    img {
-      transition: 0.6s all ease-in-out;
+    img  {
+      transition: .6s all ease-in-out;
       transform: translateX(0);
     }
   }
 }
 
-@import "./media-queries.scss";
+@import "./media-queries";

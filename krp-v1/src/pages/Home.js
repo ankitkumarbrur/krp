@@ -9,8 +9,8 @@ import {
   WhyKRP,
   Info,
   Subscribe,
-  Testimonials,
   Contactus,
+  Testimonials,
 } from "../components";
 
 import "./styles/home.scss";
@@ -47,7 +47,6 @@ const Home = () => {
 
       <Info />
       <Shopping />
-      {/* <News /> */}
 
       <Article />
       <Testimonials />
