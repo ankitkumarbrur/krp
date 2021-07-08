@@ -1,0 +1,139 @@
+// @import "../../config.scss";
+
+@media screen and (max-width: 1200px) {
+    .contactus{
+
+        &-left {
+            width: 50%;
+            h2 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+
+        &-right {
+            width: 50%;
+        }
+
+        &-address {
+            width: 35vw;
+        }
+        &-details {
+            width: 35vw;
+        }
+    
+        &-form {
+            margin-left: 5vw;
+            width: 70%;
+            .input {
+                font-size: 15px;
+            }
+            
+            .placeholder {
+                font-size: 14px;
+            }
+
+            .btn {
+                font-size: 0.8rem;
+                min-width: 100px;
+            }
+            
+            .input:focus~.placeholder, .input:valid~.placeholder {
+                top: -40px;
+            }
+            
+            .input:focus~.textarea, .input:valid~.textarea {
+                top: -16px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .contactus{
+        &-form {
+            margin-left: 3vw;
+            width: 75%;
+            &-heading{
+                
+                h1{
+                    font-size: 3rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contactus{
+        background: none;
+        height: auto;
+        flex-direction: column-reverse;
+        
+        &::before{
+            display: none;
+        }
+    
+        &-left{
+            z-index: 1;
+            width: 100%;
+            flex-direction: row;
+            justify-content: space-evenly;
+            // margin-top: 1rem;
+            flex-direction: column;
+        }
+        
+        &-right{
+            z-index: 1;
+            width: 100%;
+        }
+    
+        &-address{
+            height: 23vh;
+            width: 80vw;
+            background-color: $secondary;
+            margin-bottom: 1rem;
+        }
+
+        &-details{
+            height: 23vh;
+            width: 80vw;
+            background-color: $accent;
+        }
+    
+        &-form {
+            height: fit-content;
+            width: 100vw;
+            box-shadow: none;
+            margin: 0;
+
+            &-heading{
+                position: static;
+                top: -1.5rem;
+                left: 0vw;
+                height: 6rem;
+                width: 100vw;
+    
+                h1{
+                    font-size: 2.5rem;
+                    color: $primary;
+                    text-align: center;
+                    margin-left: 0rem;
+                    line-height: 6rem;
+                }
+            }
+
+            .form_field {
+                padding: 4rem 25px 1rem 25px;
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+   
+}

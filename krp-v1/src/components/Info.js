@@ -1,10 +1,48 @@
-import React from "react";
+import React, { useEffect, useState, useLayoutEffect, useRef } from "react";
 import "./styles/info.scss";
+import { Parallax } from 'react-scroll-parallax';
 
-const Info = () => {
+
+import { Page, Frame, useMotionValue, Scroll } from 'framer';
+
+import { useViewportScroll, useTransform, motion, useAnimation, useMotionTemplate, useSpring } from 'framer-motion';
+import InView, { useInView } from 'react-intersection-observer';
+
+
+
+const Info = ({ offset = 300, clampInitial = false, clampFinal = false }) => {
+
+
+  const [elementTop, setElementTop] = useState(0)
+  const [clientHeight, setClientHeight] = useState(0)
+  const ref = useRef(null)
+
+  const { scrollY } = useViewportScroll()
+
+  const initial = elementTop - clientHeight
+  const final = elementTop + offset / 2
+
+  const yRange = useTransform(scrollY, [initial, final], [clampInitial ? 0 : offset, clampFinal ? 0 : -offset])
+  const y = useSpring(yRange, { stiffness: 400, damping: 90 })
+
+  useLayoutEffect(() => {
+    const element = ref.current
+    const onResize = () => {
+      setElementTop(element.getBoundingClientRect().top + window.scrollY || window.pageYOffset)
+      setClientHeight(window.innerHeight)
+    }
+    console.log("fired")
+    onResize()
+    window.addEventListener('resize', onResize)
+    return () => window.removeEventListener('resize', onResize)
+  }, [ref])
+
+
+
+
   return (
     <section className="info-section">
-      
+
       <div className="info-first">
         <div className="info-first-left">
           <div className="info-title">
@@ -16,7 +54,7 @@ const Info = () => {
             </h2>
             <div className="info-title-black-square"> </div>
           </div>
-
+          {/* <Parallax className="classname"> */}
           <div className="info-workshop">
             <h3>workshop services</h3>
             <p className="info-workshop-text">
@@ -27,19 +65,25 @@ const Info = () => {
               nisi ut aliquip ex ea commodo consequat.{" "}
             </p>
 
-            <div className="info-apparels-image">
+            <motion.div className="info-apparels-image"
+              ref={ref} style={{ y }}
+
+            >
               <img />
-            </div>
+            </motion.div>
           </div>
+          {/* </Parallax> */}
         </div>
 
         <div className="info-first-right">
           {/* <div className = "info-workshop"> */}
 
           <div className="info-apparels">
-            <div className="info-workshop-image">
-              <img />
-            </div>
+            <Parallax className="custom-class" y={[30, -40]} tagOuter="figure">
+              <div className="info-workshop-image">
+                <img />
+              </div>
+            </Parallax>
             <div>
               <h3>apparels</h3>
               <p className="info-workshop-text">

@@ -1,6 +1,14 @@
-import React from "react";
-
+import React, { useEffect } from "react";
 import "./styles/imgviewer.scss";
+import {
+  useViewportScroll,
+  useTransform,
+  motion,
+  useAnimation,
+  useMotionValue,
+} from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
 const data = [
   {
     index: 1,
@@ -69,25 +77,111 @@ function Images() {
   console.log(toDisplay);
   return toDisplay;
 }
+
+const boxVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      delay: 1,
+      when: "beforeChildern",
+      staggerChildren: 0.2,
+    },
+  },
+};
+const childVariants = {
+  hidden: {
+    opacity: 0,
+    x: -20,
+    y: 20,
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      // ease: "easeOut",
+      // type: "spring",
+      // damping: 10,
+      // mass: 0.1,
+      // stiffness: 100
+    },
+  },
+};
+
 const Imgviewer = () => {
+  const y = useMotionValue(0);
+  var { scrollY, scrollYProgress } = useViewportScroll();
+
+  const scaleText = useTransform(
+    scrollY,
+    [0, 40, 80, 120, 160],
+    [1, 2, 4, 8, 16]
+  );
+  const chang = useTransform(scrollY, (value) => -value / 2);
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+    console.log(scrollY);
+  }, [controls, inView, scrollY]);
+
   return (
     <div className="home1container">
       <div id="item0"></div>
-      <div className="home1text">
+
+      <motion.div
+        className="home1text"
+        ref={ref}
+        initial="hidden"
+        animate="visible"
+        // initial={{ x: 0, y: 60, opacity: 0, }}
+        // animate={{ x: 0, y: 0, opacity: 1, transition: { duration: 0.3, delay: 0.5, ease: "easeInOut", when: "beforeChildren", staggerChildren: 2 } }}
+        variants={boxVariants}
+        style={{ y: chang }}
+      >
         <h1>
-          ONE Stop Shop For
-          <br />
-          <div className="motorcyle">Motorcycle</div> Performance Parts,
-          <br />
-          <div className="since">
-            <br />
+          <motion.div
+            variants={childVariants}
+            // initial={{ x: 0, y: 60, opacity: 0, }}
+            // animate={{ x: 0, y: 0, opacity: 1, transition: { ease: "easeInOut" } }}
+          >
+            ONE Stop Shop For
+          </motion.div>
+          <motion.div
+            className="motorcyle"
+            variants={childVariants}
+
+            // initial={{ x: 0, y: 60, opacity: 0, }}
+            // animate={{ x: 0, y: 0, opacity: 1, transition: { ease: "easeInOut" } }}
+          >
+            Motorcycle Performance Parts,
+          </motion.div>
+          <motion.div className="since" variants={childVariants}>
             <div className="hline"></div>
             Since <br /> &nbsp;&nbsp;1970
-          </div>
-          Accessories, Gear & Wear
+          </motion.div>
+          <motion.div
+            variants={childVariants}
+
+            // initial={{ x: 0, y: 60, opacity: 0, }}
+            // animate={{ x: 0, y: 0, opacity: 1, transition: { ease: "easeInOut" } }}
+          >
+            Accessories, Gear & Wear
+          </motion.div>
         </h1>
-        <button>About Us</button>
-      </div>
+        <motion.button
+          variants={childVariants}
+          // initial={{ x: 0, y: 60, opacity: 0, }}
+          // animate={{ x: 0, y: 0, opacity: 1, transition: { ease: "easeInOut" } }}
+        >
+          About Us
+        </motion.button>
+      </motion.div>
+
       <div id="item1" className="imagecontainer">
         <Images />
       </div>

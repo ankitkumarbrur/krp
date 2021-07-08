@@ -1,0 +1,108 @@
+@import "../../config.scss";
+
+@media screen and (max-width: 1200px) {
+  .review-section {
+    width: 100%;
+    margin: 3rem 0;
+    .review {
+      &-info {
+        margin-top: 8vh;
+
+        &-container {
+          &-quote {
+            top: -20px;
+          }
+
+          &-text {
+            font-size: 1.3rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .review-section {
+    .review {
+      &-heading {
+        &-left {
+          width: 100%;
+        }
+        &-right {
+          display: none;
+        }
+      }
+      &-info {
+        margin-top: 10vh;
+        &-container {
+          &-text {
+            width: 85%;
+            font-size: 1.3rem;
+          }
+          &-quote {
+            top: -20px;
+            left: -38px;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .review-section {
+    .review {
+      &-title {
+        &-accent-square {
+          height: 5rem;
+        }
+      }
+
+      &-info {
+        margin-top: 5vh;
+        margin-left: 17vw;
+        &-container {
+          &-quote {
+            display: none;
+          }
+
+          &-text {
+            width: 87%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .review-section {
+    .review {
+
+      &-title {
+        &-accent-square {
+          height: 4rem;
+        }
+      }
+
+      &-info {
+        margin: 0 auto;
+        margin-top: 1vh;
+        width: 85%;
+        &-container {
+          transform: translateX(-2.5%);
+          &-text {
+            width: 100%;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            text-align: justify;
+          }
+        }
+        &-btn {
+          bottom: -70px;
+          left: 0;
+        }
+      }
+    }
+  }
+}
