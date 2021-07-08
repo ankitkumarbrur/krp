@@ -46,8 +46,11 @@ window.addEventListener("scroll", function (e) {
     document.body.scrollTop ||
     0;
 
-  document.getElementById("item1").style.opacity =
-    1 - Math.max(0, Math.min(1, -scroll / 150 + 1));
+  const itemONe = document.getElementById("item1");
+  if (itemONe != null) {
+    itemONe.style.opacity = 1 - Math.max(0, Math.min(1, -scroll / 150 + 1));
+  }
+
   // document.getElementById('item0').style.opacity = 1 - Math.max(0, Math.min(1, -scroll / 150 + 1));
 });
 function Images() {

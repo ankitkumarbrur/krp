@@ -6,3 +6,11 @@ $grey: #808080;
 @mixin transition-ease {
   transition: all 0.6s ease-in-out;
 }
+
+@function text-clr($color) {
+  @if (lightness($color) > 50) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}

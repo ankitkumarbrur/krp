@@ -58,4 +58,38 @@
   filter: brightness(2);
 }
 
+.about {
+  .navbar {
+    .nav {
+      .title {
+        h3 {
+          color: $secondary;
+        }
+        .line {
+          background-color: $secondary;
+        }
+      }
+
+      .menu-nav {
+        &-item {
+          .nav-links {
+            color: $secondary;
+
+            &:hover {
+              color: $accent;
+            }
+            &.active {
+              color: $accent;
+            }
+          }
+        }
+      }
+    }
+  }
+  .scroll {
+    background: rgba($color: $secondary, $alpha: 1);
+    filter: brightness(2);
+  }
+}
+
 @import "./media-queries.scss";

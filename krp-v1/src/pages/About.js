@@ -12,7 +12,7 @@ import "./styles/about.scss";
 
 const About = () => {
   return (
-    <main>
+    <main className="about">
       <Navbar />
       <Main_header />
       <Our_journey />
