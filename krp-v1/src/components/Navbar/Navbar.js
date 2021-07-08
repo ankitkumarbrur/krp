@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import menuItems from "./MenuItems";
+import { motion } from "framer-motion";
 
 import { Link, useLocation } from "react-router-dom";
 import "../Navbar/navbar.scss";

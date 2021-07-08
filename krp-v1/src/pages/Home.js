@@ -1,17 +1,16 @@
 import React from "react";
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 import {
   Article,
   Shopping,
-  News,
   Footer,
   Imgviewer,
   Navbar,
   WhyKRP,
   Info,
   Subscribe,
-  Testing,
-  Contactus
+  Contactus,
+  Testimonials,
 } from "../components";
 
 import "./styles/home.scss";
@@ -23,29 +22,23 @@ const childVariants = {
     y: 10,
   },
   visible: {
-
     opacity: 1,
     x: 0,
     y: 0,
     transition: {
       duration: 0.5,
-      when: "beforeChildren"
-
-    }
-
-  }
-}
-
+      when: "beforeChildren",
+    },
+  },
+};
 
 const Home = () => {
   return (
     <main>
       <header className="main-header">
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={childVariants}
-        ><Navbar /></motion.div>
+        <motion.div initial="hidden" animate="visible" variants={childVariants}>
+          <Navbar />
+        </motion.div>
 
         <Imgviewer />
       </header>
@@ -54,11 +47,9 @@ const Home = () => {
 
       <Info />
       <Shopping />
-      {/* <News /> */}
 
       <Article />
-      {/* <Testimonials /> */}
-      <Testing />
+      <Testimonials />
 
       <Contactus />
 

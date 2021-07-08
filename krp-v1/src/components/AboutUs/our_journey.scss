@@ -1,0 +1,32 @@
+@import "../../config.scss";
+
+.our-journey {
+  width: 80vw;
+  margin: 0 auto;
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+
+  &-left {
+    width: 350px;
+    height: 350px;
+    margin-right: 3rem;
+    position: relative;
+    top: 35px;
+  }
+  &-right {
+    width: 50%;
+    h2 {
+      color: $accent;
+    }
+    .underline {
+      width: 100px;
+      height: 3px;
+      background: black;
+    }
+
+    p {
+      margin-top: 3rem;
+    }
+  }
+}
