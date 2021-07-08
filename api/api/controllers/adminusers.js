@@ -40,48 +40,60 @@ exports.adminuser_signup = (req, res, next) => {
 };
 
 exports.adminuser_login = (req, res, next)=>{
-  adminusers.findOne({where: { username: req.body.username }}).then(user => {
-    if (user == null) {
-      return res.status(401).json({
-        message: "Auth failed"
-      });
-    }
-    // return res.status(200).json({
-    //   message:user.password
-    // });
-    bcrypt.compare(req.body.password, user.password, (err, result) => {
-      if (err) {
+  console.log(req.body);
+  if(req.body.username && req.body.password)
+  {
+    adminusers.findOne({where: { username: req.body.username }}).then(user => {
+      if (user == null) {
         return res.status(401).json({
+          status:401,
           message: "Auth failed"
         });
       }
-      if (result) {
-        const token = jwt.sign(
-          {
-            username: user.username,
-            userId: user.id
-          },
-          process.env.JWT_KEY,
-          {
-            expiresIn: "1h"
-          }
-        );
-        return res.status(200).json({
-          message: "Auth successful",
-          token: token
+      // return res.status(200).json({
+      //   message:user.password
+      // });
+      bcrypt.compare(req.body.password, user.password, (err, result) => {
+        if (err) {
+          return res.status(401).json({
+            status:401,
+            message: "Auth failed"
+          });
+        }
+        if (result) {
+          const token = jwt.sign(
+            {
+              username: user.username,
+              userId: user.id
+            },
+            process.env.JWT_KEY,
+            {
+              expiresIn: "1h"
+            }
+          );
+          return res.status(200).json({
+            status: "200",
+            token: token
+          });
+        }
+        res.status(401).json({
+          status: "401"
         });
-      }
-      res.status(401).json({
-        message: "Auth failed"
+      });
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json({
+        status: "500",
+        error: err
       });
     });
-  })
-  .catch(err => {
-    console.log(err);
-    res.status(500).json({
-      error: err
+  }else{
+    return res.status(401).json({
+      status:"401",
+      message: "Auth failed"
     });
-  });
+  }
 }
 
 exports.adminuser_delete = (req, res, next)=>{
