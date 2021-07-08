@@ -65,7 +65,7 @@ const Contactus = () => {
 
   return (
     <motion.section className="contactus"
-      ref={ref}
+
       initial="hidden"
       animate={controls}
       variants={boxVariants}
@@ -95,7 +95,7 @@ const Contactus = () => {
         {/* <Frame y={logy}> */}
         <motion.div className="contactus-details"
           variants={childVariants}
-
+          ref={ref}
         >
           <h2>email & phone </h2>
           <p>
