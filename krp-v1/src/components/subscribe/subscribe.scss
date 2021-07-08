@@ -100,9 +100,9 @@
         min-width: 130px;
         text-align: center;
         font-weight: 600;
-        opacity: var(--button-opacity, .5);
+        // opacity: var(--button-opacity, .5);
         cursor: var(--button-cursor, not-allowed);
-        filter: var(--button-filter, grayscale(65%));
+        filter: var(--button-filter, grayscale(40%));
         color: var(--button-text);
         border-radius: var(--border-radius);
         transform: translateZ(0);

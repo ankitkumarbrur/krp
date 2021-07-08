@@ -1,32 +1,33 @@
-@import "../../config.scss";
+// @import "../../config.scss";
 
 @media screen and (max-width: 1200px) {
     .contactus{
-        &-form{
-            .input {
-                font-size: 16px;
-            }
-            .placeholder {
-                font-size: 16px;
-            }
-        }
-    }
-}
 
-@media screen and (max-width: 1024px) {
-    .contactus{
-
-        &-left{
-            h2{
-                font-size:2rem;
+        &-left {
+            width: 50%;
+            h2 {
+                font-size: 2rem;
             }
 
-            p{
+            p {
                 font-size: 1rem;
             }
         }
+
+        &-right {
+            width: 50%;
+        }
+
+        &-address {
+            width: 35vw;
+        }
+        &-details {
+            width: 35vw;
+        }
     
-        &-form{
+        &-form {
+            margin-left: 5vw;
+            width: 70%;
             .input {
                 font-size: 15px;
             }
@@ -51,6 +52,21 @@
     }
 }
 
+@media screen and (max-width: 1024px) {
+    .contactus{
+        &-form {
+            margin-left: 3vw;
+            width: 75%;
+            &-heading{
+                
+                h1{
+                    font-size: 3rem;
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 768px) {
     .contactus{
         background: none;
@@ -58,7 +74,7 @@
         flex-direction: column-reverse;
         
         &::before{
-            background-color: transparent;
+            display: none;
         }
     
         &-left{
@@ -66,7 +82,8 @@
             width: 100%;
             flex-direction: row;
             justify-content: space-evenly;
-            margin-top: 2rem;
+            // margin-top: 1rem;
+            flex-direction: column;
         }
         
         &-right{
@@ -76,13 +93,14 @@
     
         &-address{
             height: 23vh;
-            width: 33vw;
+            width: 80vw;
             background-color: $secondary;
+            margin-bottom: 1rem;
         }
 
         &-details{
             height: 23vh;
-            width: 33vw;
+            width: 80vw;
             background-color: $accent;
         }
     
@@ -90,15 +108,17 @@
             height: fit-content;
             width: 100vw;
             box-shadow: none;
+            margin: 0;
 
             &-heading{
-                position: absolute;
+                position: static;
                 top: -1.5rem;
                 left: 0vw;
                 height: 6rem;
                 width: 100vw;
     
                 h1{
+                    font-size: 2.5rem;
                     color: $primary;
                     text-align: center;
                     margin-left: 0rem;
@@ -107,7 +127,7 @@
             }
 
             .form_field {
-                padding: 8rem 25px 1rem 25px;
+                padding: 4rem 25px 1rem 25px;
             }
 
         }
@@ -115,30 +135,5 @@
 }
 
 @media screen and (max-width: 480px) {
-    .contactus{
-    
-        &-left{
-            flex-direction: column;
-        }
-    
-        &-address{
-            height: 20vh;
-            width: 80vw;
-            margin-bottom: 1rem;
-        }
-
-        &-details{
-            height: 18vh;
-            width: 80vw;
-            background-color: $accent;
-        }
-    
-        &-form {    
-            &-heading {
-                h1{
-                    font-size: 2.5rem;
-                }
-            }
-        }
-    }
+   
 }

@@ -7,7 +7,6 @@
     
     &::before{
         content:"";
-        // display: block;
         position: absolute;
         height: 80vh;
         width: 100vw;
@@ -31,10 +30,10 @@
         }
         p{
             margin-top: 0.5rem;
-            padding: 0 0.3rem;
+            padding: 0 0.8rem;
             text-align: center;
             color: $primary;
-            font-size: 1.1rem;
+            font-size: 1rem;
             // width: 90%;
         }
     }
@@ -45,19 +44,19 @@
     }
 
     &-address{
-        height: 25vh;
-        width: 25vw;
+        height: 27vh;
+        width: 28vw;
         background-color: $secondary;
     }
     &-details{
         height: 25vh;
-        width: 25vw;
+        width: 28vw;
         background-color: $accent;
     }
 
     &-form{
         height: 80%;
-        width: 50%;
+        width: 58%;
         background-color: $primary;
         position: relative;
         margin: auto;
@@ -68,15 +67,16 @@
         &-heading{
             position: absolute;
             top: -2rem;
-            left: 4rem;
+            left: 3.7rem;
             height: 7rem;
             width: 50vw;
             background-color: $accent;
 
             h1{
                 color: $primary;
-                margin-left:2rem;
+                margin-left: 2rem;
                 line-height: 7rem;
+                font-size: 4rem;
             }
         }
 
