@@ -1,11 +1,12 @@
 @import "../../config.scss";
 
-.contactus{
+.contactus {
     background: url("https://unsplash.com/photos/6bXvYyAYVrE/download?force=true&w=1920");
     height: 80vh;
     display: flex;
+    overflow: hidden;
     
-    &::before{
+    &::before {
         content:"";
         position: absolute;
         height: 80vh;
@@ -13,7 +14,7 @@
         background-color: rgba(0, 0, 0, .5);
     }
 
-    &-left{
+    &-left {
         z-index: 1;
         width: 40%;
         // background-color: rgba($color: red, $alpha: 0.5);
@@ -39,40 +40,52 @@
     }
     &-right{
         z-index: 1;
-        width:60%;
-        // background-color: rgba($color: green, $alpha: 0.5);
+        width: 60%;
     }
 
-    &-address{
+    &-address {
         height: 27vh;
         width: 28vw;
         background-color: $secondary;
+        position: relative;
     }
-    &-details{
+    
+    &-details {
         height: 25vh;
         width: 28vw;
         background-color: $accent;
+        position: relative;
     }
 
-    &-form{
+    &-address, &-details {
+        p {
+            width: 90%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &-form {
         height: 80%;
         width: 58%;
         background-color: $primary;
         position: relative;
         margin: auto;
-        top:10%;
+        top: 10%;
         box-shadow: 0 10px 30px rgba(0, 0, 0, .3);
 
 
-        &-heading{
+        &-heading {
             position: absolute;
             top: -2rem;
             left: 3.7rem;
             height: 7rem;
-            width: 50vw;
+            width: 60vw;
             background-color: $accent;
 
-            h1{
+            h1 {
                 color: $primary;
                 margin-left: 2rem;
                 line-height: 7rem;

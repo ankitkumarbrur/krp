@@ -5,6 +5,13 @@ import { Carousel } from 'react-responsive-carousel'
 
 export default function Article() {
     
+    React.useEffect(() => {
+        const el = document.getElementsByClassName("thumbs")[0]
+        var newEl = el.cloneNode(false);
+        while (el.hasChildNodes()) newEl.appendChild(el.firstChild);
+        el.parentNode.replaceChild(newEl, el);
+    })
+    
     const re = () => {
         return(arts.map((item, index) => {
             return(
