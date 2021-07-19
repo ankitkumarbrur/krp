@@ -6,10 +6,10 @@ import { Carousel } from 'react-responsive-carousel'
 export default function Article() {
     
     React.useEffect(() => {
-        const el = document.getElementsByClassName("thumbs")[0]
-        var newEl = el.cloneNode(false);
-        while (el.hasChildNodes()) newEl.appendChild(el.firstChild);
-        el.parentNode.replaceChild(newEl, el);
+        const element = document.getElementsByClassName("thumbs")[0]
+        var newElement = element.cloneNode(false);
+        while (element.hasChildNodes()) newElement.appendChild(element.firstChild);
+        element.parentNode.replaceChild(newElement, element);
     })
     
     const re = () => {
@@ -48,6 +48,7 @@ export default function Article() {
                     showArrows = {false}
                     showStatus = {false}
                     showIndicators = {false}
+                    swipeScrollTolerance = {40}
                 >
                     {arts.map((item,index)=>{
                         return (
