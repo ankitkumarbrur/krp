@@ -1,0 +1,18 @@
+@import "../../config.scss";
+
+.our-message {
+  width: 100vw;
+  margin-top: 4rem;
+
+  h2 {
+    background: $accent;
+    color: $primary;
+    text-align: center;
+  }
+
+  p {
+    margin: 1.5rem auto;
+    width: 80%;
+    text-align: center;
+  }
+}

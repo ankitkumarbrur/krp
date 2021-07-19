@@ -19,6 +19,29 @@ Global Styles
   padding: 0;
   box-sizing: border-box;
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #c2c9d2;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(192, 192, 192);
+}
+
 body {
   font-family: "Roboto", sans-serif;
   background: $primary;

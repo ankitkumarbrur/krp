@@ -1,0 +1,50 @@
+@import "../../config.scss";
+
+.group-structure {
+  width: 90vw;
+  margin-top: 4rem;
+  display: flex;
+  justify-content: flex-start;
+
+  &-left {
+    display: flex;
+    // margin-right: 4rem;
+    width: 55%;
+    .accent-square {
+      position: relative;
+      top: 30px;
+      width: 40px;
+      height: 140px;
+      background: $accent;
+    }
+    .title {
+      h2 {
+        position: relative;
+        margin-left: 2rem;
+        font-size: 5.5rem;
+        letter-spacing: 5px;
+        text-transform: capitalize;
+        span {
+          margin-left: 5rem;
+        }
+      }
+      .underline {
+        position: absolute;
+        width: 215px;
+        height: 3px;
+        background: $secondary;
+        right: 0;
+      }
+    }
+  }
+
+  &-right {
+    width: 45%;
+    p {
+      margin-top: 0.5rem;
+    }
+    p:nth-of-type(2) {
+      text-indent: 125px;
+    }
+  }
+}
