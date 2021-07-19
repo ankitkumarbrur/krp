@@ -1,53 +1,129 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import { Link } from "react-router-dom";
 import data from "./shopping-data";
 import "../Shopping/shopping.scss";
+import { useViewportScroll, useTransform, motion, useAnimation, useMotionValue, } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 import store_img from "../../images/store_img.png";
 
-const Shopping = () => {
-  return (
-    <section className="shopping-section">
-      <div className="store-heading">
-        <div className="store-heading-left">
-          <div className="store-title">
-            <div className="store-title-accent-square"></div>
-            <h2 className="store-title-heading"> Store </h2>
-          </div>
+const boxVariants = {
+  hidden: {
 
-          <div className="store-info">
-            <h3>shop with us !</h3>
-            <p className="store-info-text">
+  },
+  visible: {
+
+    transition: {
+
+      delay: 1,
+      when: "beforeChildern",
+      staggerChildren: 0.2
+
+    }
+  }
+}
+const childVariants = {
+  hidden: {
+    opacity: 0,
+    x: 0,
+    y: 20,
+  },
+  visible: {
+
+    opacity: 1,
+    x: 0,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      // ease: "easeOut",
+      // type: "spring",
+      // damping: 10,
+      // mass: 0.1,
+      // stiffness: 100
+
+
+    }
+
+  }
+}
+
+
+
+
+const Shopping = () => {
+
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+
+  }, [controls, inView]);
+
+
+  return (
+    <motion.section className="shopping-section"
+      initial="hidden"
+      animate={controls}
+      variants={boxVariants}
+
+    >
+      <motion.div className="store-heading">
+        <motion.div className="store-heading-left">
+          <motion.div className="store-title">
+            <motion.div className="store-title-accent-square"
+              variants={childVariants}
+            ></motion.div>
+            <motion.h2 className="store-title-heading"
+              variants={childVariants}
+            > Store </motion.h2>
+          </motion.div>
+
+          <motion.div className="store-info">
+            <motion.h3
+              variants={childVariants}
+
+            >shop with us !</motion.h3>
+            <motion.p className="store-info-text"
+              variants={childVariants}
+            >
               we bring you a variety of top notch products with sense of
               belief...
-            </p>
+            </motion.p>
 
-            <button className="store-info-btn">
+            <motion.button className="store-info-btn"
+              ref={ref}
+            >
               <Link to="#">visit store</Link>
-            </button>
-          </div>
-        </div>
+            </motion.button>
+          </motion.div>
+        </motion.div>
 
-        <div className="store-heading-right">
-          <div className="store-image">
+        <motion.div className="store-heading-right">
+          <motion.div className="store-image"
+            variants={childVariants}
+          >
             <img src={store_img} alt="" />
-          </div>
-        </div>
-      </div>
+          </motion.div>
+        </motion.div>
+      </motion.div>
 
-      <article className="item">
+      <motion.article className="item"
+        variants={childVariants}
+      >
         {data.map((item) => {
           const { id, title, image } = item;
           return (
-            <div className="item-container" key={id}>
+            <motion.div className="item-container" key={id}>
               <img className="item-container-image" src={image} alt={title} />
               <h4 className="item-container-title">{title}</h4>
-            </div>
+            </motion.div>
           );
         })}
-      </article>
-    </section>
+      </motion.article>
+    </motion.section>
   );
 };
 

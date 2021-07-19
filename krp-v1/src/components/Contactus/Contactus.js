@@ -109,15 +109,15 @@ const Contactus = () => {
 
 
 
-      <motion.div className="contactus-right">
-        <motion.div className="contactus-form">
+      <motion.div className="contactus-right" >
+        <motion.div className="contactus-form" >
           <motion.div className="contactus-form-heading"
             variants={childVariants}
           >
             <h1>SEND A MESSAGE</h1>
           </motion.div>
 
-          <motion.div class="form_field">
+          <motion.div class="form_field" >
 
             <motion.div class="input_group w_50" variants={childVariants}>
               <input type="text" class="input" required />
@@ -144,7 +144,7 @@ const Contactus = () => {
               <label class="placeholder textarea">Write your message here...</label>
             </motion.div>
 
-            <motion.div class="input_group variants={childVariants}">
+            <motion.div class="input_group" variants={childVariants}>
               <input type="submit" class="btn" value="Send" />
             </motion.div>
 

@@ -3,7 +3,65 @@ import data from "./testimonials-data";
 import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
 import "./testimonials.scss";
 
+import { useViewportScroll, useTransform, motion, useAnimation, useMotionValue, } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+
+
+
+const boxVariants = {
+  hidden: {
+
+  },
+  visible: {
+
+    transition: {
+
+      delay: 1,
+      when: "beforeChildern",
+      staggerChildren: 0.2
+
+    }
+  }
+}
+const childVariants = {
+  hidden: {
+    opacity: 0,
+    x: 0,
+    y: 20,
+  },
+  visible: {
+
+    opacity: 1,
+    x: 0,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      // ease: "easeOut",
+      // type: "spring",
+      // damping: 10,
+      // mass: 0.1,
+      // stiffness: 100
+
+
+    }
+
+  }
+}
+
+
+
+
 const Review = () => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+
+  }, [controls, inView]);
+
+
   const [current, setCurrent] = useState(0);
 
   const nextPerson = () => {
@@ -30,16 +88,28 @@ const Review = () => {
   // }, [index]);
 
   return (
-    <section className="review-section">
-      <div className="review-heading">
-        <div className="review-heading-left">
-          <div className="review-title">
-            <div className="review-title-accent-square"></div>
-            <h2 className="review-title-heading"> Testimonials </h2>
-          </div>
+    <motion.section className="review-section"
+      initial="hidden"
+      animate={controls}
+      variants={boxVariants}
 
-          <div className="review-info">
-            <div className="review-info-container-quote">
+    >
+      <motion.div className="review-heading">
+        <motion.div className="review-heading-left">
+          <motion.div className="review-title">
+            <motion.div className="review-title-accent-square"
+              variants={childVariants}
+            ></motion.div>
+            <motion.h2 className="review-title-heading"
+              variants={childVariants}
+            > Testimonials </motion.h2>
+          </motion.div>
+
+          <motion.div className="review-info">
+            <motion.div className="review-info-container-quote"
+              variants={childVariants}
+              ref={ref}
+            >
               <svg
                 width="155"
                 height="163"
@@ -68,55 +138,55 @@ const Review = () => {
                   </clipPath>
                 </defs>
               </svg>
-            </div>
-            <div className="review-info-grids">
+            </motion.div>
+            <motion.div className="review-info-grids"
+              variants={childVariants}
+            >
               {data.map((item, index) => {
                 return (
-                  <div className="review-info-container">
+                  <motion.div className="review-info-container">
                     <p
-                      className={`review-info-container-text ${
-                        index === current ? "active" : ""
-                      }`}
+                      className={`review-info-container-text ${index === current ? "active" : ""
+                        }`}
                     >
                       {item.text}
                     </p>
                     <h4
-                      className={`review-info-container-name ${
-                        index === current ? "active" : ""
-                      }`}
+                      className={`review-info-container-name ${index === current ? "active" : ""
+                        }`}
                     >
                       {item.name}
                     </h4>
                     <h5
-                      className={`review-info-container-title ${
-                        index === current ? "active" : ""
-                      }`}
+                      className={`review-info-container-title ${index === current ? "active" : ""
+                        }`}
                     >
                       {item.title}
                     </h5>
-                  </div>
+                  </motion.div>
                 );
               })}
-              <div className="review-info-btn">
+              <motion.div className="review-info-btn">
                 <button className="prev" onClick={prevPerson}>
                   <FiChevronLeft />
                 </button>
                 <button className="next" onClick={nextPerson}>
                   <FiChevronRight />
                 </button>
-              </div>
-            </div>
-          </div>
-        </div>
+              </motion.div>
+            </motion.div>
+          </motion.div>
+        </motion.div>
 
-        <div className="review-heading-right">
+        <motion.div className="review-heading-right"
+          variants={childVariants}
+        >
           {data.map((item, index) => {
             return (
-              <div
+              <motion.div
                 key={item.id}
-                className={`review-carousel-item ${
-                  index === current ? "review-active-slide" : ""
-                }`}
+                className={`review-carousel-item ${index === current ? "review-active-slide" : ""
+                  }`}
               >
                 {
                   <img
@@ -125,12 +195,12 @@ const Review = () => {
                     alt=""
                   />
                 }
-              </div>
+              </motion.div>
             );
           })}
-        </div>
-      </div>
-    </section>
+        </motion.div>
+      </motion.div>
+    </motion.section>
   );
 };
 
