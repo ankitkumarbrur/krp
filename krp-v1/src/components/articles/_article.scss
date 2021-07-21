@@ -32,6 +32,9 @@
 }
 
 @media screen and (max-width: 480px) {
+    .article-main {
+        margin-top: 3rem;
+    }
     .carousel {
         ul.thumbs{
             .article-div {

@@ -1,80 +1,82 @@
-@import "../../config.scss";
+@media screen and (max-width: 1200px) {
+  
+}
 
-// media queries tablets
-
-@media screen and (max-width: 768px) {
-  .store{
-    &-heading{
-      // display: flex;
-      margin-bottom: 10vh;
-      &-left{  width: 100vw; }
-      &-right{ display:none; }
-    }
-    &-info{
-        width: 70%;
-      &-text{
-          width: 80vw;
+@media screen and (max-width: 1024px) {
+  .shopping-section {
+    .store{
+      &-heading {
+        &-left {
+          width: 100vw;
         }
-      }
-      &-title {
-        &-accent-square {
-          height: 5rem;
-        }
-      }
-    }
-
-    .item {
-      grid-gap: 10px;
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: 200px 200px;
-
-      &-container {
-        &-title {
-          font-size: 1.25rem;
-        }
-
-        &:nth-child(7) {
+        &-right {
           display: none;
+        }
+      }
+
+      &-info-text{
+          width: 80vw;
+      }
+    }
+    .item {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 250px 250px;
+      &-container {
+        &:nth-child(1) {
+          grid-column: 1 / 2;
+        }
+        &:nth-child(6) {
+          grid-column: 3 / 4;
+        }
+        &:nth-child(7) {
+          grid-column: 4 / 5;
         }
       }
     }
   }
+}
 
-
-
-//media queries smartphones
-
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .shopping-section {
-    .store {
-      &-title {
-        &-accent-square {
-          height: 3.5rem;
-        }
-      }
-    }
     .item {
-      width: 95%;
-      grid-gap: 10px;
-      grid-template-columns: repeat(2, 175px);
-      grid-template-rows: 125px 125px;
-
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 200px 200px;
       &-container {
-        &-title {
-          font-size: 1.1rem;
-        }
-
-        &:nth-child(1) {
-          display: none;
-        }
-        &:nth-child(6) {
-          display: none;
-        }
-
         &:nth-child(7) {
           display: none;
         }
+        &-title {
+          font-size: 1.2rem;
+        }
       }
     }
+    
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .shopping-section {
+    .store{
+      &-heading{
+        margin-bottom:5vh;
+      }
+      &-info {
+        margin-top: 3vh;
+      }
+    }
+    .item {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 200px 200px;
+      &-container {
+        &:nth-child(7) {
+          display: none;
+        }
+        &-title {
+          font-size: 1rem;
+          letter-spacing: 2px;
+        }
+      }
+    }
+    
   }
 }

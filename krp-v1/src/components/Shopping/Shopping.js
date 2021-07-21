@@ -1,7 +1,8 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useLayoutEffect } from "react";
 
 import { Link } from "react-router-dom";
 import data from "./shopping-data";
+import offers from "./s-data";
 import "../Shopping/shopping.scss";
 import { useViewportScroll, useTransform, motion, useAnimation, useMotionValue, } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
@@ -55,7 +56,42 @@ const Shopping = () => {
 
   const controls = useAnimation();
   const [ref, inView] = useInView();
+
   useEffect(() => {
+    // const slideDelay = 5000;
+
+    const dynamicSlider = document.getElementsByClassName("store-carousel-image");
+    // dynamicSlider[dynamicSlider.length - 1].style.opacity = 0;
+    console.log()
+    var curSlide = 0;
+    var zindex = 0;
+
+    const fun = () =>{
+      console.log(curSlide)
+
+      dynamicSlider[curSlide % dynamicSlider.length].style.display = "none";
+      dynamicSlider[curSlide % dynamicSlider.length].style.right = "240px";
+      dynamicSlider[curSlide % dynamicSlider.length].style.transform = "scale(0.7)";
+      dynamicSlider[curSlide % dynamicSlider.length].style.zIndex = zindex--;
+      
+      for (let i = 0; i < dynamicSlider.length; i++) {
+        if(i != curSlide) {
+          let scale = parseFloat(getComputedStyle(dynamicSlider[i]).transform.slice(7)) + 0.1;
+          dynamicSlider[i].style.transform = "scale(" + scale + ")";
+          console.log("after:" + dynamicSlider[i].style.transform);
+          dynamicSlider[i].style.right = parseFloat(getComputedStyle(dynamicSlider[i]).right) - 80 + "px";
+        }
+      }
+      dynamicSlider[curSlide % dynamicSlider.length].style.display = "block";
+      curSlide = (curSlide + 1) % dynamicSlider.length;
+      setTimeout(fun,1000);
+    }
+    
+    setTimeout(fun,1000);
+
+  }, [])
+
+  useLayoutEffect(() => {
     if (inView) {
       controls.start("visible");
     }
@@ -102,12 +138,21 @@ const Shopping = () => {
         </motion.div>
 
         <motion.div className="store-heading-right">
-          <motion.div className="store-image"
-            variants={childVariants}
-          >
-            <img src={store_img} alt="" />
-          </motion.div>
+          <motion.div className="store-carousel">
+            {
+              offers.reverse().map((item) =>{
+                return(
+                    <div className = "store-carousel-image"
+                      variants = {childVariants}
+                    >
+                      <motion.img src={item.imageurl} alt="" />
+                    </div>
+                )
+              })
+            }
+          </motion.div>          
         </motion.div>
+        
       </motion.div>
 
       <motion.article className="item"
