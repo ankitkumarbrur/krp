@@ -67,7 +67,7 @@ const Shopping = () => {
     var zindex = 0;
 
     const fun = () => {
-      console.log(curSlide)
+      // console.log(curSlide)
 
       dynamicSlider[curSlide % dynamicSlider.length].style.display = "none";
       dynamicSlider[curSlide % dynamicSlider.length].style.right = "240px";
@@ -79,7 +79,7 @@ const Shopping = () => {
         if(i != curSlide) {
           let scale = parseFloat(getComputedStyle(dynamicSlider[i]).transform.slice(7)) + 0.1;
           dynamicSlider[i].style.transform = "scale(" + scale + ")";
-          console.log("after:" + dynamicSlider[i].style.transform);
+          // console.log("after:" + dynamicSlider[i].style.transform);
           dynamicSlider[i].style.right = parseFloat(getComputedStyle(dynamicSlider[i]).right) - 80 + "px";
         }
       }
@@ -92,11 +92,11 @@ const Shopping = () => {
     for (let i = 0; i < dynamicSlider.length; i++) {
       dynamicSlider[i].addEventListener("mouseover",() =>{
         window.clearInterval(caro);
-        console.log("hover");
+        // console.log("hover");
       })
       dynamicSlider[i].addEventListener("mouseout",() =>{
         caro = setInterval(fun,slideDelay);
-        console.log("out");
+        // console.log("out");
       })
     }
 
