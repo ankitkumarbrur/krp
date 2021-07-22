@@ -58,7 +58,7 @@ const Shopping = () => {
   const [ref, inView] = useInView();
 
   useEffect(() => {
-    // const slideDelay = 5000;
+    const slideDelay = 4000;
 
     const dynamicSlider = document.getElementsByClassName("store-carousel-image");
     // dynamicSlider[dynamicSlider.length - 1].style.opacity = 0;
@@ -66,13 +66,14 @@ const Shopping = () => {
     var curSlide = 0;
     var zindex = 0;
 
-    const fun = () =>{
+    const fun = () => {
       console.log(curSlide)
 
       dynamicSlider[curSlide % dynamicSlider.length].style.display = "none";
       dynamicSlider[curSlide % dynamicSlider.length].style.right = "240px";
       dynamicSlider[curSlide % dynamicSlider.length].style.transform = "scale(0.7)";
       dynamicSlider[curSlide % dynamicSlider.length].style.zIndex = zindex--;
+      
       
       for (let i = 0; i < dynamicSlider.length; i++) {
         if(i != curSlide) {
@@ -84,10 +85,20 @@ const Shopping = () => {
       }
       dynamicSlider[curSlide % dynamicSlider.length].style.display = "block";
       curSlide = (curSlide + 1) % dynamicSlider.length;
-      setTimeout(fun,1000);
     }
     
-    setTimeout(fun,1000);
+    let caro = setInterval(fun,slideDelay);
+
+    for (let i = 0; i < dynamicSlider.length; i++) {
+      dynamicSlider[i].addEventListener("mouseover",() =>{
+        window.clearInterval(caro);
+        console.log("hover");
+      })
+      dynamicSlider[i].addEventListener("mouseout",() =>{
+        caro = setInterval(fun,slideDelay);
+        console.log("out");
+      })
+    }
 
   }, [])
 
