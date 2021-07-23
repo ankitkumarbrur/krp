@@ -63,8 +63,8 @@ const Shopping = () => {
     const dynamicSlider = document.getElementsByClassName("store-carousel-image");
     // dynamicSlider[dynamicSlider.length - 1].style.opacity = 0;
     console.log()
-    var curSlide = 0;
-    var zindex = 0;
+    let curSlide = 0;
+    let zindex = 0;
 
     const fun = () => {
       // console.log(curSlide)
