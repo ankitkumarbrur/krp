@@ -207,6 +207,8 @@ export default function Subscribe() {
             animate="visible"
             variants={childVariants}
         >
+      {console.log("SUBSCRIBE")}
+
             {/*             
 
             <input placeholder="E-mail" className="subscribeEmail">

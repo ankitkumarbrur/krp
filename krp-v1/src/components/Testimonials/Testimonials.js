@@ -94,6 +94,8 @@ const Review = () => {
       variants={boxVariants}
 
     >
+      {console.log("TESTIMONIALS")}
+
       <motion.div className="review-heading">
         <motion.div className="review-heading-left">
           <motion.div className="review-title">

@@ -71,6 +71,8 @@ const Contactus = () => {
       variants={boxVariants}
 
     >
+      {console.log("CONTACT US")}
+
       <motion.div className="contactus-left">
 
         <motion.div className="contactus-address"

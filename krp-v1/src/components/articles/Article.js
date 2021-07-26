@@ -97,6 +97,8 @@ export default function Article() {
             variants={boxVariants}
             ref={ref}
         >
+      {console.log("ARTICLES")}
+
             <motion.div className="article-maintitle">
                 <motion.div className="article-title-accent-square"
                     variants={childVariants}

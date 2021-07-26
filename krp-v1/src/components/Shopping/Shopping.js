@@ -49,11 +49,7 @@ const childVariants = {
   }
 }
 
-
-
-
 const Shopping = () => {
-
   const controls = useAnimation();
   const [ref, inView] = useInView();
 
@@ -62,7 +58,6 @@ const Shopping = () => {
 
     const dynamicSlider = document.getElementsByClassName("store-carousel-image");
     // dynamicSlider[dynamicSlider.length - 1].style.opacity = 0;
-    console.log()
     let curSlide = 0;
     let zindex = 0;
 
@@ -90,13 +85,14 @@ const Shopping = () => {
     let caro = setInterval(fun,slideDelay);
 
     for (let i = 0; i < dynamicSlider.length; i++) {
-      dynamicSlider[i].addEventListener("mouseover",() =>{
+      console.log("hello")
+      dynamicSlider[i].addEventListener("mouseover", () =>{
         window.clearInterval(caro);
-        // console.log("hover");
+        console.log("hover");
       })
-      dynamicSlider[i].addEventListener("mouseout",() =>{
+      dynamicSlider[i].addEventListener("mouseout", () =>{
         caro = setInterval(fun,slideDelay);
-        // console.log("out");
+        console.log("out");
       })
     }
 
@@ -106,7 +102,6 @@ const Shopping = () => {
     if (inView) {
       controls.start("visible");
     }
-
   }, [controls, inView]);
 
 
@@ -115,8 +110,8 @@ const Shopping = () => {
       initial="hidden"
       animate={controls}
       variants={boxVariants}
-
-    >
+      >
+      {console.log("SHOPPING")}
       <motion.div className="store-heading">
         <motion.div className="store-heading-left">
           <motion.div className="store-title">

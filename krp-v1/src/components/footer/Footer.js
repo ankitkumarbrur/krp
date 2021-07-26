@@ -56,6 +56,8 @@ const Footer = () => {
         <div className="footer-background"
 
         >
+      {console.log("FOOTER")}
+            
             <motion.div className="footercontainer"
                 ref={ref}
                 initial="hidden"

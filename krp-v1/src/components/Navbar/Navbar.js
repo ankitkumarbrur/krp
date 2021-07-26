@@ -32,6 +32,8 @@ const Navbar = () => {
 
   return (
     <section className={scroll ? "navbar scroll" : "navbar"}>
+      {console.log("NAVBAR")}
+
       <nav className="nav">
         <div className="menu-icon" onClick={() => setShowLinks(!showLinks)}>
           <span className={showLinks ? "menu-btn open" : "menu-btn"}></span>
@@ -48,6 +50,7 @@ const Navbar = () => {
             return (
               <li
                 className={showLinks ? "menu-nav-item open" : "menu-nav-item"}
+                key={index}
               >
                 <Link
                   key={index}
