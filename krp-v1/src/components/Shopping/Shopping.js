@@ -54,47 +54,48 @@ const Shopping = () => {
   const [ref, inView] = useInView();
 
   useEffect(() => {
-    const slideDelay = 4000;
+    console.log("IFSNS")
+    // const slideDelay = 4000;
 
-    const dynamicSlider = document.getElementsByClassName("store-carousel-image");
-    // dynamicSlider[dynamicSlider.length - 1].style.opacity = 0;
-    let curSlide = 0;
-    let zindex = 0;
+    // const dynamicSlider = document.getElementsByClassName("store-carousel-image");
+    // // dynamicSlider[dynamicSlider.length - 1].style.opacity = 0;
+    // let curSlide = 0;
+    // let zindex = 0;
 
-    const fun = () => {
-      // console.log(curSlide)
+    // const fun = () => {
+    //   // console.log(curSlide)
 
-      dynamicSlider[curSlide % dynamicSlider.length].style.display = "none";
-      dynamicSlider[curSlide % dynamicSlider.length].style.right = "240px";
-      dynamicSlider[curSlide % dynamicSlider.length].style.transform = "scale(0.7)";
-      dynamicSlider[curSlide % dynamicSlider.length].style.zIndex = zindex--;
+    //   dynamicSlider[curSlide % dynamicSlider.length].style.display = "none";
+    //   dynamicSlider[curSlide % dynamicSlider.length].style.right = "240px";
+    //   dynamicSlider[curSlide % dynamicSlider.length].style.transform = "scale(0.7)";
+    //   dynamicSlider[curSlide % dynamicSlider.length].style.zIndex = zindex--;
       
       
-      for (let i = 0; i < dynamicSlider.length; i++) {
-        if(i != curSlide) {
-          let scale = parseFloat(getComputedStyle(dynamicSlider[i]).transform.slice(7)) + 0.1;
-          dynamicSlider[i].style.transform = "scale(" + scale + ")";
-          // console.log("after:" + dynamicSlider[i].style.transform);
-          dynamicSlider[i].style.right = parseFloat(getComputedStyle(dynamicSlider[i]).right) - 80 + "px";
-        }
-      }
-      dynamicSlider[curSlide % dynamicSlider.length].style.display = "block";
-      curSlide = (curSlide + 1) % dynamicSlider.length;
-    }
+    //   for (let i = 0; i < dynamicSlider.length; i++) {
+    //     if(i != curSlide) {
+    //       let scale = parseFloat(getComputedStyle(dynamicSlider[i]).transform.slice(7)) + 0.1;
+    //       dynamicSlider[i].style.transform = "scale(" + scale + ")";
+    //       // console.log("after:" + dynamicSlider[i].style.transform);
+    //       dynamicSlider[i].style.right = parseFloat(getComputedStyle(dynamicSlider[i]).right) - 80 + "px";
+    //     }
+    //   }
+    //   dynamicSlider[curSlide % dynamicSlider.length].style.display = "block";
+    //   curSlide = (curSlide + 1) % dynamicSlider.length;
+    // }
     
-    let caro = setInterval(fun,slideDelay);
+    // let caro = setInterval(fun,slideDelay);
 
-    for (let i = 0; i < dynamicSlider.length; i++) {
-      console.log("hello")
-      dynamicSlider[i].addEventListener("mouseover", () =>{
-        window.clearInterval(caro);
-        console.log("hover");
-      })
-      dynamicSlider[i].addEventListener("mouseout", () =>{
-        caro = setInterval(fun,slideDelay);
-        console.log("out");
-      })
-    }
+    // for (let i = 0; i < dynamicSlider.length; i++) {
+    //   console.log("hello")
+    //   dynamicSlider[i].addEventListener("mouseover", () =>{
+    //     window.clearInterval(caro);
+    //     console.log("hover");
+    //   })
+    //   dynamicSlider[i].addEventListener("mouseout", () =>{
+    //     caro = setInterval(fun,slideDelay);
+    //     console.log("out");
+    //   })
+    // }
 
   }, [])
 

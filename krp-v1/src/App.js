@@ -4,27 +4,17 @@ import { Home, About, Contact, Error, Blog } from "./pages";
 
 function App() {
   return (
-    <div>
-      <Router>
+      // <Router>
         <Switch>
           <Route exact={true} path="/">
             <Home />
           </Route>
-          <Route path="/blog">
-            <Blog />
-          </Route>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/contact">
-            <Contact />
-          </Route>
-          <Route path="*">
-            <Error />
-          </Route>
+          <Route path="/blog" exact component={() => <Blog />} /> 
+          <Route path="/about" exact component={() => <About />} /> 
+          <Route path="/contact" exact component={() => <Contact />} /> 
+          <Route path="*" exact component={() => <Error />} /> 
         </Switch>
-      </Router>
-    </div>
+      // </Router>
   );
 }
 

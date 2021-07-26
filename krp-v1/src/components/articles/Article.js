@@ -7,16 +7,12 @@ import { useInView } from 'react-intersection-observer';
 
 const boxVariants = {
     hidden: {
-
     },
     visible: {
-
         transition: {
-
             delay: 1,
             when: "beforeChildern",
             staggerChildren: 0.15
-
         }
     }
 }
@@ -27,7 +23,6 @@ const childVariants = {
         y: 20,
     },
     visible: {
-
         opacity: 1,
         x: 0,
         y: 0,
@@ -38,8 +33,6 @@ const childVariants = {
             // damping: 10,
             // mass: 0.1,
             // stiffness: 100
-
-
         }
 
     }
@@ -54,7 +47,6 @@ export default function Article() {
         if (inView) {
             controls.start("visible");
         }
-
     }, [controls, inView]);
 
 
