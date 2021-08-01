@@ -9,11 +9,9 @@
     &-heading {
       display: flex;
       margin-bottom: 8vh;
-      &-left {
-        width: 40vw;
-      }
+      justify-content: space-between;
       &-right {
-        width: 60vw;
+        width: calc(29vw + 15rem);
       }
     }
 
