@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useLayoutEffect, useRef } from "react";
-import "./styles/info.scss";
+import "./info.scss";
 import { Parallax } from 'react-scroll-parallax';
 
 
@@ -128,12 +128,11 @@ const Info = ({ offset = 300, clampInitial = false, clampFinal = false }) => {
               nisi ut aliquip ex ea commodo consequat.{" "}
             </motion.p>
 
-            <motion.div className="info-apparels-image"
+            <div className="info-apparels-image"
               ref={ref} style={{ y }}
-
             >
               <img />
-            </motion.div>
+            </div>
           </motion.div>
           {/* </Parallax> */}
         </motion.div>
@@ -179,7 +178,7 @@ const Info = ({ offset = 300, clampInitial = false, clampFinal = false }) => {
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex ea commodo consequat.{" "}
             </p>
-            <button> read more </button>
+            {/* <button> read more </button> */}
           </motion.div>
         </motion.div>
 

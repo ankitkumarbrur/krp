@@ -5,10 +5,10 @@
   background-size: cover;
 }
 @media screen and (max-width: 480px) {
-  .main-header {
-  background-image: url("./../../images/bg_bike.png");
-  background-repeat: no-repeat;
-  background-size: 100vh 100vw;
-  background-size: cover;
-}
+    .main-header {
+    background-image: url("./../../images/bg_bike.png");
+    background-repeat: no-repeat;
+    background-size: 100vh 100vw;
+    background-size: cover;
+  }
 }

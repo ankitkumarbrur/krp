@@ -4,7 +4,7 @@ import { Home, About, Contact, Error, Blog } from "./pages";
 
 function App() {
   return (
-      // <Router>
+      <Router>
         <Switch>
           <Route exact={true} path="/">
             <Home />
@@ -14,7 +14,7 @@ function App() {
           <Route path="/contact" exact component={() => <Contact />} /> 
           <Route path="*" exact component={() => <Error />} /> 
         </Switch>
-      // </Router>
+      </Router>
   );
 }
 

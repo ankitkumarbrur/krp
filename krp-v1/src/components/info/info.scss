@@ -1,0 +1,157 @@
+@import "../../config";
+
+.info{
+
+    &-first{
+        display: flex;
+        &-left{
+            width: 57vw;
+        }
+
+        &-right{
+            width: 43vw;
+        }
+    }
+
+    
+    &-title{
+        display: flex;
+        align-items: center;
+
+        &-accent-square{
+            height: 13.5rem;
+            width: 11.2vw;
+            margin-right: 3.8vw;
+            background-color: $accent;
+        }
+    
+        &-black-square{
+            height: 13.5rem;
+            width: 3vw;
+            margin-left: auto;
+            background-color: black;
+        }
+    }    
+
+    &-workshop{
+        
+        position: relative;
+        top: 10vh;
+        left: 15vw;
+
+        &-text{
+            margin-top: 4vh;
+            width: 35vw;
+        }
+        
+        &-image{
+            img{
+                background: url("https://images.unsplash.com/photo-1558981396-5fcf84bdf14d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80") no-repeat;
+                background-size: cover;
+            }
+            height:50vw;
+        }
+    }
+
+    &-apparels{
+
+        position: relative;
+        
+        h3{
+            margin-top: 7vh;
+        }
+        &-text{
+            margin-top: 4vh;
+            width: 35vw;
+        }
+        
+        &-image{
+            img{
+                background: url("https://unsplash.com/photos/616JSWafGbw/download?force=true&w=1920") no-repeat;
+                background-size: cover;
+            }
+            margin-top: 10vh;
+            height:38vw;
+            width:34vw;
+        }
+    }
+
+
+    &-second{
+        display:flex;
+        margin-top: 20vh;
+
+        &-left{
+            display:flex;
+            justify-content: space-between;
+            width:38vw;
+        }
+
+        &-right{  
+            display:flex;
+            justify-content: flex-end;
+            width:62vw;
+        }
+
+        &-black-square{
+            align-self: flex-end;
+            height: 22rem;
+            width: 2rem;
+            margin-right: auto;
+            background-color: black;
+        }
+    }
+
+    &-projects{
+
+        &-text{
+            // justify-self: flex-end;
+            margin: 4vh 0 10vh 0;
+            width:23vw;
+        }
+        &-image{
+            width:26vw;
+            height:75vh;
+        }
+        // button {
+        //     background-color: $accent;
+        //     color:white;
+        //     height: 7vh;
+        //     width: 10rem;
+        //     font-size: 1.5rem;
+        // }
+
+
+        &-card{
+            position: relative;
+
+            &-text{
+                background-color: black;
+                height: 75vh;
+                width: 28vw;
+                h3{
+                    margin-left: auto;
+                    margin-right: 4vw;
+                    padding-top: 8vh;
+                    text-align: right;
+                    display:block;
+                    color: white;
+                    width: 18vw;
+                    letter-spacing: 2px;
+                }
+            }
+            &-image{
+                position: absolute;
+                bottom: 0px;
+                left: -6vw;
+                width: clamp(35vh,21.5vw,21.5vw);
+                // width:40vh;
+                height:27vh;
+            }
+        }
+    }
+
+
+}
+
+@import "./info";

@@ -64,7 +64,7 @@
 // export default About;
 
 import React, { useEffect } from "react";
-import "./styles/whyKRP.scss";
+import "./whyKRP.scss";
 import { useViewportScroll, useTransform, motion, useAnimation, useMotionValue } from 'framer-motion';
 import { useInView, InView } from 'react-intersection-observer';
 
@@ -82,7 +82,7 @@ const About = () => {
           <article className="about-info">
             <div className="heading">
               <h2>why krp?</h2>
-              <div className="line"></div>
+              {/* <div className="line"></div> */}
             </div>
             <div className="text">
               <p ref={ref}>

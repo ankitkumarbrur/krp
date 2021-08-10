@@ -10,29 +10,30 @@
     position: relative;
     margin-bottom: 10vh;
     .heading {
-      transform: rotate(180deg);
-      writing-mode: vertical-rl;
+      // transform: rotate(180deg);
+      // writing-mode: vertical-rl;
+      color: rgba(0, 0, 0, 0.24);
       .line {
         position: absolute;
-        top: 0;
-        transform: rotate(90deg);
+        top: 1rem;
+        // transform: rotate(90deg);
         width: 7rem;
         height: 6px;
-        background: black;
+        background: rgba(0, 0, 0, 0.438);
         margin-top: 3.6rem;
         margin-right: -25px;
       }
       
     }
     .text {
-        
-        width: 80%;
-        
+        width: 100%;
+        position: absolute;
+        top:3rem;
+        left:4rem;
       p{
         
         bottom: 20%;
-        position: absolute;
-        margin:auto;
+        margin: auto;
         
       }
       
